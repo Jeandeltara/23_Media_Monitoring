@@ -23,10 +23,15 @@ jobs:
     - name: Устанавливаем библиотеки
       run: |
         python -m pip install --upgrade pip
-        pip install requests beautifulsoup4 python-dateutil google-auth google-auth-oauthlib google-api-python-client lxml
+        pip install requests beautifulsoup4 python-dateutil lxml
 
     - name: Запускаем парсер новостей
-      env:
-        # Передаем наш секретный JSON-ключ внутрь Python
-        GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
       run: python main.py
+
+    - name: Upload Report to Google Drive
+      uses: adityassarkar/google-drive-upload-gitaction@main
+      with:
+        credentials: ${{ secrets.GOOGLE_CREDENTIALS }} # Ваш текущий JSON-ключ робота
+        filename: "*.txt"                             # Какой файл брать (наш отчет)
+        folderId: "1HLX_PykEsDvuOpp7gGnEoTaTYN49T050" # ID вашей папки
+        overwrite: "true"
