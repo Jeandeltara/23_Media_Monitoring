@@ -17,13 +17,11 @@ from zoneinfo import ZoneInfo
 def upload_to_google_drive(file_name, folder_id):
     print(f"Начинаем отправку файла {file_name} на Google Диск...")
     try:
-        # 1. Достаем секретный ключ из переменных окружения GitHub
         creds_json = os.environ.get("GOOGLE_CREDENTIALS")
         if not creds_json:
             print("Ошибка: Секрет GOOGLE_CREDENTIALS не найден в настройках GitHub!")
             return
 
-        # 2. Авторизуемся в Google API
         service_account_info = json.loads(creds_json)
         credentials = Credentials.from_service_account_info(
             service_account_info, 
@@ -31,18 +29,18 @@ def upload_to_google_drive(file_name, folder_id):
         )
         service = build("drive", "v3", credentials=credentials)
 
-        # 3. Настраиваем метаданные файла
         file_metadata = {
             "name": file_name,
             "parents": [folder_id]
         }
         media = MediaFileUpload(file_name, mimetype="text/plain")
 
-        # 4. Загружаем
+        # Добавили supportsAllDrives=True, чтобы корректно работать с правами папки
         uploaded_file = service.files().create(
             body=file_metadata,
             media_body=media,
-            fields="id"
+            fields="id",
+            supportsAllDrives=True
         ).execute()
 
         print(f"Успех! Файл успешно загружен на Google Диск. ID файла: {uploaded_file.get('id')}")
