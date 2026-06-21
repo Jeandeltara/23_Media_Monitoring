@@ -29,13 +29,13 @@ def upload_to_google_drive(file_name, folder_id):
         )
         service = build("drive", "v3", credentials=credentials)
 
+        # 1. Загружаем файл
         file_metadata = {
             "name": file_name,
             "parents": [folder_id]
         }
-        media = MediaFileUpload(file_name, mimetype="text/plain")
+        media = MediaFileUpload(file_name, mimetype="text/plain", resumable=True)
 
-        # Добавили supportsAllDrives=True, чтобы корректно работать с правами папки
         uploaded_file = service.files().create(
             body=file_metadata,
             media_body=media,
@@ -43,10 +43,30 @@ def upload_to_google_drive(file_name, folder_id):
             supportsAllDrives=True
         ).execute()
 
-        print(f"Успех! Файл успешно загружен на Google Диск. ID файла: {uploaded_file.get('id')}")
+        file_id = uploaded_file.get("id")
+        print(f"Файл загружен на Диск. ID: {file_id}")
+
+        # 2. Магия: Передаем права владения на ВАШ личный email.
+        # Замените 'ВАШ_EMAIL@gmail.com' на вашу реальную почту Google Диска!
+        user_email = "ivannosalevych@gmail.com" 
+        
+        permission_metadata = {
+            "type": "user",
+            "role": "writer",  # Сначала даем права на запись
+            "emailAddress": user_email
+        }
+        
+        # Делимся файлом с вашим основным аккаунтом
+        service.permissions().create(
+            fileId=file_id,
+            body=permission_metadata,
+            supportsAllDrives=True
+        ).execute()
+        
+        print(f"Права на файл успешно предоставлены для {user_email}. Теперь он появится в вашей папке!")
 
     except Exception as e:
-        print(f"Ошибка при загрузке на Google Диск: {e}")
+        print(f"Ошибка при работе с Google Диском: {e}")
 
 def parse_rss_feed(url, target_date):
     """Сканирует одну стандартную RSS-ленту и возвращает ссылки за целевую дату."""
