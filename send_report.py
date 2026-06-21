@@ -1,6 +1,7 @@
 import os
 import json
 import glob
+import sys
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
@@ -12,7 +13,7 @@ def upload_latest_report():
     report_files = glob.glob("*_report.txt")
     if not report_files:
         print("❌ Ошибка: Файлы отчетов (*_report.txt) не найдены!")
-        return
+        sys.exit(1)
         
     # Сортируем файлы по имени (благодаря YYMMDD в начале, свежий всегда будет последним)
     report_files.sort()
@@ -24,7 +25,7 @@ def upload_latest_report():
     secret_credentials = os.environ.get("GOOGLE_CREDENTIALS")
     if not secret_credentials:
         print("❌ Ошибка: Переменная окружения GOOGLE_CREDENTIALS не найдена!")
-        return
+        sys.exit(1)
 
     try:
         # Превращаем строку с секретом обратно в JSON-словарь
@@ -49,17 +50,19 @@ def upload_latest_report():
         media = MediaFileUpload(latest_report, mimetype='text/plain', resumable=True)
         
         print("🚀 Отправка файла в Google Drive...")
-        # Выполняем запрос на создание файла на Диске
+        # Выполняем запрос на создание файла на Диске с поддержкой квоты папки-родителя
         drive_file = service.files().create(
             body=file_metadata,
             media_body=media,
-            fields='id'
+            fields='id',
+            supportsAllDrives=True  # Использовать квоту папки владельца, а не робота
         ).execute()
         
         print(f"✅ Успех! Файл успешно загружен на Google Диск. ID файла: {drive_file.get('id')}")
 
     except Exception as e:
         print(f"❌ Произошла ошибка во время отправки: {e}")
+        sys.exit(1)  # Заставляем GitHub Actions показать красную шайбу при ошибке
 
 if __name__ == "__main__":
     upload_latest_report()
