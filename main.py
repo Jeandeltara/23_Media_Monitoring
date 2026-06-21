@@ -5,12 +5,6 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from dateutil import parser
-
-from google.oauth2 import service_account
-from google.oauth2.service_account import Credentials
-from googleapiclient.discovery import build
-from googleapiclient.http import MediaFileUpload
-
 from zoneinfo import ZoneInfo
 
 def parse_rss_feed(url, target_date):
@@ -64,7 +58,6 @@ def parse_rayon_site(base_url, target_date):
             soup = BeautifulSoup(response.text, "html.parser")
             
             # Находим самый ПЕРВЫЙ тег ссылки, ведущий на статью (содержит /news/ и цифры ID)
-            # Метод find() возвращает только один первый элемент сверху вниз по коду страницы
             first_news_link = soup.find("a", href=re.compile(r"/news/\d+"))
             
             if first_news_link:
@@ -79,7 +72,6 @@ def parse_rayon_site(base_url, target_date):
                     full_url = href
                 
                 # Поднимаемся к ближайшему контейнеру этой новости, чтобы забрать её дату
-                # get_text() соберет весь текст карточки, включая строчку с датой вида "21.06.2026 09:07"
                 parent_container = first_news_link.find_parent()
                 container_text = ""
                 
@@ -134,7 +126,7 @@ def filter_pages_by_keyword(urls, keyword_pattern):
                 })
                 
         except requests.RequestException:
-            print(f"  -> Ошибка при скачивании страницы: {url}")
+            print(f"  -> Ошибка при скачивании страницу: {url}")
             continue
 
     return filtered_results
@@ -192,14 +184,12 @@ def parse_radiotrek_site():
             return found_urls
             
         # Вырезаем только те текстовые и HTML элементы, которые лежат между границами дней
-        # Если вчерашний день не нашли на 1-й странице, берем всё до конца
         if end_index is None:
             target_nodes = all_text_nodes[start_index:]
         else:
             target_nodes = all_text_nodes[start_index:end_index]
             
         # Из собранного куска вытаскиваем ссылки на статьи
-        # Так как мы работаем со списком строк, нам нужно найти ссылки, связанные с этими строками
         for node in target_nodes:
             parent = node.find_parent("a")
             if parent:
@@ -288,7 +278,7 @@ def parse_suspilne_site():
 
 TARGET_NEWS_LIST = []
 
-# --- БЛОК ЗАПУСКА (Полный конвейер: RSS + Район + Радіо ТРЕК + Суспільне) ---
+# --- БЛОК ЗАПУСКА (Полный конвейер) ---
 if __name__ == "__main__":
     GOOGLE_FOLDER_ID = "1HLX_PykEsDvuOpp7gGnEoTaTYN49T050"
     
@@ -309,7 +299,6 @@ if __name__ == "__main__":
         "https://charivne.info/rss",
         "https://7dniv.rv.ua/feed/",
         "https://rivne.media/rss",
-        "https://rivne.media/rss",  
         "https://rivne1.tv/rss",
         "https://itvmg.com/rss",
         "https://teza.tv/rss",
@@ -357,27 +346,12 @@ if __name__ == "__main__":
     for item in TARGET_NEWS_LIST:
         final_text += f"- {item['title']}\n  {item['url']}\n\n"
 
-    # 8. Запись локального файла с правильным динамическим именем
+    # 8. Запись ОДНОГО локального файла на сервер GitHub
     with open(file_name, "w", encoding="utf-8") as file:
-        file.write(final_text)
-        
-    print(f"Локальный файл {file_name} успешно создан.")
-    
-    # 9. Отправка готового файла на Google Диск
-    #upload_to_google_drive(file_name, GOOGLE_FOLDER_ID)
+        file.write(final_text) 
 
-file_name = f"{date_str}_{time_str}_report.txt"
-with open(file_name, "w", encoding="utf-8") as f:
-    f.write(report_text)
-
-print(f"Локальный файл {file_name} успешно создан.")
-print("ФИЛЬТРАЦИЯ ЗАВЕРШЕНА. Отобрано статей: ...")
-
-print(f"Локальный файл {file_name} успешно создан.")
-print("ФИЛЬТРАЦИЯ ЗАВЕРШЕНА. Отобрано статей: ...")
-            
+    # 9. Финальный красивый вывод в логи GitHub Actions
     print("\n" + "=" * 40)
+    print(f"Локальный файл {file_name} успешно создан.")
     print(f"ФИЛЬТРАЦИЯ ЗАВЕРШЕНА. Отобрано статей: {len(TARGET_NEWS_LIST)}")
-    print(f"Полный отчет сохранен в файле: {file_name}")
     print("=" * 40)
-
