@@ -1,6 +1,5 @@
 name: Test Google Drive OAuth Upload
 
-# Запуск вручную по кнопке из вкладки Actions
 on:
   workflow_dispatch:
 
@@ -9,26 +8,24 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # 1. Скачиваем текущее содержимое репозитория (вместе с вашими отчетами)
+    # 1. Скачиваем репозиторий (все файлы отчетов будут в корне папки раннера)
     - name: Checkout repository
       uses: actions/checkout@v4
 
-    # 2. Разворачиваем Python окружение
+    # 2. Настраиваем Python (убрали вредный кэш)
     - name: Set up Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.10'
-        cache: 'pip'
 
-    # 3. Ставим необходимые библиотеки Google
+    # 3. Ставим библиотеки Google
     - name: Install dependencies
       run: |
         pip install google-auth-oauthlib google-api-python-client
 
-    # 4. Запускаем скрипт отправки самого свежего отчета
+    # 4. Запускаем отправку. Скрипт увидит файлы в корне и выберет самый свежий: 260621_2006_report.txt
     - name: Run send_report.py
       env:
-        # Передаем секрет с токеном из настроек репозитория
         GOOGLE_DRIVE_TOKEN: ${{ secrets.GOOGLE_DRIVE_TOKEN }}
       run: |
         python send_report.py
