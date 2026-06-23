@@ -4,11 +4,11 @@ import re
 import datetime
 import requests
 from bs4 import BeautifulSoup
-import google.genai as genai
+from groq import Groq
 
 # --- Настройка API ---
-# Используем новую клиентскую библиотеку
-client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
+# Используем ключ GROQ_API_KEY из Secrets
+client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
 # --- Parsers library ---
 def clean_content(element):
@@ -50,13 +50,15 @@ def get_parser_by_url(url):
     return None
 
 # --- Main logic ---
-def send_to_gemini(prompt_text):
-    # Используем метод client.models.generate_content
-    response = client.models.generate_content(
-        model='gemini-2.0-flash',
-        contents=prompt_text,
+def send_to_ai(prompt_text):
+    # Используем модель Llama 3.3, она очень мощная и быстрая
+    chat_completion = client.chat.completions.create(
+        messages=[
+            {"role": "user", "content": prompt_text}
+        ],
+        model="llama-3.3-70b-versatile",
     )
-    return response.text
+    return chat_completion.choices[0].message.content
 
 def get_latest_report():
     files = glob.glob("*_report.txt")
@@ -94,14 +96,13 @@ def process_and_create_prompt():
     else:
         base_prompt = "Проанализируй следующие статьи:"
 
-    # Замена ключевого слова
     full_prompt = (base_prompt + "\n\n" + "\n".join(articles_data)).replace('redneck', 'ВАШЕ_КЛЮЧЕВОЕ_СЛОВО')
 
     with open('prompt_w.txt', 'w', encoding='utf-8') as f:
         f.write(full_prompt)
 
-    # Обработка через Gemini
-    analysis_result = send_to_gemini(full_prompt)
+    # Обработка через Groq (Llama)
+    analysis_result = send_to_ai(full_prompt)
     
     date_str = datetime.datetime.now().strftime("%y%m%d")
     with open(f"{date_str}_media_analysis.txt", 'w', encoding='utf-8') as f:
