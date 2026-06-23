@@ -2,7 +2,7 @@ name: Automated News Monitoring System
 
 on:
   schedule:
-    - cron: '30 20 * * *'  # Каждый день в 20:30 UTC (23:30 по Киеву)
+    - cron: '10 11 * * *'  # Каждый день в 11:10 UTC (14:10 по Киеву)
   workflow_dispatch:       # Кнопка ручного запуска для тестов
 
 permissions:
@@ -35,7 +35,9 @@ jobs:
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
+        
+        # Добавляем все отчеты, подходящие под новый формат имени (YYMMDD_hhmm_report.txt)
         git add *_report.txt
-        # Коммитим только если появился новый файл
-        git diff --cached --quiet || git commit -m "Автоматическое обновление архива отчетов [skip ci]"
-        git push origin main
+        
+        # Коммитим и пушим только если появились новые файлы отчетов
+        git diff --cached --quiet || (git commit -m "Автоматическое обновление архива отчетов [skip ci]" && git push origin main)
