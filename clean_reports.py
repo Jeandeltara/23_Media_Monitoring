@@ -1,30 +1,32 @@
 import os
-import glob
+import re
 from datetime import datetime, timedelta
 
-# Сколько дней хранить файлы в репозитории
-DAYS_TO_KEEP = 7
-
-def clean_old_reports():
-    print("Запуск модуля очистки старых отчетов...")
-    now = datetime.now()
-    cutoff_date = now - timedelta(days=DAYS_TO_KEEP)
+def remove_old_reports():
+    # Вычисляем дату, которая была ровно 3 дня назад
+    target_date = datetime.now() - timedelta(days=3)
+    # Форматируем её в YYMMDD (например, 260621)
+    date_prefix = target_date.strftime("%y%m%d")
     
-    # Находим все файлы отчетов в текущей папке
-    report_files = glob.glob("*_report.txt")
+    print(f"Ищу файлы отчетов за дату: {target_date.strftime('%Y-%m-%d')} (префикс: {date_prefix})")
     
-    for file_path in report_files:
-        file_name = os.path.basename(file_path)
-        # Имя файла имеет формат: YYMMDD_HHMM_report.txt (длина даты-времени — 11 символов)
-        try:
-            date_part = file_name.split('_')[0] # Получаем YYMMDD
-            file_date = datetime.strptime(date_part, "%y%m%d")
-            
-            if file_date < cutoff_date:
-                os.remove(file_path)
-                print(f"🗑️ Удален старый отчет: {file_name}")
-        except Exception as e:
-            print(f"Не удалось обработать файл {file_name}: {e}")
+    # Регулярное выражение для проверки точного соответствия формата имени файла
+    # YYMMDD_hhmm_report.txt
+    report_pattern = re.compile(rf"^{date_prefix}_\d{{4}}_report\.txt$")
+    
+    deleted_count = 0
+    
+    # Обходим файлы в текущей корневой директории
+    for filename in os.listdir("."):
+        if report_pattern.match(filename):
+            try:
+                os.remove(filename)
+                print(f"  [Удален] файл: {filename}")
+                deleted_count += 1
+            except Exception as e:
+                print(f"  [Ошибка] Не удалось удалить {filename}: {e}")
+                
+    print(f"Очистка завершена. Всего удалено файлов: {deleted_count}")
 
 if __name__ == "__main__":
-    clean_old_reports()
+    remove_old_reports()
