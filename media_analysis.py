@@ -1,13 +1,17 @@
 import os
 import glob
 import re
+import datetime
 import requests
+import google.generativeai as genai
 from bs4 import BeautifulSoup
 
-# --- Parsers library section ---
+# --- Настройка API ---
+# Ключ подтягивается из GitHub Secrets (GOOGLE_API_KEY)
+genai.configure(api_key=os.environ.get("GOOGLE_API_KEY"))
 
+# --- Parsers library ---
 def clean_content(element):
-    """Utility to remove unwanted tags and extract text"""
     for tag in element(['script', 'style', 'noscript', 'iframe', 'ins', 'header', 'footer']):
         tag.extract()
     return element.get_text(separator=" ", strip=True)
@@ -21,15 +25,12 @@ def parse_rivne1(soup):
     return clean_content(container) if container else ""
 
 def parse_rp_rv(soup):
-    container = soup.find('div', class_='entry-content') # Check specific theme class
+    container = soup.find('div', class_='entry-content')
     return clean_content(container) if container else ""
 
 def parse_rayon(soup):
-    # Extracts the first article found in the feed
     news_items = soup.find_all('article')
-    if news_items:
-        return clean_content(news_items[0])
-    return ""
+    return clean_content(news_items[0]) if news_items else ""
 
 def parse_teza(soup):
     container = soup.find('div', class_='post-content')
@@ -40,7 +41,6 @@ def parse_horyn(soup):
     return clean_content(container) if container else ""
 
 def get_parser_by_url(url):
-    """Router to select the appropriate parser function"""
     if 'itvmg.com' in url: return parse_itvmg
     if 'rivne1.tv' in url: return parse_rivne1
     if 'rp.rv.ua' in url: return parse_rp_rv
@@ -49,7 +49,11 @@ def get_parser_by_url(url):
     if 'horyn.info' in url: return parse_horyn
     return None
 
-# --- Main logic section ---
+# --- Main logic ---
+def send_to_gemini(prompt_text):
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    response = model.generate_content(prompt_text)
+    return response.text
 
 def get_latest_report():
     files = glob.glob("*_report.txt")
@@ -63,7 +67,6 @@ def extract_urls(file_path):
 def process_and_create_prompt():
     report_file = get_latest_report()
     if not report_file:
-        print("No report file found.")
         return
 
     urls = extract_urls(report_file)
@@ -74,25 +77,28 @@ def process_and_create_prompt():
             response = requests.get(url, timeout=10)
             soup = BeautifulSoup(response.content, 'html.parser')
             parser = get_parser_by_url(url)
-            
             if parser:
                 text = parser(soup)
                 title = soup.title.string.strip() if soup.title else "No Title"
                 articles_data.append(f"### Заголовок: {title}\nИсточник: {url}\nТекст: {text}\n---")
         except Exception as e:
-            print(f"Error processing {url}: {e}")
+            print(f"Error: {e}")
 
-    # Merge with prompt.txt
-    if os.path.exists('prompt.txt'):
-        with open('prompt.txt', 'r', encoding='utf-8') as f:
-            base_prompt = f.read()
-    else:
-        base_prompt = "Проанализируй следующие статьи:"
+    with open('prompt.txt', 'r', encoding='utf-8') as f:
+        base_prompt = f.read()
 
-    full_prompt = base_prompt + "\n\n" + "\n".join(articles_data)
+    # Замените 'redneck' на ваше ключевое слово перед отправкой
+    full_prompt = (base_prompt + "\n\n" + "\n".join(articles_data)).replace('redneck', 'ВАШЕ_КЛЮЧЕВОЕ_СЛОВО')
 
     with open('prompt_w.txt', 'w', encoding='utf-8') as f:
         f.write(full_prompt)
+
+    # Обработка через Gemini
+    analysis_result = send_to_gemini(full_prompt)
+    
+    date_str = datetime.datetime.now().strftime("%y%m%d")
+    with open(f"{date_str}_media_analysis.txt", 'w', encoding='utf-8') as f:
+        f.write(analysis_result)
 
 if __name__ == "__main__":
     process_and_create_prompt()
