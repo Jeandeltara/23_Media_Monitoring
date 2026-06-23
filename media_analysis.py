@@ -2,41 +2,35 @@ import os
 import glob
 import re
 import datetime
+import time
 import requests
 from bs4 import BeautifulSoup
 from groq import Groq
 
-# --- Настройка API ---
+# --- API Configuration ---
 client = Groq(api_key=os.environ.get("GROQ_API_KEY"))
 
-# --- Parsers library ---
+# --- Parser Functions ---
 def clean_content(element):
+    """
+    Remove unnecessary tags and return clean text.
+    Limits text length to ensure efficient token usage.
+    """
     if not element:
         return ""
-    for tag in element(['script', 'style', 'noscript', 'iframe', 'ins', 'header', 'footer', 'nav']):
+    for tag in element(['script', 'style', 'noscript', 'iframe', 'ins', 'header', 'footer', 'nav', 'aside', 'svg']):
         tag.extract()
-    return element.get_text(separator=" ", strip=True)
+    text = element.get_text(separator=" ", strip=True)
+    return text[:2500]  # Cap content length to maintain stability
 
-def parse_itvmg(soup):
-    return clean_content(soup.find('div', itemprop='articleBody'))
-
-def parse_rivne1(soup):
-    return clean_content(soup.find('div', class_='articleBody'))
-
-def parse_rp_rv(soup):
-    return clean_content(soup.find('div', class_='entry-content'))
-
-def parse_rayon(soup):
-    return clean_content(soup.find('article'))
-
-def parse_teza(soup):
-    return clean_content(soup.find('div', class_='post-content'))
-
-def parse_horyn(soup):
-    return clean_content(soup.find('div', class_='entry-content'))
+def parse_itvmg(soup): return clean_content(soup.find('div', itemprop='articleBody'))
+def parse_rivne1(soup): return clean_content(soup.find('div', class_='articleBody'))
+def parse_rp_rv(soup): return clean_content(soup.find('div', class_='entry-content'))
+def parse_rayon(soup): return clean_content(soup.find('article'))
+def parse_teza(soup): return clean_content(soup.find('div', class_='post-content'))
+def parse_horyn(soup): return clean_content(soup.find('div', class_='entry-content'))
 
 def parse_rivnepost(soup):
-    # Пытаемся найти основной контент
     content = soup.find('div', class_='article-body') or soup.find('article')
     return clean_content(content) if content else soup.get_text(separator=" ", strip=True)
 
@@ -45,6 +39,7 @@ def parse_rivnemedia(soup):
     return clean_content(content) if content else soup.get_text(separator=" ", strip=True)
 
 def get_parser_by_url(url):
+    """Select the appropriate parser based on the domain."""
     if 'itvmg.com' in url: return parse_itvmg
     if 'rivne1.tv' in url: return parse_rivne1
     if 'rp.rv.ua' in url: return parse_rp_rv
@@ -55,8 +50,9 @@ def get_parser_by_url(url):
     if 'rivne.media' in url: return parse_rivnemedia
     return None
 
-# --- Main logic ---
+# --- Core Logic ---
 def send_to_ai(prompt_text):
+    """Send individual article content to Groq for analysis."""
     chat_completion = client.chat.completions.create(
         messages=[{"role": "user", "content": prompt_text}],
         model="llama-3.3-70b-versatile",
@@ -64,63 +60,63 @@ def send_to_ai(prompt_text):
     return chat_completion.choices[0].message.content
 
 def get_latest_report():
+    """Find the most recent file ending with _report.txt."""
     files = glob.glob("*_report.txt")
     return max(files, key=os.path.getctime) if files else None
 
 def extract_urls(file_path):
+    """Extract all HTTP/HTTPS links from the report file."""
     with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
-    # Ищем любую ссылку, начинающуюся с http
     return re.findall(r'https?://\S+', content)
 
-def process_and_create_prompt():
+def process_and_create_report():
     report_file = get_latest_report()
     if not report_file:
         print("No report file found.")
         return
 
-    print(f"DEBUG: Анализирую файл: {report_file}")
     urls = extract_urls(report_file)
-    print(f"DEBUG: Найдено ссылок: {len(urls)}")
+    print(f"Found {len(urls)} links to process.")
     
-    articles_data = []
-    for url in urls:
-        try:
-            headers = {'User-Agent': 'Mozilla/5.0'}
-            response = requests.get(url, timeout=15, headers=headers)
-            soup = BeautifulSoup(response.content, 'html.parser')
-            parser = get_parser_by_url(url)
-            
-            # Если парсера нет, берем весь текст страницы
-            text = parser(soup) if parser else clean_content(soup.find('body'))
-            title = soup.title.string.strip() if soup.title else "No Title"
-            
-            if len(text) > 50: # Сохраняем, если вытянули хоть что-то осмысленное
-                articles_data.append(f"### Заголовок: {title}\nИсточник: {url}\nТекст: {text}\n---")
-        except Exception as e:
-            print(f"Error processing {url}: {e}")
-
-    if not articles_data:
-        print("No content extracted from links.")
-        return
-
-    # Загружаем промпт
-    base_prompt = "Проанализируй следующие статьи:"
+    date_str = datetime.datetime.now().strftime("%y%m%d")
+    output_filename = f"{date_str}_media_analysis.txt"
+    
+    # Load analysis instructions
+    base_prompt = "Analyze this article, specifically looking for mentions of 'Дубно' or local context:"
     if os.path.exists('prompt.txt'):
         with open('prompt.txt', 'r', encoding='utf-8') as f:
             base_prompt = f.read()
 
-    full_prompt = (base_prompt + "\n\n" + "\n".join(articles_data))
+    with open(output_filename, 'w', encoding='utf-8') as f:
+        f.write(f"MEDIA ANALYSIS REPORT - {datetime.datetime.now().strftime('%Y-%m-%d')}\n")
+        f.write("="*60 + "\n\n")
 
-    with open('prompt_w.txt', 'w', encoding='utf-8') as f:
-        f.write(full_prompt)
-
-    # Обработка через Groq
-    analysis_result = send_to_ai(full_prompt)
-    
-    date_str = datetime.datetime.now().strftime("%y%m%d")
-    with open(f"{date_str}_media_analysis.txt", 'w', encoding='utf-8') as f:
-        f.write(analysis_result)
+        for url in urls:
+            try:
+                print(f"Processing: {url}")
+                headers = {'User-Agent': 'Mozilla/5.0'}
+                response = requests.get(url, timeout=15, headers=headers)
+                soup = BeautifulSoup(response.content, 'html.parser')
+                
+                parser = get_parser_by_url(url)
+                text = parser(soup) if parser else clean_content(soup.find('body'))
+                title = soup.title.string.strip() if soup.title else "No Title"
+                
+                if len(text) > 100:
+                    full_prompt = f"{base_prompt}\n\nTitle: {title}\nContent: {text}"
+                    analysis = send_to_ai(full_prompt)
+                    
+                    f.write(f"ARTICLE: {title}\n")
+                    f.write(f"URL: {url}\n")
+                    f.write(f"ANALYSIS:\n{analysis}\n")
+                    f.write("-" * 30 + "\n\n")
+                    
+                    # Rate limiting: wait 1 second between API calls
+                    time.sleep(1)
+            except Exception as e:
+                print(f"Error processing {url}: {e}")
+                f.write(f"Error processing {url}: {e}\n\n")
 
 if __name__ == "__main__":
-    process_and_create_prompt()
+    process_and_create_report()
