@@ -4,10 +4,10 @@ import re
 import datetime
 import requests
 from bs4 import BeautifulSoup
-from google import genai
+import google.genai as genai
 
 # --- Настройка API ---
-# Используем новую клиентскую библиотеку google-genai
+# Используем новую клиентскую библиотеку
 client = genai.Client(api_key=os.environ.get("GOOGLE_API_KEY"))
 
 # --- Parsers library ---
@@ -51,7 +51,7 @@ def get_parser_by_url(url):
 
 # --- Main logic ---
 def send_to_gemini(prompt_text):
-    # Используем самую актуальную модель
+    # Используем метод client.models.generate_content
     response = client.models.generate_content(
         model='gemini-2.0-flash',
         contents=prompt_text,
@@ -94,7 +94,7 @@ def process_and_create_prompt():
     else:
         base_prompt = "Проанализируй следующие статьи:"
 
-    # Замена ключевого слова (если оно есть в prompt.txt)
+    # Замена ключевого слова
     full_prompt = (base_prompt + "\n\n" + "\n".join(articles_data)).replace('redneck', 'ВАШЕ_КЛЮЧЕВОЕ_СЛОВО')
 
     with open('prompt_w.txt', 'w', encoding='utf-8') as f:
