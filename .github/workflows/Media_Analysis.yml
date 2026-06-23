@@ -23,17 +23,18 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install requests beautifulsoup4
+          python -m pip install requests beautifulsoup4 google-generativeai
 
       - name: Run media analysis script
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
         run: python media_analysis.py
 
       - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
-          # Додаємо файл, якщо він був змінений
-          git add prompt_w.txt
-          # Комітимо тільки якщо були зміни
-          git commit -m "Update prompt_w.txt with fresh media analysis [skip ci]" || echo "No changes to commit"
+          # Додаємо результати аналізу та промпт, якщо вони з'явилися
+          git add *_media_analysis.txt prompt_w.txt || echo "No files to add"
+          git commit -m "Update media analysis report [skip ci]" || echo "No changes to commit"
           git push
