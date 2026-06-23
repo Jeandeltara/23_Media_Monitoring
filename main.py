@@ -7,15 +7,16 @@ from dateutil import parser
 
 def parse_rss_feed(url, start_time, end_time):
     """
-    Сканирует RSS-ленты стандартных новостных ресурсов.
+    Scans RSS feeds of standard news resources and returns a list of article URLs 
+    published within the specified time interval.
     """
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     found_urls = []
-    print(f"  --> Сканирую RSS: {url}...")
+    print(f"  --> Scanning RSS: {url}...")
     try:
         response = requests.get(url, headers=headers, timeout=10)
         if response.status_code != 200:
-            print(f"      [Ошибка] Ошибка HTTP {response.status_code}")
+            print(f"      [Error] HTTP Error {response.status_code}")
             return found_urls
         soup = BeautifulSoup(response.text, "xml")
         items = soup.find_all("item")
@@ -36,21 +37,21 @@ def parse_rss_feed(url, start_time, end_time):
                 count_before_time += 1
         
         if count_before_time > 0:
-            print(f"      [Успех] Найдено {count_before_time} новостей в интервале времени.")
+            print(f"      [Success] Found {count_before_time} news items in the time interval.")
     except requests.RequestException as e:
-        print(f"      [Ошибка] Ошибка запроса: {e}")
+        print(f"      [Error] Request error: {e}")
     return found_urls
 
 def parse_rayon_site(base_url, start_time, end_time):
     """
-    Сканирует общую ленту новостей Rayon.in.ua и собирает ВСЕ ссылки на статьи.
+    Scans the general news feed of Rayon.in.ua and collects all article links.
     """
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     target_url = base_url.rstrip('/') + "/news"
     collected_links = []
     
     try:
-        print(f"  --> Сканирую общую ленту Rayon: {target_url}...")
+        print(f"  --> Scanning general Rayon feed: {target_url}...")
         response = requests.get(target_url, headers=headers, timeout=10)
         if response.status_code != 200:
             return collected_links
@@ -70,15 +71,15 @@ def parse_rayon_site(base_url, start_time, end_time):
                 if full_url not in collected_links:
                     collected_links.append(full_url)
                     
-        print(f"      [Успех] Собрано {len(collected_links)} потенциальных ссылок для проверки.")
+        print(f"      [Success] Collected {len(collected_links)} potential links for verification.")
     except Exception as e:
-        print(f"      [Ошибка] При сборе ссылок с {base_url}: {e}")
+        print(f"      [Error] While collecting links from {base_url}: {e}")
         
     return collected_links
 
 def parse_charivne_site(start_time, end_time):
     """
-    Парсит страницы "Усі новини" сайта charivne.info с контролем даты для пагинации.
+    Parses the "All News" section of charivne.info with date control for pagination.
     """
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     base_url = "https://charivne.info"
@@ -92,7 +93,7 @@ def parse_charivne_site(start_time, end_time):
     yesterday_str = start_time.strftime("%d").lstrip('0')
     yesterday_month = start_time.month
     
-    print(f"  --> Сканирую charivne.info (замена RSS)...")
+    print(f"  --> Scanning charivne.info (RSS replacement)...")
     
     pages_to_parse = [1, 2]
     
@@ -133,30 +134,29 @@ def parse_charivne_site(start_time, end_time):
                     collected_links.append(full_url)
                     page_links_count += 1
             
-            print(f"      Страница {page}: Собрано {page_links_count} ссылок.")
+            print(f"      Page {page}: Collected {page_links_count} links.")
             
             if page == 1 and has_yesterday_date:
-                print("      [Инфо] На первой странице обнаружена предыдущая дата. Вторая страница не требуется.")
+                print("      [Info] Previous date detected on the first page. Second page is not required.")
                 break
                 
         except Exception as e:
-            print(f"      [Ошибка] При парсинге страницы {page} на charivne.info: {e}")
+            print(f"      [Error] While parsing page {page} on charivne.info: {e}")
             break
 
-    print(f"      [Успех] Итого с charivne.info отправлено на фильтрацию: {len(collected_links)} ссылок.")
+    print(f"      [Success] Total sent for filtering: {len(collected_links)} links.")
     return collected_links
 
 def parse_vse_rv_site(start_time, end_time):
     """
-    Сканирует одну страницу ленты новостей сайта ВСЕ (vse.rv.ua/strichka.html) 
-    и собирает все ссылки на публикации.
+    Scans the news feed of vse.rv.ua (strichka.html) and collects all publication links.
     """
     base_url = "https://vse.rv.ua"
     target_url = f"{base_url}/strichka.html"
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     collected_links = []
     
-    print(f"  --> Сканирую ленту ВСЕ: {target_url} (замена RSS)...")
+    print(f"  --> Scanning VSE feed: {target_url} (RSS replacement)...")
     try:
         response = requests.get(target_url, headers=headers, timeout=10)
         if response.status_code != 200:
@@ -173,20 +173,23 @@ def parse_vse_rv_site(start_time, end_time):
                 if full_url not in collected_links:
                     collected_links.append(full_url)
                     
-        print(f"      [Успех] Собрано {len(collected_links)} потенциальных ссылок с vse.rv.ua.")
+        print(f"      [Success] Collected {len(collected_links)} potential links from vse.rv.ua.")
     except Exception as e:
-        print(f"      [Ошибка] При сборе ссылок с {target_url}: {e}")
+        print(f"      [Error] While collecting links from {target_url}: {e}")
         
     return collected_links
 
 def parse_radiotrek_site(start_time, end_time):
+    """
+    Scans Radiotrek news feed by identifying daily blocks in the page text.
+    """
     base_url = "https://radiotrek.rv.ua"
     url = f"{base_url}/news/"
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     found_urls = []
     
     str_day_today = str(end_time.day)
-    print(f"  --> Сканирую Радиотрек ({url})...")
+    print(f"  --> Scanning Radiotrek ({url})...")
     
     try:
         response = requests.get(url, headers=headers, timeout=10)
@@ -208,7 +211,7 @@ def parse_radiotrek_site(start_time, end_time):
                 break
         
         if start_index is None:
-            print("      [Внимание] Не удалось надежно определить границы блоков дней на Радиотреке.")
+            print("      [Warning] Failed to reliably detect daily block boundaries on Radiotrek.")
             return found_urls
             
         target_nodes = all_text_nodes[start_index:] if end_index is None else all_text_nodes[start_index:end_index]
@@ -219,18 +222,21 @@ def parse_radiotrek_site(start_time, end_time):
                 if href and re.search(r"/news/.*_\d+\.html", href):
                     found_urls.append(href if href.startswith("http") else base_url.rstrip("/") + href)
     except requests.RequestException as e:
-        print(f"      [Ошибка] {e}")
+        print(f"      [Error] {e}")
         
-    print(f"      [Успех] Собрано {len(set(found_urls))} потенциальных ссылок.")
+    print(f"      [Success] Collected {len(set(found_urls))} potential links.")
     return list(set(found_urls))
 
 def parse_suspilne_site(start_time, end_time):
+    """
+    Scans Suspilne Media regional news feed with pagination and timestamp verification.
+    """
     base_url = "https://suspilne.media"
     url_regional = f"{base_url}/rivne/"
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     found_urls = []
     page = 1
-    print(f"  --> Сканирую Суспильне ({url_regional})...")
+    print(f"  --> Scanning Suspilne ({url_regional})...")
     
     while True:
         url = f"{url_regional}?p={page}"
@@ -271,18 +277,18 @@ def parse_suspilne_site(start_time, end_time):
         except requests.RequestException:
             break
             
-    print(f"      [Успех] Собрано {len(set(found_urls))} новостей строго по времени.")
+    print(f"      [Success] Collected {len(set(found_urls))} news items strictly by time.")
     return list(set(found_urls))
 
 def filter_pages_by_keyword(urls, keywords, start_time, end_time):
     """
-    Обходит список URL, извлекает контент по специфическим шаблонам сайтов,
-    проверяет временной интервал публикации и ищет ключевые слова/регулярки.
+    Iterates through URLs, extracts content based on site-specific templates,
+    validates the publication timestamp, and searches for keywords or regex patterns.
     """
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     filtered_results = []
 
-    print(f"\n[ЭТАП 2] Глубокая контентная фильтрация ({len(urls)} ссылок)...")
+    print(f"\n[Stage 2] Deep content filtering ({len(urls)} links)...")
 
     for url in urls:
         try:
@@ -293,11 +299,11 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
             response.encoding = response.apparent_encoding
             soup = BeautifulSoup(response.text, "html.parser")
 
-            title = soup.title.string.strip() if soup.title else "Без заголовка"
+            title = soup.title.string.strip() if soup.title else "No title"
             time_tag = None
             clean_text = ""
 
-            # 1. Шаблон для сети RAYON
+            # 1. Template for RAYON network
             if "rayon.in.ua" in url:
                 first_article = soup.find("article")
                 if first_article:
@@ -308,7 +314,7 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
                 else:
                     continue
 
-            # 2. Шаблон для RIVNE.MEDIA
+            # 2. Template for RIVNE.MEDIA
             elif "rivne.media" in url:
                 article_container = soup.find("article")
                 if article_container:
@@ -319,7 +325,7 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
                 else:
                     continue
 
-            # 3. Шаблон для CHARIVNE.INFO
+            # 3. Template for CHARIVNE.INFO
             elif "charivne.info" in url:
                 article_container = soup.find("article") or soup.find("div", class_="the-news-container") or soup.find("div", class_="single-news")
                 if article_container:
@@ -333,7 +339,7 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
                         script.extract()
                     clean_text = soup.get_text(separator=" ")
 
-            # 4. Шаблон для ВСЕ (vse.rv.ua) - Изолируем фрейм статьи
+            # 4. Template for VSE.RV.UA
             elif "vse.rv.ua" in url:
                 article_container = soup.find("div", class_="article-inner__content")
                 if article_container:
@@ -347,14 +353,14 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
                         script.extract()
                     clean_text = soup.get_text(separator=" ")
 
-            # 5. Дефолтный шаблон для остальных сайтов (Радиотрек, Суспильне и т.д.)
+            # 5. Default template
             else:
                 time_tag = soup.find("time") or soup.find("meta", property="article:published_time")
                 for script in soup(["script", "style", "noscript"]):
                     script.extract()
                 clean_text = soup.get_text(separator=" ")
 
-            # Валидация времени публикации
+            # Validate publication time
             if time_tag:
                 try:
                     pub_time_str = time_tag.get("datetime") or time_tag.get("content") or time_tag.text.strip()
@@ -364,15 +370,13 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
                 except Exception:
                     pass
 
-            # Проверка контента на ключевые слова или регулярные выражения
+            # Check content for keywords or regex patterns
             text_to_check = f"{title} {clean_text}".lower()
             
             for keyword in keywords:
-                # Если фраза содержит спецсимволы регулярок, ищем её напрямую
                 if any(char in keyword for char in ".*{}[]()|+?^$"):
                     match = re.search(keyword.lower(), text_to_check, flags=re.UNICODE)
                 else:
-                    # Обычные слова изолируем границами \b
                     pattern = r'\b' + re.escape(keyword.lower()) + r'\b'
                     match = re.search(pattern, text_to_check, flags=re.UNICODE)
                 
@@ -387,25 +391,22 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
         except Exception as e:
             continue
 
-    print(f"  --> Фильтрация окончена. Найдено целевых новостей: {len(filtered_results)}")
+    print(f"  --> Filtering complete. Target news items found: {len(filtered_results)}")
     return filtered_results
 
 
 if __name__ == "__main__":
-    # Вычисление временного диапазона мониторинга (за последние 24 часа от 14:00)
     end_time = datetime.now().replace(hour=14, minute=0, second=0, microsecond=0)
     start_time = end_time - timedelta(days=1)
 
     print("="*70)
-    print(" ЗАПУСК МОНИТОРИНГА ПРЕССЫ")
-    print(f" Целевой интервал: c {start_time} по {end_time}")
+    print(" STARTING PRESS MONITORING")
+    print(f" Target interval: from {start_time} to {end_time}")
     print("="*70)
 
     all_links = []
 
-    # -----------------------------------------------------------------
-    # ШАГ 1: Сбор через RSS
-    # -----------------------------------------------------------------
+    # Step 1: Collect via RSS
     rss_urls = [
         "https://rivnepost.rv.ua/rss",
         "https://ogo.ua/feed",
@@ -415,83 +416,68 @@ if __name__ == "__main__":
         "https://teza.tv/rss"
     ]
 
-    print("\n[ЭТАП 1.1] Сбор ссылок с RSS-источников...")
+    print("\n[Stage 1.1] Collecting links from RSS sources...")
     for rss_url in rss_urls:
         links_from_rss = parse_rss_feed(rss_url, start_time, end_time)
         all_links.extend(links_from_rss)
 
-    # -----------------------------------------------------------------
-    # ШАГ 2: Сбор через HTML-ленты (Сайты без RSS)
-    # -----------------------------------------------------------------
-    print("\n[ЭТАП 1.2] Сбор ссылок со страниц новостей (HTML-парсинг)...")
+    # Step 2: Collect via HTML scraping
+    print("\n[Stage 1.2] Collecting links from news pages (HTML parsing)...")
 
-    # А. Сеть сайтов "Район"
     rayon_sites = ["https://rivne.rayon.in.ua", "https://dubno.rayon.in.ua"]
     for site in rayon_sites:
         links_from_rayon = parse_rayon_site(site, start_time, end_time)
         all_links.extend(links_from_rayon)
 
-    # Б. Стабильные HTML-модули (Радиотрек и Суспильне)
     links_from_radiotrek = parse_radiotrek_site(start_time, end_time)
     all_links.extend(links_from_radiotrek)
 
     links_from_suspilne = parse_suspilne_site(start_time, end_time)
     all_links.extend(links_from_suspilne)
     
-    # В. Чаривне (замена RSS, пагинация)
     links_from_charivne = parse_charivne_site(start_time, end_time)
     all_links.extend(links_from_charivne)
 
-    # Г. Сайт ВСЕ (замена RSS, парсинг одной страницы ленты)
     links_from_vse = parse_vse_rv_site(start_time, end_time)
     all_links.extend(links_from_vse)
 
-    # -----------------------------------------------------------------
-    # ШАГ 3: Очистка буфера от дубликатов
-    # -----------------------------------------------------------------
+    # Step 3: Deduplication
     all_links = list(set(all_links))
-    print(f"\n Всего уникальных кандидатов отправлено на глубокую фильтрацию: {len(all_links)}")
+    print(f"\n Total unique candidates sent for deep filtering: {len(all_links)}")
 
-    # -----------------------------------------------------------------
-    # ШАГ 4: Глубокая контентная фильтрация по шаблонам
-    # -----------------------------------------------------------------
+    # Step 4: Content filtering
     keywords_list = [r"23.{0,4} інженерно"] 
     TARGET_NEWS_LIST = filter_pages_by_keyword(all_links, keywords_list, start_time, end_time)
 
-    # -----------------------------------------------------------------
-    # ШАГ 5: Формирование структуры финального отчета
-    # -----------------------------------------------------------------
+    # Step 5: Report generation
     print("\n" + "="*70)
-    print(f" ФИНАЛЬНЫЙ ОТЧЕТ МОНИТОРИНГА (Найдено статей: {len(TARGET_NEWS_LIST)})")
+    print(f" FINAL MONITORING REPORT (Articles found: {len(TARGET_NEWS_LIST)})")
     print("="*70)
     
     report_lines = []
-    report_lines.append(f"ОТЧЕТ МОНИТОРИНГА СМИ ЗА ПЕРИОД: {start_time} -> {end_time}")
-    report_lines.append(f"Ключевые слова поиска: {', '.join(keywords_list)}")
-    report_lines.append(f"Всего проанализировано уникальных ссылок: {len(all_links)}")
+    report_lines.append(f"MEDIA MONITORING REPORT FOR PERIOD: {start_time} -> {end_time}")
+    report_lines.append(f"Search keywords: {', '.join(keywords_list)}")
+    report_lines.append(f"Total unique links analyzed: {len(all_links)}")
     report_lines.append("-" * 60)
     
     if TARGET_NEWS_LIST:
         for idx, news in enumerate(TARGET_NEWS_LIST, 1):
-            entry = f"{idx}. {news['title']}\n   Ссылка: {news['url']}\n   Найдено по ключу: [{news['matched_keyword']}]\n"
+            entry = f"{idx}. {news['title']}\n   URL: {news['url']}\n   Matched by keyword: [{news['matched_keyword']}]\n"
             print(entry)
             report_lines.append(entry)
     else:
-        no_news_msg = "За указанный период релевантных публикаций не обнаружено."
+        no_news_msg = "No relevant publications found for the specified period."
         print(no_news_msg)
         report_lines.append(no_news_msg)
         
     report_lines.append("="*70)
     
-    # -----------------------------------------------------------------
-    # ШАГ 6: Автоматическое именование файла в формате YYMMDD_hhmm_report.txt
-    # -----------------------------------------------------------------
-    # Используем end_time (или datetime.now()) для генерации имени файла
+    # Step 6: File export
     output_filename = end_time.strftime("%y%m%d_%H%M_report.txt")
     
     try:
         with open(output_filename, "w", encoding="utf-8") as file:
             file.write("\n".join(report_lines))
-        print(f"\n[Успех] Отчет успешно создан локально: {output_filename}")
+        print(f"\n[Success] Report created locally: {output_filename}")
     except Exception as e:
-        print(f"\n[Ошибка] Не удалось записать отчет в файл: {e}")
+        print(f"\n[Error] Failed to write report to file: {e}")
