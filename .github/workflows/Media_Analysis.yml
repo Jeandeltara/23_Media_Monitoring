@@ -1,0 +1,39 @@
+name: Media Analysis Workflow
+
+on:
+  schedule:
+    # Запуск щодня о 09:00 за UTC
+    - cron: '0 9 * * *'
+  # Можливість запустити вручну з вкладки Actions
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests beautifulsoup4
+
+      - name: Run media analysis script
+        run: python media_analysis.py
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          # Додаємо файл, якщо він був змінений
+          git add prompt_w.txt
+          # Комітимо тільки якщо були зміни
+          git commit -m "Update prompt_w.txt with fresh media analysis [skip ci]" || echo "No changes to commit"
+          git push
