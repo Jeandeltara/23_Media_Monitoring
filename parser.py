@@ -163,6 +163,6 @@ if __name__ == "__main__":
         print(msg)
         report_lines.append(msg)
         
-    f_name = end_time.strftime("%y%m%d_%H%M_report.txt")
+    f_name = end_time.strftime("%y%m%d_report.txt")
     with open(f_name, "w", encoding="utf-8") as f: f.write("\n".join(report_lines))
     print(f"\n[Успішно] Звіт створено: {f_name}")
