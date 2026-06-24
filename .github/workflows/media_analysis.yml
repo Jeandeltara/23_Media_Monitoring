@@ -1,4 +1,4 @@
-name: Media Analysis Workflow
+name: run analysis
 
 on:
   schedule:
@@ -37,5 +37,5 @@ jobs:
           git config --global user.email 'action@github.com'
           # Додаємо результати аналізу та промпт, якщо вони з'явилися
           git add *_media_analysis.txt prompt_w.txt || echo "No files to add"
-          git commit -m "Update media analysis report [skip ci]" || echo "No changes to commit"
+          git commit -m "Оновлення аналітичного звіту [skip ci]" || echo "No changes to commit"
           git push
