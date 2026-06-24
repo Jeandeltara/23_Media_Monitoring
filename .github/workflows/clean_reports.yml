@@ -1,4 +1,4 @@
-name: Cleanup Old Reports
+name: cleanup reports workflow
 
 on:
   schedule:
