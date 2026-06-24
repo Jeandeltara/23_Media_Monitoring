@@ -1,4 +1,4 @@
-name: run analysis
+name: run analysis workflow
 
 on:
   schedule:
