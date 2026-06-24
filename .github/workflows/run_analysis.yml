@@ -36,6 +36,6 @@ jobs:
           git config --global user.name 'GitHub Action'
           git config --global user.email 'action@github.com'
           # Додаємо результати аналізу та промпт, якщо вони з'явилися
-          git add *_media_analysis.txt prompt_w.txt || echo "No files to add"
+          git add *_analysis_report.txt || echo "No files to add"
           git commit -m "Оновлення аналітичного звіту [skip ci]" || echo "No changes to commit"
           git push
