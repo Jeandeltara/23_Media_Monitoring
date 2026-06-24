@@ -1,4 +1,4 @@
-name: Automated News Monitoring System
+name: Run parser
 
 on:
   schedule:
@@ -13,31 +13,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Проверяем код репозитория
+    - name: Перевірка коду репозіторія
       uses: actions/checkout@v4
       with:
         persist-credentials: true
 
-    - name: Настраиваем Python
+    - name: Налаштування Python
       uses: actions/setup-python@v5
       with:
         python-version: '3.10'
 
-    - name: Устанавливаем базовые библиотеки
+    - name: Базові бібліотеки
       run: |
         python -m pip install --upgrade pip
         pip install requests beautifulsoup4 python-dateutil lxml
 
-    - name: Сбор новостей (Парсер)
-      run: python main.py
+    - name: Збір новин (парсінг)
+      run: python parser.py
 
-    - name: Синхронизация файлов с репозиторием GitHub
+    - name: Збереження файлів до репозіторію GitHub
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
         
-        # Добавляем все отчеты, подходящие под новый формат имени (YYMMDD_hhmm_report.txt)
+        # Adding reports (YYMMDD_hhmm_report.txt)
         git add *_report.txt
         
-        # Коммитим и пушим только если появились новые файлы отчетов
+        # Commiting and ushing report files
         git diff --cached --quiet || (git commit -m "Автоматическое обновление архива отчетов [skip ci]" && git push origin main)
