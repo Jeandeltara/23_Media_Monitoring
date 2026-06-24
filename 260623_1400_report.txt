@@ -1,6 +1,0 @@
-MEDIA MONITORING REPORT FOR PERIOD: 2026-06-22 14:00:00 -> 2026-06-23 14:00:00
-Search keywords: 23.{0,4} інженерно
-Total unique links analyzed: 108
-------------------------------------------------------------
-No relevant publications found for the specified period.
-======================================================================
