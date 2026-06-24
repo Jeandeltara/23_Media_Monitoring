@@ -1,0 +1,86 @@
+ЗВІТ ЗА ПЕРІОД: 2026-06-23 14:00:00 -> 2026-06-24 14:00:00
+Ключові слова: 23.{0,4} інженерно, дубно
+------------------------------------------------------------
+1. Дубенський замок став локацією зйомок історичного проєкту «Королівська доба» –                Rayon.in.ua
+   URL: https://dubno.rayon.in.ua/news/1081729-dubenskii-zamok-stav-lokacijeiu-ziomok-istoricnogo-projektu-korolivska-doba
+   Ключ: [дубно]
+
+2. В Україні запустили нові мотиваційні контракти для ЗСУ –                Rayon.in.ua
+   URL: https://life.rayon.in.ua/news/1081724-citki-termini-ta-zarplata-do-300-tisiac-iak-pidpisati-novii-motivaciinii-kontrakt-iz-zsu
+   Ключ: [дубно]
+
+3. Представницю України обрали до складу Комітету ООН з прав дитини –                Rayon.in.ua
+   URL: https://zakordon.rayon.in.ua/news/1081776-predstavniciu-ukrayini-svitlanu-ilcuk-obrali-do-skladu-komitetu-oon-z-prav-ditini
+   Ключ: [дубно]
+
+4. Вакансія директора КП «Агентство розвитку Гощі-Тучин» – Гощанська громада –                Rayon.in.ua
+   URL: https://hoshcha.rayon.in.ua/news/1081734-goshhanska-gromada-sukaje-kerivnika-dlia-kp-agentstvo-rozvitku-goshhi-tucin
+   Ключ: [дубно]
+
+5. Кабмін спрямував додаткові 220 мільйонів гривень на армію –                Rayon.in.ua
+   URL: https://rayon.in.ua/news/1081733-kabmin-spriamuvav-dodatkovi-220-milioniv-griven-na-armiiu
+   Ключ: [дубно]
+
+6. Варковицька громада повідомила про загибель захисника України Вячеслава Баняса –                Rayon.in.ua
+   URL: https://dubno.rayon.in.ua/news/1081744-znik-bezvisti-dva-roki-tomu-pidtverdilas-zagibel-viaceslava-baniasa-z-varkovickoyi-gromadi
+   Ключ: [дубно]
+
+7. Україна передала оновлену заявку на членство в ОЕСР та очікує на статус кандидата восени –                Rayon.in.ua
+   URL: https://zakordon.rayon.in.ua/news/1081778-ukrayina-peredala-oesr-onovlenu-zaiavku-na-clenstvo-ta-ocikuje-na-status-kandidata-voseni-zelenskii
+   Ключ: [дубно]
+
+8. Ціни, що дивують: У Рівному працює унікальний склад-магазин "Дивоцін". Рівне. Новини - Новини Рівного. Відео on-line. Все про телекомпанію - Телеканал «Рівне 1»
+   URL: https://rivne1.tv/news/173659-tsini-shcho-divuyut-u-rivnomu-pratsyue-unikalniy-sklad-mahazin-divotsin
+   Ключ: [дубно]
+
+9. Зупинити Росію: українські та польські медіа виступили зі спільною заявою через кризу у відносинах –                Rayon.in.ua
+   URL: https://zakordon.rayon.in.ua/news/1081792-objednatisia-proti-rosiyi-ukrayinski-ta-polski-media-vistupili-zi-spilnim-zvernenniam-cerez-krizu-u-vidnosinax
+   Ключ: [дубно]
+
+10. Обстановка на фронті на ранок 24 червня: оперативне зведення Генштабу –                Rayon.in.ua
+   URL: https://rayon.in.ua/news/1081796-operativna-informaciia-obstanovka-na-fronti-stanom-na-ranok-24-cervnia
+   Ключ: [дубно]
+
+11. Захисник Маріуполя з Рівненщини Ростислав Приступа – герой благодійної фотовиставки у Києві –                Rayon.in.ua
+   URL: https://rivne.rayon.in.ua/news/1081705-zaxisnik-mariupolia-ta-azovstali-z-rivnenshhini-rostislav-pristupa-geroi-blagodiinoyi-fotovistavki-u-kijevi
+   Ключ: [дубно]
+
+12. Історичні місця Карпат: що варто побачити під час подорожі –                Rayon.in.ua
+   URL: https://life.rayon.in.ua/news/1081735-tajemnici-girskix-xrebtiv-iaki-istoricni-miscia-vidvidati-pid-cas-vidpocinku-v-karpatax
+   Ключ: [дубно]
+
+13. Підтвердилась загибель захисника з Козинської громади Івана Берлінця –                Rayon.in.ua
+   URL: https://dubno.rayon.in.ua/news/1081727-cerez-rik-cekannia-pidtverdilas-zagibel-viiskovogo-z-kozinskoyi-gromadi-ivana-berlincia
+   Ключ: [дубно]
+
+14. Рятувальники завершили консервацію пошкодженого даху Успенського собору після російського удару –                Rayon.in.ua
+   URL: https://kultura.rayon.in.ua/news/1081765-dsns-zakonservuvala-poskodzenii-rosiiskoiu-atakoiu-dax-uspenskogo-soboru
+   Ключ: [дубно]
+
+15. «Район.Рівне» та вісім видань мережі підтвердили знак якості на Мапі рекомендованих медіа –                Rayon.in.ua
+   URL: https://rivne.rayon.in.ua/news/1081756-raionrivne-ta-shhe-sim-rivnenskix-vidan-merezi-pidtverdili-znak-iakosti-na-mapi-rekomendovanix-media
+   Ключ: [дубно]
+
+16. Втрати РФ за добу: ЗСУ ліквідували 1260 окупантів та 60 артсистем –                Rayon.in.ua
+   URL: https://rayon.in.ua/news/1081794-minus-1260-zagarbnikiv-i-ponad-60-odinic-artileriyi-u-genstabi-pidraxuvali-dobovi-vtrati-rf-na-fronti
+   Ключ: [дубно]
+
+17. Пропуск великих автобусів через ПП Дяківці – Раковець продовжили: деталі рішення –                Rayon.in.ua
+   URL: https://zakordon.rayon.in.ua/news/1081719-ukrayina-ta-rumuniia-domovilisia-pro-propusk-velikix-avtobusiv-cerez-punkt-diakivci-rakovec
+   Ключ: [дубно]
+
+18. Дайджест головних новин Рівненщини: 23 червня –                Rayon.in.ua
+   URL: https://rayon.in.ua/news/1081784-daidzest-golovnix-novin-rivnenshhini-23-cervnia
+   Ключ: [дубно]
+
+19. У Демидівській громаді говорили про адаптацію та життєстійкість внутрішньо переміщених осіб –                Rayon.in.ua
+   URL: https://demydivka.rayon.in.ua/news/1081748-u-demidivskii-gromadi-praciuvali-z-pereselenciami-nad-temoiu-adaptaciyi-ta-zittjestiikosti
+   Ключ: [дубно]
+
+20. Апеляційний суд підтвердив 2 роки для матері з Костополя, з вини якої дитина випала з 6 поверху –                Rayon.in.ua
+   URL: https://rivne.rayon.in.ua/news/1081707-apeliaciinii-sud-pidtverdiv-2-roki-uviaznennia-materi-z-kostopolia-z-vini-iakoyi-3-ricna-ditina-vipala-z-vikna-6-poverxu
+   Ключ: [дубно]
+
+21. У Дубні відбудеться благодійна ініціатива «Фестиваль добра» –                Rayon.in.ua
+   URL: https://dubno.rayon.in.ua/news/1081741-u-dubni-vidbudetsia-festival-dobra-dlia-pidtrimki-ditei-z-invalidnistiu
+   Ключ: [дубно]
