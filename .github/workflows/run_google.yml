@@ -1,4 +1,4 @@
-name: run google upload
+name: run google upload workflow
 
 on:
   workflow_dispatch:
