@@ -29,12 +29,15 @@ def cleanup_old_files():
         except ValueError:
             continue
 
-def get_report_files():
-    """Get list of files matching the YYMMDD_*.txt pattern."""
-    return glob.glob("[0-9][0-9][0-9][0-9][0-9][0-9]_*.txt")
+def get_report_date_prefix():
+    """Get the current date prefix (YYMMDD) to identify today's reports."""
+    return datetime.now().strftime("%y%m%d")
 
-def send_email(file_path):
-    """Send an email report using SMTP."""
+def send_email(date_prefix):
+    """
+    Concatenate YYMMDD_report.txt and YYMMDD_analysis_report.txt 
+    and send them via email.
+    """
     recipient = os.environ.get("EMAIL_RECIPIENT")
     smtp_user = os.environ.get("GMAIL_SMTP_USERNAME")
     smtp_pass = os.environ.get("GMAIL_SMTP_PASSWORD")
@@ -43,8 +46,27 @@ def send_email(file_path):
         print("Skipping email: missing environment variables.")
         return
 
-    with open(file_path, 'r', encoding='utf-8') as f:
-        content = f.read()
+    # Files to look for
+    report_file = f"{date_prefix}_report.txt"
+    analysis_file = f"{date_prefix}_analysis_report.txt"
+    
+    content = ""
+    
+    # Read first file
+    if os.path.exists(report_file):
+        with open(report_file, 'r', encoding='utf-8') as f:
+            content += f.read()
+    
+    # Append second file with two newlines
+    if os.path.exists(analysis_file):
+        if content:
+            content += "\n\n"
+        with open(analysis_file, 'r', encoding='utf-8') as f:
+            content += f.read()
+
+    if not content:
+        print("No report content found to send.")
+        return
 
     msg = EmailMessage()
     msg.set_content(content)
@@ -56,7 +78,7 @@ def send_email(file_path):
         with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
             smtp.login(smtp_user, smtp_pass)
             smtp.send_message(msg)
-        print(f"Email successfully sent for {file_path}")
+        print(f"Email successfully sent for date {date_prefix}")
     except Exception as e:
         print(f"Failed to send email: {e}")
 
@@ -68,9 +90,14 @@ def main():
         print("Error: GOOGLE_DRIVE_TOKEN not found!")
         return
 
-    report_files = get_report_files()
+    # Send email for today's files
+    date_prefix = get_report_date_prefix()
+    send_email(date_prefix)
+
+    # Upload process
+    report_files = glob.glob(f"{date_prefix}_*.txt")
     if not report_files:
-        print("No report files found.")
+        print("No report files found for upload.")
         return
 
     try:
@@ -79,10 +106,6 @@ def main():
         service = build('drive', 'v3', credentials=creds)
 
         for file_path in report_files:
-            # 1. Send via Email
-            send_email(file_path)
-
-            # 2. Upload to Drive
             timestamp = time.strftime("%H%M%S")
             parts = file_path.split('_', 1)
             temp_filename = f"{parts[0]}_{timestamp}_{parts[1]}"
