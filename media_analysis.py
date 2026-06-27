@@ -89,7 +89,7 @@ def process_and_create_report():
             base_prompt = f.read()
 
     with open(output_filename, 'w', encoding='utf-8') as f:
-        f.write(f"MEDIA ANALYSIS REPORT - {datetime.datetime.now().strftime('%Y-%m-%d')}\n")
+        f.write(f"АНАЛІТИЧНИЙ ЗВІТ - {datetime.datetime.now().strftime('%Y-%m-%d')}\n")
         f.write("="*60 + "\n\n")
 
         for url in urls:
