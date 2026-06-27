@@ -13,21 +13,23 @@ from googleapiclient.http import MediaFileUpload
 # Configuration for Google Drive
 FOLDER_ID = '1HLX_PykEsDvuOpp7gGnEoTaTYN49T050'
 
-def cleanup_old_files():
-    """Remove local files older than 3 days."""
-    print("Checking for outdated files...")
-    files = glob.glob("[0-9][0-9][0-9][0-9][0-9][0-9]_*.txt")
-    now = datetime.now()
+def cleanup_files():
+    """Remove all .txt files in the directory except prompt.txt."""
+    print("Starting cleanup of temporary files...")
+    
+    # Получаем список всех .txt файлов
+    files = glob.glob("*.txt")
     
     for file_path in files:
-        date_str = file_path[:6]
-        try:
-            file_date = datetime.strptime(date_str, "%y%m%d")
-            if now - file_date > timedelta(days=3):
-                os.remove(file_path)
-                print(f"Removed outdated file: {file_path}")
-        except ValueError:
+        # Пропускаем файл, который нельзя удалять
+        if file_path == "prompt.txt":
             continue
+            
+        try:
+            os.remove(file_path)
+            print(f"Removed file: {file_path}")
+        except Exception as e:
+            print(f"Error removing {file_path}: {e}")
 
 def get_report_date_prefix():
     """Get the current date prefix (YYMMDD) to identify today's reports."""
