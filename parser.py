@@ -135,7 +135,7 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
 
 if __name__ == "__main__":
     end_time = datetime.now().replace(hour=14, minute=0, second=0, microsecond=0)
-    start_time = end_time - timedelta(days=1)
+    start_time = end_time - timedelta(days=3)
     
     print("="*70 + "\n ПОЧАТОК МОНІТОРИНГУ ПРЕСИ\n" + "="*70)
     all_links = []
