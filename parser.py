@@ -6,10 +6,7 @@ from datetime import datetime, timedelta
 from dateutil import parser
 
 # --- КОНФІГУРАЦІЯ ---
-KEYWORDS_LIST = [
-    r"23.{0,4}\s+(?:окрем.{0,4}\s+)?інженерн.{0,4}(?:[- ]?позиційн.{0,4})?", 
-    r"А0451", "Гелюком"
-]
+KEYWORDS_LIST = [r"23.{0,4} інженерно", "А0451"]
 
 def parse_rss_feed(url, start_time, end_time):
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
@@ -125,7 +122,8 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
             clean_text = soup.get_text(separator=" ").lower()
             
             for keyword in keywords:
-                if re.search(keyword, combined_text, flags=re.UNICODE):
+                pattern = keyword if any(c in keyword for c in ".*{}[]()|+?^$") else r'\b' + re.escape(keyword.lower()) + r'\b'
+                if re.search(pattern, f"{title.lower()} {clean_text}", flags=re.UNICODE):
                     filtered_results.append({"url": url, "title": title, "matched_keyword": keyword})
                     break
         except Exception: 
@@ -134,7 +132,7 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
 
 if __name__ == "__main__":
     end_time = datetime.now().replace(hour=14, minute=0, second=0, microsecond=0)
-    start_time = end_time - timedelta(days=3)
+    start_time = end_time - timedelta(days=1)
     
     print("="*70 + "\n ПОЧАТОК МОНІТОРИНГУ ПРЕСИ\n" + "="*70)
     all_links = []
