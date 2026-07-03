@@ -8,7 +8,7 @@ from dateutil import parser
 # --- КОНФІГУРАЦІЯ ---
 KEYWORDS_LIST = [
     r"23.{0,4}\s+(?:окрем.{0,4}\s+)?інженерн.{0,4}(?:[- ]?позиційн.{0,4})?", 
-    r"А0451"
+    r"А0451", "Гелюком"
 ]
 
 def parse_rss_feed(url, start_time, end_time):
