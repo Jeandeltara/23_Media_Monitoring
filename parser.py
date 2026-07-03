@@ -125,8 +125,7 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
             clean_text = soup.get_text(separator=" ").lower()
             
             for keyword in keywords:
-                pattern = keyword if any(c in keyword for c in ".*{}[]()|+?^$") else r'\b' + re.escape(keyword.lower()) + r'\b'
-                if re.search(pattern, f"{title.lower()} {clean_text}", flags=re.UNICODE):
+                if re.search(keyword, combined_text, flags=re.UNICODE):
                     filtered_results.append({"url": url, "title": title, "matched_keyword": keyword})
                     break
         except Exception: 
