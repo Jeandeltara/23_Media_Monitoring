@@ -6,8 +6,8 @@ from datetime import datetime, timedelta
 from dateutil import parser
 
 keywords_list = [r"23.{0,4} інженерно", "рівне"] 
-    end_time = datetime.now().replace(hour=14, minute=0, second=0, microsecond=0)
-    start_time = end_time - timedelta(days=1)
+end_time = datetime.now().replace(hour=14, minute=0, second=0, microsecond=0)
+start_time = end_time - timedelta(days=1)
 
 def parse_rss_feed(url, start_time, end_time):
     """
