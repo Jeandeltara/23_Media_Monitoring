@@ -5,6 +5,10 @@ from bs4 import BeautifulSoup
 from datetime import datetime, timedelta
 from dateutil import parser
 
+keywords_list = [r"23.{0,4} інженерно", "рівне"] 
+    end_time = datetime.now().replace(hour=14, minute=0, second=0, microsecond=0)
+    start_time = end_time - timedelta(days=1)
+
 def parse_rss_feed(url, start_time, end_time):
     """
     Сканирует RSS-ленты стандартных новостных ресурсов.
@@ -392,10 +396,7 @@ def filter_pages_by_keyword(urls, keywords, start_time, end_time):
 
 
 if __name__ == "__main__":
-    # Вычисление временного диапазона мониторинга (за последние 24 часа от 14:00)
-    end_time = datetime.now().replace(hour=14, minute=0, second=0, microsecond=0)
-    start_time = end_time - timedelta(days=1)
-
+    
     print("="*70)
     print(" ЗАПУСК МОНИТОРИНГА ПРЕССЫ")
     print(f" Целевой интервал: c {start_time} по {end_time}")
@@ -455,7 +456,7 @@ if __name__ == "__main__":
     # -----------------------------------------------------------------
     # ШАГ 4: Глубокая контентная фильтрация по шаблонам
     # -----------------------------------------------------------------
-    keywords_list = [r"23.{0,4} інженерно", "рівне"] 
+    
     TARGET_NEWS_LIST = filter_pages_by_keyword(all_links, keywords_list, start_time, end_time)
 
     # -----------------------------------------------------------------
