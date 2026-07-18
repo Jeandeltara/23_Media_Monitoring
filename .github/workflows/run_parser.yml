@@ -57,3 +57,8 @@ jobs:
         git add full_report.txt brief_report.txt error_report.txt
         git diff --staged --quiet || git commit -m "Update reports [skip ci]"
         git push
+    - name: Install curl_cffi with dependencies
+      run: |
+        pip install --upgrade pip
+        pip install curl_cffi --no-cache-dir --force-reinstall
+        pip install beautifulsoup4 lxml python-dateutil playwright requests
