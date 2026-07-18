@@ -1,1 +1,3 @@
 18.07
+Рівне 1
+parse_rivne1_site: offset 0 - Timeout: Failed to perform, curl: (28) Operation timed out after 10002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.

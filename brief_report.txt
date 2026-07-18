@@ -1,55 +1,25 @@
+-- Увага! під час обробки зафіксовані помилки. Ймовірно результати не повні.
+
 18.07
 Район.in.ua
-Понад 10 тисяч дронів і 43 штурми на Покровському напрямку: зведення Генштабу
-https://rayon.in.ua/news/1087840-ponad-10-tisiac-droniv-i-43-sturmi-na-pokrovskomu-napriamku-zvedennia-genstabu
 За минулу добу ЗСУ знищили 1 420 російських окупантів
 https://rayon.in.ua/news/1087839-za-minulu-dobu-zsu-znishhili-1-420-rosiiskix-okupantiv
 У Рівному зустрілися з родинами зниклих безвісти нацгвардійців: розповіли про пошук і репатріацію
 https://rivne.rayon.in.ua/news/1087801-u-rivnomu-zustrilisia-z-rodinami-zniklix-bezvisti-nacgvardiiciv-rozpovili-pro-posuk-i-repatriaciiu
-Сміття, пісня, їжа і тирса з парафіном – для допомоги воїнам: історії волонтерок із Локач, Дубна, Моршина і Ківерців
-https://rayon.in.ua/news/1087811-smittia-pisnia-yiza-i-tirsa-z-parafinom-dlia-dopomogi-voyinam-istoriyi-volonterok-iz-lokac-dubna-morsina-i-kiverciv
-Жіночий футбол України: визначено склад учасників чемпіонату Першої ліги 26/27
-https://sport.rayon.in.ua/news/1087805-zinocii-futbol-ukrayini-viznaceno-sklad-ucasnikiv-cempionatu-persoyi-ligi-2627
-На День Гощанської громади відкрили виставку старовинних сорочок, хусток і рушників із «Скрині» Тетяни Скрябіної
-https://hoshcha.rayon.in.ua/news/1087764-na-den-goshhanskoyi-gromadi-vidkrili-vistavku-starovinnix-sorocok-xustok-i-rusnikiv-iz-skrini-tetiani-skriabinoyi
 Забудовник не заплатив пайову участь: прокуратура повернула до бюджету Рівного понад мільйон гривень
 https://rivne.rayon.in.ua/news/1087799-zabudovnik-ne-zaplativ-paiovu-ucast-prokuratura-povernula-do-biudzetu-rivnogo-ponad-milion-griven
-Борщ, який нагадує дім: історія волонтерського проєкту «Сватківський гостинець» на Полтавщині
-https://myrgorod.rayon.in.ua/news/1086575-borshh-shho-nagaduje-dim-istoriia-volonterskogo-projektu-svatkivskii-gostinec-na-poltavshhini
-Удар по логістиці та бензоколонці агресора: Генштаб підтвердив ураження флотських цілей, мостів та гігантського НПЗ РФ
-https://rayon.in.ua/news/1087779-udar-po-logistici-ta-benzokolonci-agresora-genstab-pidtverdiv-urazennia-flotskix-cilei-mostiv-ta-gigantskogo-npz-rf
-Ворог тисне на Покровськ, Слов'янськ та Гуляйполе: оперативна карта боїв станом на 16:00
-https://rayon.in.ua/news/1087773-vorog-tisne-na-pokrovsk-sloviansk-ta-guliaipole-operativna-karta-boyiv-stanom-na-1600
 Покладанням квітів, міжконфесійною молитвою та духовним концертом в Острозі відзначили День Української державності
 https://ostrog.rayon.in.ua/news/1087748-pokladanniam-kvitiv-mizkonfesiinoiu-molitvoiu-ta-duxovnim-koncertom-v-ostrozi-vidznacili-den-ukrayinskoyi-derzavnosti
 У Рівному відкрили пам'ятний знак Олені Телізі
 https://kultura.rayon.in.ua/news/1087736-u-rivnomu-vidkrili-pamiatnii-znak-oleni-telizi
 Рівненський драмтеатр – у шортлисті Фестивалю-премії «ГРА»
 https://kultura.rayon.in.ua/news/1087728-rivnenskii-dramteatr-u-sortlisti-festivaliu-premiyi-gra
-Гощанська громада купуватиме житлові будинки для переселенців: власники можуть продати нерухомість громаді
-https://hoshcha.rayon.in.ua/news/1087726-goshhanska-gromada-kupuvatime-zitlovi-budinki-dlia-pereselenciv-vlasniki-mozut-prodati-neruxomist-gromadi
 У Рівному власника та директорку фірми підозрюють у заволодінні державною нерухомістю на 12 мільйонів
 https://rivne.rayon.in.ua/news/1087721-u-rivnomu-vlasnika-ta-direktorku-firmi-pidozriuiut-u-zavolodinni-derzavnoiu-neruxomistiu-na-12-milioniv
-В Україні стартує Національний тиждень читання: як долучитися
-https://kultura.rayon.in.ua/news/1087724-v-ukrayini-startuje-nacionalnii-tizden-citannia-iak-dolucitisia
-СБУ знищила російський бомбардувальник Ту-95 на аеродромі в Енгельсі
-https://rayon.in.ua/news/1087713-sbu-znishhila-rosiiskii-bombarduvalnik-tu-95-na-aerodromi-v-engelsi
-Понад 10 тисяч дронів і 43 штурми на Покровському напрямку: зведення Генштабу
-https://rayon.in.ua/news/1087840-ponad-10-tisiac-droniv-i-43-sturmi-na-pokrovskomu-napriamku-zvedennia-genstabu
+Уродженка Радивилова продовжить кар’єру в чемпіонаті Шотландії
+https://sport.rayon.in.ua/news/1087807-urodzenka-radivilova-prodovzit-karjeru-v-cempionati-sotlandiyi
 За минулу добу ЗСУ знищили 1 420 російських окупантів
 https://rayon.in.ua/news/1087839-za-minulu-dobu-zsu-znishhili-1-420-rosiiskix-okupantiv
-Сміття, пісня, їжа і тирса з парафіном – для допомоги воїнам: історії волонтерок із Локач, Дубна, Моршина і Ківерців
-https://rayon.in.ua/news/1087811-smittia-pisnia-yiza-i-tirsa-z-parafinom-dlia-dopomogi-voyinam-istoriyi-volonterok-iz-lokac-dubna-morsina-i-kiverciv
-Жіночий футбол України: визначено склад учасників чемпіонату Першої ліги 26/27
-https://sport.rayon.in.ua/news/1087805-zinocii-futbol-ukrayini-viznaceno-sklad-ucasnikiv-cempionatu-persoyi-ligi-2627
-Борщ, який нагадує дім: історія волонтерського проєкту «Сватківський гостинець» на Полтавщині
-https://myrgorod.rayon.in.ua/news/1086575-borshh-shho-nagaduje-dim-istoriia-volonterskogo-projektu-svatkivskii-gostinec-na-poltavshhini
-Удар по логістиці та бензоколонці агресора: Генштаб підтвердив ураження флотських цілей, мостів та гігантського НПЗ РФ
-https://rayon.in.ua/news/1087779-udar-po-logistici-ta-benzokolonci-agresora-genstab-pidtverdiv-urazennia-flotskix-cilei-mostiv-ta-gigantskogo-npz-rf
-Ворог тисне на Покровськ, Слов'янськ та Гуляйполе: оперативна карта боїв станом на 16:00
-https://rayon.in.ua/news/1087773-vorog-tisne-na-pokrovsk-sloviansk-ta-guliaipole-operativna-karta-boyiv-stanom-na-1600
-СБУ знищила російський бомбардувальник Ту-95 на аеродромі в Енгельсі
-https://rayon.in.ua/news/1087713-sbu-znishhila-rosiiskii-bombarduvalnik-tu-95-na-aerodromi-v-engelsi
 ЧаРівне.інфо
 Житель Рівненщини обладнав тайник у мікроавтобусі для переправлення чоловіків за кордон
 https://charivne.info/news/zhitel-rivnenshchini-obladnav-taynik-u-mikroavtobusi-dlya-perepravlennya-cholovikiv-za-kordon
@@ -66,57 +36,35 @@ https://charivne.info/news/na-rivnenshchini-kerivnikiv-pidpriemstva-pidozryuyut-
 У Рівному попрощалися з воїнами Ігорем Веремчуком та Сергієм Кондратюком
 https://charivne.info/news/u-rivnomu-poproshchalisya-z-voinami-Ihorem-veremchukom-ta-serhiem-kondratyukom
 Радіо ТРЕК
+Майже 9 мільйонів гривень витратять на ремонт Рівненського центру служби крові
+https://radiotrek.rv.ua/news/mayzhe-9-milyoniv-griven-vitratyat-na-remont-rivnenskogo-centru-sluzhbi-krovi_368205.html
 Додайте в борошно один інгредієнт: як правильно смажити усю рибу
 https://radiotrek.rv.ua/news/dodayte-v-boroshno-odin-ingrediient-yak-pravilno-smazhiti-usyu-ribu_367760.html
 Чому на карасі з’являються червоні плями та чи можна їсти таку рибу
 https://radiotrek.rv.ua/news/chomu-na-karasi-z-yavlyayutsya-chervoni-plyami-ta-chi-mozhna-yisti-taku-ribu_368112.html
 Тест, що триває 20 секунд, розповість все про ваше здоров'я
 https://radiotrek.rv.ua/news/test-shcho-trivaie-20-sekund-rozpovist-vse-pro-vashe-zdorov-ya_368217.html
-В Україні росте рослина, яка пережила динозаврів
-https://radiotrek.rv.ua/news/v-ukrayini-roste-roslina-yaka-perezhila-dinozavriv_368140.html
 Психіатр порівняв життя принців Вільяма та Гаррі після смерті Діани
 https://radiotrek.rv.ua/news/psihiatr-porivnyav-zhittya-princiv-vilyama-ta-garri-pislya-smerti-diani_368130.html
-Старі меблі з OLX стали трендом: дизайнери показали, як перетворити радянську «стінку» на стильний інтер'єр (ФОТО)
-https://radiotrek.rv.ua/news/stari-mebli-z-olx-stali-trendom-dizayneri-pokazali-yak-peretvoriti-radyansku-stinku-na-stilniy-inter-ier-foto_368216.html
-Пекар пропонує зробити Федорова – Заступником Міністра Оборони: одним із Трьох (ФОТО)
-https://radiotrek.rv.ua/news/pekar-proponuie-zrobiti-fedorova...-zastupnikom-ministra-oboroni---odnim-iz-troh-foto_368214.html
 Магнітні бурі 18 липня: чи буде вплив на самопочуття (ФОТО)
 https://radiotrek.rv.ua/news/magnitni-buri-18-lipnya-chi-bude-vpliv-na-samopochuttya-foto_368165.html
 Зачіски, які приховають непофарбоване коріння: їх всього 4 (ФОТО)
 https://radiotrek.rv.ua/news/zachiski-yaki-prihovayut-nepofarbovane-korinnya-yih-vsogo-4-foto_368196.html
-Готую часто і не набридає: Простий шоколадний пиріг до чаю
-https://radiotrek.rv.ua/news/gotuyu-chasto-i-ne-nabridaie-prostiy-shokoladniy-pirig-do-chayu_367861.html
-Україну чекає нова кліматична реальність: метеорологи б'ють на сполох
-https://radiotrek.rv.ua/news/ukrayinu-chekaie-nova-klimatichna-realnist-meteorologi-b-yut-na-spoloh_368192.html
-Держава анонсувала виплату 1000 грн новій категорії українців: хто зможе отримати кошти
-https://radiotrek.rv.ua/news/derzhava-anonsuvala-viplatu-1000-grn-noviy-kategoriyi-ukrayinciv-hto-zmozhe-otrimati-koshti_368191.html
 На Рівненщину йде похолодання: Відомо, як сильно зміниться температура
 https://radiotrek.rv.ua/news/na-rivnenshchinu-yde-poholodannya-vidomo-yak-silno-zminitsya-temperatura_368210.html
 Чоловіки чи жінки: лікарі пояснили, кому спека загрожує більше
 https://radiotrek.rv.ua/news/choloviki-chi-zhinki-likari-poyasnili-komu-speka-zagrozhuie-bilshe_368097.html
-Скільки вступників отримають шанс навчатися на бюджеті у 2026 році
-https://radiotrek.rv.ua/news/skilki-vstupnikiv-otrimayut-shans-navchatisya-na-byudzheti-u-2026-roci_368115.html
-Які рослини наші пращури садили біля хати для захисту від блискавки: народні прикмети
-https://radiotrek.rv.ua/news/yaki-roslini-nashi-prashchuri-sadili-bilya-hati-dlya-zahistu-vid-bliskavki-narodni-prikmeti_368170.html
-Понад 90% відстрочок продовжать автоматично: що зміниться для українців
-https://radiotrek.rv.ua/news/ponad-90-vidstrochok-prodovzhat-avtomatichno-shcho-zminitsya-dlya-ukrayinciv_368099.html
 Бронювання і великі зарплати: кого зараз активно шукають компанії
 https://radiotrek.rv.ua/news/bronyuvannya-i-veliki-zarplati-kogo-zaraz-aktivno-shukayut-kompaniyi_368098.html
 Вантажоперевезення в Києві: швидке та безпечне перевезення меблів | Biggy
 https://radiotrek.rv.ua/news/vantazhoperevezennya-v-kiievi-shvidke-ta-bezpechne-perevezennya-mebliv-biggy_368198.html
-Томати під загрозою дефіциту: які ціни будуть в Україні і коли вигідно купувати для консервації
-https://radiotrek.rv.ua/news/tomati-pid-zagrozoyu-deficitu-yaki-cini-budut-v-ukrayini-i-koli-vigidno-kupuvati-dlya-konservaciyi_368189.html
-5 стильних манікюрів для коротких нігтів: найкращі ідеї для вашого образу (ФОТО)
-https://radiotrek.rv.ua/news/5-stilnih-manikyuriv-dlya-korotkih-nigtiv-naykrashchi-ideyi-dlya-vashogo-obrazu-foto_368179.html
 Українцям пояснили, коли тримати гроші в банку стане невигідно
 https://radiotrek.rv.ua/news/ukrayincyam-poyasnili-koli-trimati-groshi-v-banku-stane-nevigidno_368109.html
-Не засіб, а чарівна паличка: чим обробити помідори після дощу? Фітофтори не буде
-https://radiotrek.rv.ua/news/ne-zasib-a-charivna-palichka-chim-obrobiti-pomidori-pislya-doshchu-fitoftori-ne-bude_368182.html
 Рівне вечірнє
+На Рівненщині попрощалися із сімома захисниками України
+https://rivnepost.rv.ua/vijna/na-rivnenshhyni-poproshhalysya-iz-simoma-zahysnykamy-ukrayiny/
 Замість Коваля у міськраді вже є депутат
 https://rivnepost.rv.ua/news/zamist-kovalya-u-miskradi-vzhe-ye-deputat/
-Спокійний день: сьогодні геомагнітна ситуація буде стабільною
-https://rivnepost.rv.ua/zdorovya/spokijnyj-den-sogodni-geomagnitna-sytuacziya-bude-stabilnoyu/
 Соковитий пиріг з аличею: простий рецепт ароматної літньої випічки
 https://rivnepost.rv.ua/zhittya/sokovytyj-pyrig-z-alycheyu-prostyj-reczept-aromatnoyi-litnoyi-vypichky/
 Сонце, дощ та літня гроза: якою буде погода на Рівненщині 18 липня
@@ -129,12 +77,8 @@ https://rivnepost.rv.ua/vijna/na-rivnenshhyni-poproshhayutsya-iz-zahysnykom-yaky
 https://rivnepost.rv.ua/misto/u-rivnomu-na-nich-perekryyut-ruh-na-odnomu-z-perehrest-cherez-dorozhni-roboty/
 У центрі Рівного встановили 24 нові портрети полеглих Захисників України
 https://rivnepost.rv.ua/misto/u-czentri-rivnogo-vstanovyly-24-novi-portrety-poleglyh-zahysnykiv-ukrayiny/
-Активоване вугілля: чим воно корисне та коли справді допомагає
-https://rivnepost.rv.ua/zdorovya/aktyvovane-vugillya-chym-vono-korysne-ta-koly-spravdi-dopomagaye/
 На Рівненщині проведуть ювілейний благодійний велопробіг до Дня Незалежності
 https://rivnepost.rv.ua/news/na-rivnenshhyni-provedut-yuvilejnyj-blagodijnyj-veloprobig-do-dnya-nezalezhnosti/
-Гострий салат із кабачків у томатній заливці на зиму
-https://rivnepost.rv.ua/zhittya/gostryj-salat-iz-kabachkiv-u-tomatnij-zalyvczi-na-zymu/
 Підтвердили загибель військового з Рівненщини, який понад півтора року вважався зниклим безвісти у Росії
 https://rivnepost.rv.ua/vijna/pidtverdyly-zagybel-vijskovogo-z-rivnenshhyny-yakyj-ponad-pivtora-roku-vvazhavsya-znyklym-bezvisty-u-rosiyi/
 Ще 63 родини воїнів з Рівненщини зможуть купити власне житло
@@ -169,8 +113,6 @@ https://7dniv.rv.ua/suspilstvo/yakoiu-bude-pohoda-na-rivnenshchyni-18-lypnia-202
 https://7dniv.rv.ua/suspilstvo/u-rivnomu-vidkryly-pamyatnyj-znak-oleni-telizi-z-qr-kodom/
 У центрі Рівного, на Майдані Незалежності, встановили ще 24 портрети Героїв
 https://7dniv.rv.ua/suspilstvo/viyna/u-rivnomu-vstanovyly-24-portrety-geroyiv-tsina-nezalezhnosti/
-Захисники з Дубенщини отримають новий пікап: автомобіль придбали спільними зусиллями громади та волонтерів
-https://7dniv.rv.ua/suspilstvo/viyna/dubno-nissan-navara-dlia-104-bryhady-tro/
 На вічний спочинок у Рівному провели двох полеглих Захисників України
 https://7dniv.rv.ua/suspilstvo/viyna/na-vichnyy-spochynok-u-rivnomu-provely-dvokh-polehlykh-zakhysnykiv-ukrainy/
 Понад 175 мільйонів гривень на житло для ветеранів: на Рівненщині вручили чергові сертифікати
@@ -198,8 +140,6 @@ https://rivne.media/news/mediko-henetichniy-tsentr-yakiy-pereikhav-u-rivnensku-o
 https://rivne.media/news/u-rivnomu-suditimut-dilkiv-yaki-cherez-poshtu-torhuvali-zbroeyu
 У Рівному на Бандери затримали домашнього насильника
 https://rivne.media/news/u-rivnomu-na-banderi-zatrimali-domashnoho-nasilnika
-Корсет: як обрати модель, що підкреслить фігуру
-https://rivne.media/news/korset-yak-obrati-model-shcho-pidkreslit-fihuru-131789
 Як спланувати сучасне освітлення квартири без зайвих світильників і переробок
 https://rivne.media/news/yak-splanuvati-suchasne-osvitlennya-kvartiri-bez-zayvikh-svitilnikiv-i-pererobok-131791
 Як вибрати банерну сітку Mesh для зовнішньої реклами: головні критерії
@@ -226,16 +166,12 @@ https://rivne.media/news/u-rivnomu-na-nich-znovu-perekriyut-vazhlive-perekhresty
 https://rivne.media/news/ekshravets-chornomortsya-ta-karpat-priednavsya-do-sarnenskoho-mayaka
 Військовий із Волині освідчився коханій у замку на Рівненщині
 https://rivne.media/news/viyskoviy-iz-volini-osvidchivsya-kokhaniy-u-zamku-na-rivnenshchini-131769
-На Сарненщині порахували збитки, завдані лісам російською агресією
-https://rivne.media/news/na-sarnenshchini-porakhuvali-zbitki-zavdani-lisam-rosiyskoyu-ahresieyu--131768
 Водійка, яка у Рівному на смерть збила пішохідку, відбулась умовним покаранням
 https://rivne.media/news/vodiyka-yaka-u-rivnomu-na-smert-zbila-pishokhidku-vidbulas-umovnim-pokarannyam-131773
 Старший сержант із Рівненщини, якого вважали зниклим безвісти, загинув на Курщині
 https://rivne.media/news/starshiy-serzhant-iz-rivnenshchini-yakoho-vvazhali-zniklim-bezvisti-zahinuv-na-kurshchini
 Частина села на Рівненщині буде без світла впродовж двох днів
 https://rivne.media/news/chastina-sela-na-rivnenshchini-bude-bez-svitla-vprodovzh-dvokh-dniv
-Мариновані огірки на зиму без стерилізації за рецептом відомого шеф-кухаря
-https://rivne.media/news/marinovani-ohirki-na-zimu-bez-sterilizatsii-za-retseptom-vidomoho-shef-kukharya-131693
 Через 2-3 дні після дощу та на світанку: секрети вдалого "тихого полювання" для жителів Рівненщини
 https://rivne.media/news/cherez-2-3-dni-pislya-doshchu-ta-na-svitanku-sekreti-vdaloho-tikhoho-polyuvannya-dlya-zhiteliv-rivnenshchini
 У селі на Рівненщині замінили майже 6,5 км застарілого електропроводу
@@ -244,17 +180,15 @@ https://rivne.media/news/u-seli-na-rivnenshchini-zaminili-mayzhe-65-km-zastarilo
 https://rivne.media/news/na-rivnenshchinu-nayblizhchimi-dnyami-znovu-povernetsya-komfortna-temperatura-131761
 У нацпарку на Рівненщині помітили рідкісного птаха (ФОТО)
 https://rivne.media/news/u-natsparku-na-rivnenshchini-pomitili-ridkisnoho-ptakha-foto-131665
-Найкраще військове взуття для активного використання у 2026 році
-https://rivne.media/news/naykrashche-viyskove-vzuttya-dlya-aktivnoho-vikoristannya-u-2026-rotsi-131797
 Ексзавідувач клубу на Рівненщині намагався відсудити компенсацію за затримку видачі трудової книжки
 https://rivne.media/news/ekszaviduvach-klubu-na-rivnenshchini-namahavsya-vidsuditi-kompensatsiyu-za-zatrimku-vidachi-trudovoi-knizhki-131668
 Рівненські плавець і легкоатлети вибороли медалі міжнародного й національного рівнів
 https://rivne.media/news/rivnenski-plavets-i-lehkoatleti-viboroli-medali-mizhnarodnoho-y-natsionalnoho-rivniv-131537
 Понад 60 тис. глядачів і гучні прем`єри: яким був 86-й сезон Рівненського драмтеатру
 https://rivne.media/news/ponad-60-tis-hlyadachiv-i-huchni-premeri-yakim-buv-86-y-sezon-rivnenskoho-dramteatru-131613
+Перевірка ВОД абітурієнтів на Рівненщині стала автоматичною
+https://rivne.media/news/perevirka-vod-abiturientiv-na-rivnenshchini-stala-avtomatichnoyu-131694
 Горинь.info
-Фронт: за добу росіяни використали для ураження 10 252 дрони-камікадзе
-https://horyn.info/news/front-za-dobu-rosiyany-vykorystaly-dlya-urazhennya-10-252-drony-kamikadze/
 Громади Рівненщини сповістили про загибель чотирьох захисників
 https://horyn.info/news/gromady-rivnenshhyny-spovistyly-pro-zagybel-chotyroh-zahysnykiv-2/
 «Пасажир» у сховку: жителя Рівненщини затримали під час спроби переправити чоловіка до Польщі
@@ -263,35 +197,12 @@ https://horyn.info/news/pasazhyr-u-shovku-zhytelya-rivnenshhyny-zatrymaly-pid-ch
 https://horyn.info/news/za-muzhnist-na-pokrovskomu-napryamku-voyina-z-rivnenshhyny-nagorodyly-zolotym-hrestom/
 У Рівному на фасаді ліцею №26 відкрили меморіальну дошку загиблому захиснику Андрію Нестеруку
 https://horyn.info/news/u-rivnomu-na-fasadi-liczeyu-%e2%84%9626-vidkryly-memorialnu-doshku-zagyblomu-zahysnyku-andriyu-nesteruku/
-Рівне 1
-У громаді на Рівненщині попрощалися із полеглим воїном (ФОТО)
-https://rivne1.tv/news/u-hromadi-na-rivnenshchini-poproshchalisya-iz-polehlim-voinom-foto
-Погода на Рівненщині: регіон накриють потужні зливи
-https://rivne1.tv/news/174277-pohoda-na-rivnenshchini-rehion-nakriyut-potuzhni-zlivi
-На Рівненщині збудують сучасний модульний морг: держава виділила понад 92 млн грн
-https://rivne1.tv/news/174297-na-rivnenshchini-zbuduyut-suchasniy-modulniy-morh-derzhava-vidilila-ponad-92-mln-hrn
-Мрія про власний дім: ветеранам Рівненщини вручили житлові сертифікати (ВІДЕО)
-https://rivne1.tv/news/174293-mriya-pro-vlasniy-dim-veteranam-rivnenshchini-vruchili-zhitlovi-sertifikati-video
-На Рівненщині посилюють перевірки маршруток через зростання кількості ДТП
-https://rivne1.tv/news/174296-na-rivnenshchini-posilyuyut-perevirki-marshrutok-cherez-zrostannya-kilkosti-dtp
-Понад 9,7 тисячі стоматологічних послуг отримали військові та ветерани Рівненщини за пів року
-https://rivne1.tv/news/174295-ponad-9-7-tisyachi-stomatolohichnikh-posluh-otrimali-viyskovi-ta-veterani-rivnenshchini-za-piv-roku
-На Рівненщині до Дня Незалежності проведуть благодійний велопробіг на підтримку ЗСУ
-https://rivne1.tv/news/174294-na-rivnenshchini-do-dnya-nezalezhnosti-provedut-blahodiyniy-veloprobih-na-pidtrimku-zsu
-Руїни, океан і самовільне паркування: що кажуть рівняни про історичну вулицю Поштову (ВІДЕО)
-https://rivne1.tv/news/174281-ruini-okean-i-samovilne-parkuvannya-shcho-kazhut-rivnyani-pro-istorichnu-vulitsyu-poshtovu-video
-Без іспитів, але з медоглядом: як на Рівненщині працюватимуть нові правила МВС (ВІДЕО)
-https://rivne1.tv/news/174280-bez-ispitiv-ale-z-medohlyadom-yak-na-rivnenshchini-pratsyuvatimut-novi-pravila-mvs-video
-У Рівному провели в останню дорогу двох захисників України: Ігоря Веремчука та Сергія Кондратюка (ВІДЕО)
-https://rivne1.tv/news/174292-u-rivnomu-proveli-v-ostannyu-dorohu-dvokh-zakhisnikiv-ukraini-ihorya-veremchuka-ta-serhiya-kondratyuka-video
-У Рівненській обласній дитячій лікарні відновив роботу медико-генетичний центр
-https://rivne1.tv/news/174291-u-rivnenskiy-oblasniy-dityachiy-likarni-vidnoviv-robotu-mediko-henetichniy-tsentr
 Рівненська правда
 Фотоконкурс «ФеНоМенальне Рівне VIII» стартував – прийом робіт розпочато (відео)
 https://www.rp.rv.ua/3796588726-fotokonkyrs-fenomenalne-r%d1%96vne-viii-startyvav-priiom-rob%d1%96t-rozpochato-v%d1%96deo.html
 ITV
-Рейтинг найкориснішої зелені для вашого здоров'я
-https://itvmg.com/news/reytinh-naykorisnishoi-zeleni-dlya-vashoho-zdorovya-115983
+Суд зобов`язав Здолбунівську міськраду встановити межі водоохоронних зон
+https://itvmg.com/news/sud-zobovyazav-zdolbunivsku-miskradu-vstanoviti-mezhi-vodookhoronnikh-zon-115998
 Спортивні змагання з мініфутболу серед правоохоронців відбулися у Рівному (ВІДЕО)
 https://itvmg.com/news/sportivni-zmahannya-z-minifutbolu-sered-pravookhorontsiv-vidbulisya-u-rivnomu-video-116021
 «Не мріє, а діє»: про службу поліцейського КОРДу з Рівненщини із позивним Лазар  (ВІДЕО)
