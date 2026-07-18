@@ -15,6 +15,23 @@ suspilne_report_for_analysis = []
 suspilne_err = []
 
 
+import os
+import re
+import time
+from datetime import datetime, timedelta
+from typing import List
+from bs4 import BeautifulSoup
+from curl_cffi import requests
+
+
+# ===== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ =====
+suspilne_links = []
+suspilne_report_brief = []
+suspilne_report_for_analysis = []
+suspilne_err = []
+
+
+# ===== ФУНКЦИЯ ПАРСИНГА САЙТА =====
 def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
     Parse news articles from suspilne.media within a specified time range.
@@ -56,6 +73,9 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
             print(f"   Status: {response.status_code}, Length: {len(response.text)}")
             
             if response.status_code != 200:
+                if response.status_code == 403:
+                    suspilne_err.append(f"Page {page}: BLOCKED (403)")
+                    print("   ❌ Blocked (403)!")
                 break
                 
             soup = BeautifulSoup(response.text, "html.parser")
@@ -63,11 +83,9 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
             print(f"   Found {len(articles)} articles")
             
             if not articles:
-                # Если не нашли статьи, возможно капча
                 if "captcha" in response.text.lower():
                     suspilne_err.append(f"Page {page}: CAPTCHA detected")
                     print("   ❌ CAPTCHA detected!")
-                    break
                 break
             
             found_older = False
@@ -99,7 +117,7 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
                 break
                 
             page += 1
-            time.sleep(1)
+            time.sleep(2)  # Увеличенная задержка между страницами
             
         except Exception as e:
             suspilne_err.append(f"parse_suspilne_site: page {page} - {type(e).__name__}: {e}")
@@ -108,6 +126,151 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     
     print(f"   Total: {len(collected_links)} links")
     return collected_links
+
+
+# ===== ФУНКЦИЯ ПАРСИНГА СТАТЬИ =====
+def parse_suspilne_article(url: str, keywords: List[str]):
+    """
+    Parse a single article from suspilne.media and search for keyword patterns.
+    """
+    global suspilne_err, suspilne_report_brief, suspilne_report_for_analysis
+    
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
+    
+    try:
+        response = requests.get(url, headers=headers, timeout=15, impersonate="chrome120")
+        response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_suspilne_article: {url} - HTTP {response.status_code}"
+            suspilne_err.append(error_msg)
+            return
+        
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        title_tag = soup.find('h1')
+        if not title_tag:
+            title_tag = soup.find('h1', class_=re.compile(r'title'))
+        title = title_tag.get_text(strip=True) if title_tag else "No title"
+        
+        article = soup.find('article', class_='post-body')
+        if not article:
+            article = soup.find('article')
+        if not article:
+            error_msg = f"parse_suspilne_article: {url} - ARTICLE CONTAINER NOT FOUND"
+            suspilne_err.append(error_msg)
+            return
+        
+        content_container = article.find('div', class_=re.compile(r'c-article-content'))
+        if not content_container:
+            content_container = article
+        
+        content_copy = content_container.__copy__()
+        
+        for unwanted in content_copy.find_all(['div'], class_=re.compile(r'(share|social|ad|banner|promo|sharing|info-share)')):
+            unwanted.decompose()
+        for img in content_copy.find_all('img'):
+            img.decompose()
+        for embed in content_copy.find_all('div', {'data-embed': True}):
+            embed.decompose()
+        
+        text = content_copy.get_text(separator=' ', strip=True)
+        text = ' '.join(text.split())
+        full_text = title + " " + text
+        
+        found_keywords = []
+        for pattern in keywords:
+            if re.search(pattern, full_text, re.IGNORECASE):
+                found_keywords.append(pattern)
+        
+        if found_keywords:
+            suspilne_report_brief.append({
+                'title': title,
+                'link': url,
+                'keywords': found_keywords
+            })
+            
+            suspilne_report_for_analysis.append({
+                'title': title,
+                'link': url,
+                'text': text,
+                'keywords': found_keywords
+            })
+        
+    except Exception as e:
+        error_msg = f"parse_suspilne_article: {url} - {type(e).__name__}: {e}"
+        suspilne_err.append(error_msg)
+
+
+# ===== ЗАПУСК =====
+
+if __name__ == "__main__":
+    # Время за последние 7 дней
+    end_time = datetime.now().replace(hour=23, minute=59, second=59, microsecond=0)
+    start_time = end_time - timedelta(days=7)
+    keywords_list = [r'\bрівн\w*']
+    
+    print("=" * 60)
+    print("Запуск парсера Суспільного")
+    print(f"Период: {start_time} - {end_time}")
+    print("=" * 60)
+    
+    # Сбор ссылок
+    suspilne_links = parse_suspilne_site(start_time, end_time)
+    print(f"Найдено ссылок: {len(suspilne_links)}")
+    
+    # Парсинг статей
+    for url in suspilne_links:
+        parse_suspilne_article(url, keywords_list)
+        time.sleep(1)
+    
+    print(f"Найдено статей с ключевыми словами: {len(suspilne_report_brief)}")
+    print(f"Ошибок: {len(suspilne_err)}")
+    
+    # Формирование отчетов
+    brief_report = f"{end_time.strftime('%d.%m')}\n"
+    if suspilne_report_brief:
+        brief_report += "Суспільне Рівне\n"
+        for item in suspilne_report_brief:
+            brief_report += f"{item['title']}\n{item['link']}\n"
+    else:
+        brief_report += "Публікації у медіа відсутні\n"
+    
+    full_report = f"{end_time.strftime('%d.%m')}\n"
+    if suspilne_report_for_analysis:
+        full_report += "Суспільне Рівне\n"
+        for item in suspilne_report_for_analysis:
+            full_report += f"\n\n{item['title']}\n{item['link']}\n{item['text']}\n"
+    else:
+        full_report += "Публікації у медіа відсутні\n"
+    
+    error_report = f"{end_time.strftime('%d.%m')}\n"
+    if suspilne_err:
+        error_report += "Суспільне Рівне\n"
+        for error in suspilne_err:
+            error_report += f"{error}\n"
+    else:
+        error_report += "Помилок не зафіксовано\n"
+    
+    # Сохранение
+    has_errors = len(suspilne_err) > 0
+    warning = "-- Увага! під час обробки зафіксовані помилки. Ймовірно результати не повні.\n\n"
+    
+    with open('suspilne_full_report.txt', 'w', encoding='utf-8') as f:
+        f.write((warning if has_errors else '') + full_report)
+    
+    with open('suspilne_brief_report.txt', 'w', encoding='utf-8') as f:
+        f.write((warning if has_errors else '') + brief_report)
+    
+    with open('suspilne_error_report.txt', 'w', encoding='utf-8') as f:
+        f.write(error_report)
+    
+    print("\n✅ Файлы сохранены:")
+    print("   - suspilne_full_report.txt")
+    print("   - suspilne_brief_report.txt")
+    print("   - suspilne_error_report.txt")
 
 
 # ===== ЗАПУСК =====
