@@ -1,3 +1,5 @@
+-- Увага! під час обробки зафіксовані помилки. Ймовірно результати не повні.
+
 18.07
 Район.in.ua
 У Завизові внаслідок пожежі постраждало двоє чоловіків
@@ -45,8 +47,6 @@ https://charivne.info/news/u-rivnomu-znovu-dtp-z-mototsiklistom-19-richnoho-vodi
 https://charivne.info/news/zhitel-rivnenshchini-obladnav-taynik-u-mikroavtobusi-dlya-perepravlennya-cholovikiv-za-kordon
 Як вибрати алюмінієві двері для будинку: 9 важливих нюансів
 https://charivne.info/news/yak-vibrati-alyuminievi-dveri-dlya-budinku-9-vazhlivikh-nyuansiv
-У Рівному знову перекриють рух
-https://charivne.info/news/u-rivnomu-znovu-perekriyut-rukh-
 У Рівному відкрили меморіальну дошку в пам’ять про загиблого воїна Андрія Нестерука
 https://charivne.info/news/novina-748596a
 У Рівному оштрафували чоловіка, який фізично і морально знущався зі співмешканки
@@ -86,6 +86,9 @@ https://radiotrek.rv.ua/news/bronyuvannya-i-veliki-zarplati-kogo-zaraz-aktivno-s
 https://radiotrek.rv.ua/news/vantazhoperevezennya-v-kiievi-shvidke-ta-bezpechne-perevezennya-mebliv-biggy_368198.html
 Українцям пояснили, коли тримати гроші в банку стане невигідно
 https://radiotrek.rv.ua/news/ukrayincyam-poyasnili-koli-trimati-groshi-v-banku-stane-nevigidno_368109.html
+Все Рівне
+На Рівненщині судитимуть ділків, які налагодили механізм підпільної торгівлі зброєю
+https://vse.rv.ua/article/na-rivnensini-suditimut-dilkiv-aki-nalagodili-mehanizm-pidpilnoi-torgivli-zbroeu.html
 Рівне вечірнє
 Вибухотехніки з Рівненщини розміновують деокуповану Херсонщину
 https://rivnepost.rv.ua/vijna/vybuhotehniky-z-rivnenshhyny-rozminovuyut-deokupovanu-hersonshhynu/
@@ -134,8 +137,6 @@ OGO.ua
 https://ogo.ua/selo-mezhyrich-svyatkuye-630-richnyj-yuvilej-zhyteliv-ta-gostej-zaproshuyut-na-blagodijnyj-zahid/
 На Рівненщині провели всеукраїнське навчання психологів ДСНС та координаторів програми «Ти як?»
 https://ogo.ua/na-rivnenshhyni-provely-vseukrayinske-navchannya-psyhologiv-dsns-ta-koordynatoriv-programy-ty-yak/
-У Рівному встановили нові портрети полеглих Захисників України
-https://ogo.ua/u-rivnomu-vstanovyly-novi-portrety-poleglyh-zahysnykiv-ukrayiny/
 У Рівному відкрили пам’ятний знак до 120-річчя від дня народження Олени Теліги
 https://ogo.ua/u-rivnomu-vidkryly-pamyatnyj-znak-do-120-richchya-vid-dnya-narodzhennya-oleny-teligy/
 На Рівненщині ще 63 родини ветеранів та загиблих Героїв забезпечать житлом: перші 29 сертифікатів уже вручили
@@ -312,6 +313,27 @@ https://rivne1.tv/news/174280-bez-ispitiv-ale-z-medohlyadom-yak-na-rivnenshchini
 https://rivne1.tv/news/174292-u-rivnomu-proveli-v-ostannyu-dorohu-dvokh-zakhisnikiv-ukraini-ihorya-veremchuka-ta-serhiya-kondratyuka-video
 У Рівненській обласній дитячій лікарні відновив роботу медико-генетичний центр
 https://rivne1.tv/news/174291-u-rivnenskiy-oblasniy-dityachiy-likarni-vidnoviv-robotu-mediko-henetichniy-tsentr
+Рівненська правда
+На Рівненщині понад 70 фахівців навчалися надавати психологічну допомогу під час війни
+https://www.rp.rv.ua/3796868726-na-r%d1%96vnenshin%d1%96-ponad-70-fah%d1%96vc%d1%96v-navchalisia-nadavati-psiholog%d1%96chny-dopomogy-p%d1%96d-chas-v%d1%96ini.html
+У Рівному двоє дітей на електросамокаті зіткнулися з автомобілем: деталі від поліції
+https://www.rp.rv.ua/3796848726-y-r%d1%96vnomy-dvo%d1%94-d%d1%96tei-na-elektrosamokat%d1%96-z%d1%96tknylisia-z-avtomob%d1%96lem-detal%d1%96-v%d1%96d-pol%d1%96c%d1%96%d1%97.html
+У Рівному знову ДТП з мотоциклістом: 19-річного водія двоколісного госпіталізували
+https://www.rp.rv.ua/3796838726-y-r%d1%96vnomy-znovy-dtp-z-motocikl%d1%96stom-19-r%d1%96chnogo-vod%d1%96ia-dvokol%d1%96snogo-gosp%d1%96tal%d1%96zyvali.html
+Вибухотехніки з Рівненщини продовжують розміновувати Херсонщину
+https://www.rp.rv.ua/3796818726-vibyhotehn%d1%96ki-z-r%d1%96vnenshini-prodovjyut-rozm%d1%96novyvati-hersonshiny.html
+У Тайкурах надзвичайники Рівненщини дістали двох песиків із закинутої свердловини
+https://www.rp.rv.ua/3796808726-y-taikyrah-nadzvichainiki-r%d1%96vnenshini-d%d1%96stali-dvoh-pesik%d1%96v-%d1%96z-zakinyto%d1%97-sverdlovini.html
+Понад 60 тисяч глядачів і благодійні проєкти: чим запам’ятався 86-й сезон Рівненського драмтеатру
+https://www.rp.rv.ua/3796788726-ponad-60-tisiach-gliadach%d1%96v-%d1%96-blagod%d1%96in%d1%96-pro%d1%94kti-chim-zapamiatavsia-86-i-sezon-r%d1%96vnenskogo-dramteatry.html
+На Рівненщині 29 ветеранів отримали сертифікати на придбання житла
+https://www.rp.rv.ua/3796718726-na-r%d1%96vnenshin%d1%96-29-veteran%d1%96v-otrimali-sertif%d1%96kati-na-pridbannia-jitla.html
+Житель Рівненщини обладнав тайник у мікроавтобусі для переправлення чоловіків за кордон
+https://www.rp.rv.ua/3796698726-jitel-r%d1%96vnenshini-obladnav-tainik-y-m%d1%96kroavtobys%d1%96-dlia-perepravlennia-cholov%d1%96k%d1%96v-za-kordon.html
+Як вибрати алюмінієві двері для будинку: 9 важливих нюансів
+https://www.rp.rv.ua/3796688726-iak-vibrati-alum%d1%96n%d1%96%d1%94v%d1%96-dver%d1%96-dlia-bydinky-9-vajlivih-nuans%d1%96v.html
+Фотоконкурс «ФеНоМенальне Рівне VIII» стартував – прийом робіт розпочато (відео)
+https://www.rp.rv.ua/3796588726-fotokonkyrs-fenomenalne-r%d1%96vne-viii-startyvav-priiom-rob%d1%96t-rozpochato-v%d1%96deo.html
 ITV
 ДТП у Рівному: двоє малолітніх дітей на електросамокаті зіткнулися з автомобілем
 https://itvmg.com/news/dtp-u-rivnomu-dvoe-malolitnikh-ditey-na-elektrosamokati-zitknulisya-z-avtomobilem-116035
