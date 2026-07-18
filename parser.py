@@ -407,7 +407,7 @@ def parse_charivne_site(start_time: datetime, end_time: datetime) -> List[str]:
         url = f"{base_url}/category/novini-rivnoho?page={page}"
         
         try:
-            response = requests.get(url, headers=headers, timeout=10)
+            response = requests.get(url, headers=headers, timeout=30)
             if response.status_code != 200:
                 break
                 
@@ -466,7 +466,7 @@ def parse_charivne_article(url: str, keywords: List[str]):
     }
     
     try:
-        response = requests.get(url, headers=headers, timeout=15)
+        response = requests.get(url, headers=headers, timeout=30)
         response.encoding = 'utf-8'
         
         if response.status_code != 200:
