@@ -1,4 +1,18 @@
 18.07
 Суспільне Рівне
-Page 1: BLOCKED (403)
-Page 1: BLOCKED (403)
+Page 2: BLOCKED (403)
+parse_suspilne_article: https://suspilne.media/rivne/1356664-vstupna-kampania-2026-aki-specialnosti-koristuutsa-popitom-j-comu-vstupniki-obiraut-zakladi-osviti-rivnensini/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1358208-dvoe-colovikiv-otrimali-opiki-vnaslidok-pozezi-na-rivnensini/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1358112-do-32-tepla-ta-dos-rivnenski-sinoptiki-dali-prognoz-pogodi-na-18-lipna/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1358002-proti-vidstavki-fedorova-ta-za-zvilnenna-sirskogo-priblizno-100-ludej-vijsli-na-akciu-u-rivnomu/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1357870-24-portreti-zagiblih-vijskovosluzbovciv-vstanovili-v-centri-rivnogo/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1357364-z-vijskovimi-igorem-veremcukom-ta-sergiem-kondratukom-poprosalisa-u-rivnomu/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1357470-grozi-ta-znizenna-temperaturi-povitra-prognozuut-sinoptiki-najblizcimi-dnami-na-rivnensini/ - HTTP 403
+Page 2: BLOCKED (403)
+parse_suspilne_article: https://suspilne.media/sport/1358212-liderka-zinocoi-zbirnoi-ukraini-z-futbolu-ovdijcuk-zminila-klub-de-gratime-u-sezoni-202627/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1358208-dvoe-colovikiv-otrimali-opiki-vnaslidok-pozezi-na-rivnensini/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1358112-do-32-tepla-ta-dos-rivnenski-sinoptiki-dali-prognoz-pogodi-na-18-lipna/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1358002-proti-vidstavki-fedorova-ta-za-zvilnenna-sirskogo-priblizno-100-ludej-vijsli-na-akciu-u-rivnomu/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1357870-24-portreti-zagiblih-vijskovosluzbovciv-vstanovili-v-centri-rivnogo/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1357642-29-veteranam-z-rivnensini-vrucili-sertifikati-na-zitlo-hto-moze-otrimati-kompensaciu/ - HTTP 403
+parse_suspilne_article: https://suspilne.media/rivne/1357364-z-vijskovimi-igorem-veremcukom-ta-sergiem-kondratukom-poprosalisa-u-rivnomu/ - HTTP 403
