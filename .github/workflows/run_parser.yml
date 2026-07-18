@@ -62,3 +62,4 @@ jobs:
         pip install --upgrade pip
         pip install curl_cffi --no-cache-dir --force-reinstall
         pip install beautifulsoup4 lxml python-dateutil playwright requests
+        pip install feedparser
