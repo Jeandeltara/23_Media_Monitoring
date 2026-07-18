@@ -13,57 +13,8 @@ import requests as simple_requests
 from playwright.sync_api import sync_playwright
 
 
-# ============================================================================
-# REQUEST HELPER WITH RETRY
-# ============================================================================
 
-def fetch_with_retry(url: str, headers: dict, timeout: int = 30, max_retries: int = 2) -> requests.Response:
-    """
-    Fetch URL with retry logic. First attempt: 30s timeout, second: 100s timeout.
-    
-    Args:
-        url: URL to fetch
-        headers: Request headers
-        timeout: Initial timeout in seconds (default: 30)
-        max_retries: Maximum number of retry attempts (default: 2)
-    
-    Returns:
-        requests.Response: Response object
-    
-    Raises:
-        Exception: If all attempts fail
-    """
-    timeouts = [timeout, 100]  # First: 30s, Second: 100s
-    
-    for attempt in range(min(max_retries, len(timeouts))):
-        current_timeout = timeouts[attempt]
-        
-        try:
-            if attempt > 0:
-                print(f"🔄 Retry {attempt+1}/{max_retries} for {url[:60]}... with {current_timeout}s timeout")
-            
-            response = requests.get(url, headers=headers, timeout=current_timeout)
-            response.raise_for_status()
-            return response
-            
-        except requests.Timeout:
-            if attempt == max_retries - 1:
-                raise Exception(f"Timeout after {max_retries} attempts for {url}")
-            time.sleep(2)
-            continue
-        
-        except Exception as e:
-            if attempt == max_retries - 1:
-                raise
-            time.sleep(2)
-            continue
-    
-    raise Exception(f"All {max_retries} attempts failed for {url}")
-
-
-# ============================================================================
-# VARIABLES
-# ============================================================================
+# ===== VARIABLES ===== 
 
 keywords_list = [r'\bрівн\w*']
 #keywords_list = [r"23(?:-й|-го|-му|й)?[\s-](?:окрем\S*\s)?інженерн[^\s]*|А0451"]
@@ -162,23 +113,19 @@ media_names = {"rayon" :"Район.in.ua",
                "horyn": "Горинь.info", 
                "rivne1": "Рівне 1", 
                "rp_rv_ua": "Рівненська правда", 
-               "itvmg": "ITV"}
+               "itvmg": "ITV"}\
 
 MAX_WORKERS = 5
 
 
-# ============================================================================
-# FUNCTIONS
-# ============================================================================
+# ===== FUNCTIONS ===== 
 
 def run_rayon():
-    global links_from_rayon, rayon_report_brief, rayon_report_for_analysis, rayon_err
     for site in rayon_sites:
         collected, brief, analysis = parse_rayon_articles(site, start_time, end_time, keywords_list)
 
 
 def run_charivne():
-    global links_from_charivne, charivne_report_brief, charivne_report_for_analysis, charivne_err
     links_from_charivne = parse_charivne_site(start_time, end_time)
     for url in links_from_charivne:
         parse_charivne_article(url, keywords_list)
@@ -186,7 +133,6 @@ def run_charivne():
 
 
 def run_radiotrek():
-    global links_from_radiotrek, radiotrek_report_brief, radiotrek_report_for_analysis, radiotrek_err
     links_from_radiotrek = parse_radiotrek_site(start_time, end_time)
     for url in links_from_radiotrek:
         parse_radiotrek_article(url, keywords_list)
@@ -194,7 +140,6 @@ def run_radiotrek():
 
 
 def run_suspilne():
-    global links_from_suspilne, suspilne_report_brief, suspilne_report_for_analysis, suspilne_err
     links_from_suspilne = parse_suspilne_site(start_time, end_time)
     for url in links_from_suspilne:
         parse_suspilne_article(url, keywords_list)
@@ -202,7 +147,6 @@ def run_suspilne():
 
 
 def run_vse_rv():
-    global links_from_vse_rv, vse_rv_report_brief, vse_rv_report_for_analysis, vse_rv_err
     links_from_vse_rv = parse_vse_rv_site(start_time, end_time)
     for url in links_from_vse_rv:
         parse_vse_rv_article(url, keywords_list)
@@ -210,7 +154,6 @@ def run_vse_rv():
 
 
 def run_rivnepost():
-    global links_from_rivnepost, rivnepost_report_brief, rivnepost_report_for_analysis, rivnepost_err
     links_from_rivnepost = parse_rivnepost_site(start_time, end_time)
     for url in links_from_rivnepost:
         parse_rivnepost_article(url, keywords_list)
@@ -218,7 +161,6 @@ def run_rivnepost():
 
 
 def run_ogo():
-    global links_from_ogo, ogo_report_brief, ogo_report_for_analysis, ogo_err
     links_from_ogo = parse_ogo_site(start_time, end_time)
     for url in links_from_ogo:
         parse_ogo_article(url, keywords_list)
@@ -226,12 +168,10 @@ def run_ogo():
 
 
 def run_sevendniv():
-    global links_from_sevendniv, sevendniv_report_brief, sevendniv_report_for_analysis, sevendniv_err
     parse_7dniv(start_time, end_time, keywords_list)
 
 
 def run_rivnemedia():
-    global links_from_rivnemedia, rivnemedia_report_brief, rivnemedia_report_for_analysis, rivnemedia_err
     links_from_rivnemedia = parse_rivnemedia_sitemap(start_time, end_time)
     for url in links_from_rivnemedia:
         parse_rivnemedia_article(url, keywords_list)
@@ -239,7 +179,6 @@ def run_rivnemedia():
 
 
 def run_horyn():
-    global links_from_horyn, horyn_report_brief, horyn_report_for_analysis, horyn_err
     links_from_horyn = get_horyn_news(start_time, end_time)
     for url in links_from_horyn:
         parse_horyn_article(url, keywords_list)
@@ -247,7 +186,6 @@ def run_horyn():
 
 
 def run_rivne1():
-    global links_from_rivne1, rivne1_report_brief, rivne1_report_for_analysis, rivne1_err
     links_from_rivne1 = parse_rivne1_site(start_time, end_time)
     for url in links_from_rivne1:
         parse_rivne1_article(url, keywords_list)
@@ -255,7 +193,6 @@ def run_rivne1():
 
 
 def run_rp_rv_ua():
-    global links_from_rp_rv_ua, rp_rv_ua_report_brief, rp_rv_ua_report_for_analysis, rp_rv_ua_err
     links_from_rp_rv_ua = parse_rp_rv_ua(start_time, end_time)
     for url in links_from_rp_rv_ua:
         parse_rp_rv_ua_article(url, keywords_list)
@@ -263,7 +200,6 @@ def run_rp_rv_ua():
 
 
 def run_itvmg():
-    global links_from_itvmg, itvmg_report_brief, itvmg_report_for_analysis, itvmg_err
     links_from_itvmg = parse_itvmg_site(start_time, end_time)
     for url in links_from_itvmg:
         parse_itvmg_article(url, keywords_list)
@@ -286,9 +222,7 @@ tasks = [
 ]
 
 
-# ============================================================================
-# RAYON PARSING
-# ============================================================================
+# ===== RAYON PARSING =====
 
 def parse_rayon_articles(base_url, start_time, end_time, keywords):
     """
@@ -316,8 +250,6 @@ def parse_rayon_articles(base_url, start_time, end_time, keywords):
     Returns:
         tuple: (collected_links, brief_reports, analysis_reports)
     """
-    global rayon_err, rayon_report_brief, rayon_report_for_analysis, links_from_rayon
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     collected_links = []
     page = 1
@@ -325,7 +257,10 @@ def parse_rayon_articles(base_url, start_time, end_time, keywords):
     while True:
         target_url = f"{base_url.rstrip('/')}/news?page={page}"
         try:
-            response = fetch_with_retry(target_url, headers, timeout=30)
+            response = requests.get(target_url, headers=headers, timeout=30)
+            if response.status_code != 200:
+                rayon_err.append(f"Page {page} unavailable (code {response.status_code}) - {base_url}")
+                break
             
             soup = BeautifulSoup(response.text, "html.parser")
             cards = soup.find_all("a", class_="newsCard")
@@ -333,7 +268,6 @@ def parse_rayon_articles(base_url, start_time, end_time, keywords):
             if not cards:
                 break
                 
-            news_time = None
             for card in cards:
                 time_tag = card.find("time", class_="newsCard__time")
                 if not time_tag:
@@ -357,7 +291,7 @@ def parse_rayon_articles(base_url, start_time, end_time, keywords):
                     if link not in collected_links:
                         collected_links.append(link)
             
-            if news_time and news_time < start_time:
+            if news_time < start_time:
                 break
                 
             page += 1
@@ -367,10 +301,11 @@ def parse_rayon_articles(base_url, start_time, end_time, keywords):
             rayon_err.append(f"Error on page {page}: {type(e).__name__} - {e} - {base_url}")
             break
     
+    global links_from_rayon
     links_from_rayon.extend(collected_links)
 
     
-    # ===== RAYON ARTICLES =====
+    # ===== RAYON ARTICLES  =====
 
     for url in collected_links:
         success = False
@@ -379,8 +314,17 @@ def parse_rayon_articles(base_url, start_time, end_time, keywords):
         for attempt in range(max_retries):
             try:
                 # Fetch article with extended timeout and retry
-                response = fetch_with_retry(url, headers, timeout=30)
+                response = requests.get(
+                    url, 
+                    headers=headers, 
+                    timeout=45,  # Increased timeout
+                    impersonate="chrome"
+                )
                 response.encoding = 'utf-8'
+                
+                if response.status_code != 200:
+                    rayon_err.append(f"HTTP error {response.status_code}: {url}")
+                    break
                 
                 soup = BeautifulSoup(response.text, 'html.parser')
                 
@@ -426,10 +370,13 @@ def parse_rayon_articles(base_url, start_time, end_time, keywords):
                 success = True
                 break  # Success, exit retry loop
                 
-            except Exception as e:
+            except requests.exceptions.Timeout:
                 wait_time = (attempt + 1) * 5  # 5, 10, 15 seconds
-                rayon_err.append(f"Error (attempt {attempt + 1}/{max_retries}) for {url}: {type(e).__name__}")
+                rayon_err.append(f"Timeout (attempt {attempt + 1}/{max_retries}) for {url}, waiting {wait_time}s")
                 time.sleep(wait_time)
+            except Exception as e:
+                rayon_err.append(f"Error processing {url}: {type(e).__name__} - {e}")
+                break
         
         if not success:
             rayon_err.append(f"Failed to process {url} after {max_retries} attempts")
@@ -439,9 +386,7 @@ def parse_rayon_articles(base_url, start_time, end_time, keywords):
     return collected_links, rayon_report_brief, rayon_report_for_analysis
 
 
-# ============================================================================
-# CHARIVNE PARSING
-# ============================================================================
+# ===== CHARIVNE PARSING =====
 
 def parse_charivne_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -450,8 +395,6 @@ def parse_charivne_site(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global charivne_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     base_url = "https://charivne.info"
     collected_links = []
@@ -461,8 +404,10 @@ def parse_charivne_site(start_time: datetime, end_time: datetime) -> List[str]:
         url = f"{base_url}/category/novini-rivnoho?page={page}"
         
         try:
-            response = fetch_with_retry(url, headers, timeout=30)
-            
+            response = requests.get(url, headers=headers, timeout=10)
+            if response.status_code != 200:
+                break
+                
             soup = BeautifulSoup(response.text, "html.parser")
             news_items = soup.find_all("div", class_="entry-header")
             
@@ -506,20 +451,25 @@ def parse_charivne_site(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
+ # ===== CHARIVNE ARTICLES  =====
+
 def parse_charivne_article(url: str, keywords: List[str]):
     """
     Parse a single article from charivne.info and search for keyword patterns.
     Results are appended to global charivne_report_brief and charivne_report_for_analysis.
     """
-    global charivne_err, charivne_report_brief, charivne_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_charivne_article: {url} - HTTP {response.status_code}"
+            charivne_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         article = soup.find('article', class_='blog-post')
@@ -538,19 +488,17 @@ def parse_charivne_article(url: str, keywords: List[str]):
             charivne_err.append(error_msg)
             return
         
-        content_copy = content_container.__copy__()
-        
-        for img in content_copy.find_all('img'):
+        for img in content_container.find_all('img'):
             img.decompose()
         
-        for separator in content_copy.find_all('div', class_='separator'):
+        for separator in content_container.find_all('div', class_='separator'):
             if not separator.get_text(strip=True):
                 separator.decompose()
             else:
                 for img in separator.find_all('img'):
                     img.decompose()
         
-        text = content_copy.get_text(separator=' ', strip=True)
+        text = content_container.get_text(separator=' ', strip=True)
         text = ' '.join(text.split())
         full_text = title + " " + text
         
@@ -578,9 +526,7 @@ def parse_charivne_article(url: str, keywords: List[str]):
         charivne_err.append(error_msg)
 
 
-# ============================================================================
-# RADIOTREK PARSING
-# ============================================================================
+#===== RADIOTREK PARSING =====
 
 def parse_radiotrek_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -589,8 +535,6 @@ def parse_radiotrek_site(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global radiotrek_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     base_url = "https://radiotrek.rv.ua"
     collected_links = []
@@ -601,8 +545,10 @@ def parse_radiotrek_site(start_time: datetime, end_time: datetime) -> List[str]:
         url = f"{base_url}/news/?st={offset}" if offset > 0 else f"{base_url}/news/"
         
         try:
-            response = fetch_with_retry(url, headers, timeout=30)
-            
+            response = requests.get(url, headers=headers, timeout=10)
+            if response.status_code != 200:
+                break
+                
             soup = BeautifulSoup(response.text, "html.parser")
             
             articles = soup.find_all("article")
@@ -646,20 +592,25 @@ def parse_radiotrek_site(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
+#===== RADIOTREK ARTICLES =====
+
 def parse_radiotrek_article(url: str, keywords: List[str]):
     """
     Parse a single article from radiotrek.rv.ua and search for keyword patterns.
     Results are appended to global radiotrek_report_brief and radiotrek_report_for_analysis.
     """
-    global radiotrek_err, radiotrek_report_brief, radiotrek_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_radiotrek_article: {url} - HTTP {response.status_code}"
+            radiotrek_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         main = soup.find('main', id='page-main')
@@ -733,9 +684,7 @@ def parse_radiotrek_article(url: str, keywords: List[str]):
         radiotrek_err.append(error_msg)
 
 
-# ============================================================================
-# SUSPILNE PARSING
-# ============================================================================
+# ===== SUSPILNE PARSING =====
 
 def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -744,8 +693,6 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global suspilne_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     base_url = "https://suspilne.media"
     collected_links = []
@@ -754,8 +701,10 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     while True:
         url = f"{base_url}/rivne/latest/?page={page}"
         try:
-            response = fetch_with_retry(url, headers, timeout=30)
-            
+            response = requests.get(url, headers=headers, timeout=10)
+            if response.status_code != 200:
+                break
+                
             soup = BeautifulSoup(response.text, "html.parser")
             articles = soup.find_all("article", class_=lambda x: x and "c-article-card" in x)
             
@@ -800,20 +749,25 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
+# ===== SUSPILNE ARTICLES =====
+
 def parse_suspilne_article(url: str, keywords: List[str]):
     """
     Parse a single article from suspilne.media and search for keyword patterns.
     Results are appended to global suspilne_report_brief and suspilne_report_for_analysis.
     """
-    global suspilne_err, suspilne_report_brief, suspilne_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_suspilne_article: {url} - HTTP {response.status_code}"
+            suspilne_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         
@@ -871,9 +825,7 @@ def parse_suspilne_article(url: str, keywords: List[str]):
         suspilne_err.append(error_msg)
 
 
-# ============================================================================
-# VSE_RV PARSING
-# ============================================================================
+# ===== VSE_RV PARSING =====
 
 def parse_vse_rv_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -882,8 +834,6 @@ def parse_vse_rv_site(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global vse_rv_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     base_url = "https://vse.rv.ua"
     collected_links = []
@@ -892,8 +842,10 @@ def parse_vse_rv_site(start_time: datetime, end_time: datetime) -> List[str]:
     while True:
         url = f"{base_url}/strichka.html?page={page}&per-page=9"
         try:
-            response = fetch_with_retry(url, headers, timeout=30)
-            
+            response = requests.get(url, headers=headers, timeout=10)
+            if response.status_code != 200:
+                break
+                
             soup = BeautifulSoup(response.text, "html.parser")
             articles = soup.find_all("div", class_="article__item")
             
@@ -933,20 +885,25 @@ def parse_vse_rv_site(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
+# ===== VSE_RV ARTICLES =====
+
 def parse_vse_rv_article(url: str, keywords: List[str]):
     """
     Parse a single article from vse.rv.ua and search for keyword patterns.
     Results are appended to global vse_rv_report_brief and vse_rv_report_for_analysis.
     """
-    global vse_rv_err, vse_rv_report_brief, vse_rv_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_vse_rv_article: {url} - HTTP {response.status_code}"
+            vse_rv_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         container = soup.find('div', class_='section')
@@ -1007,9 +964,7 @@ def parse_vse_rv_article(url: str, keywords: List[str]):
         vse_rv_err.append(error_msg)
 
 
-# ============================================================================
-# RIVNEPOST PARSING
-# ============================================================================
+# ===== RIVNEPOST PARSING =====
 
 def parse_rivnepost_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -1018,8 +973,6 @@ def parse_rivnepost_site(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global rivnepost_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     base_url = "https://rivnepost.rv.ua"
     collected_links = []
@@ -1029,8 +982,10 @@ def parse_rivnepost_site(start_time: datetime, end_time: datetime) -> List[str]:
         url = f"{base_url}/category/news/page/{page}/" if page > 1 else f"{base_url}/category/news/"
         
         try:
-            response = fetch_with_retry(url, headers, timeout=30)
-            
+            response = requests.get(url, headers=headers, timeout=10)
+            if response.status_code != 200:
+                break
+                
             soup = BeautifulSoup(response.text, "html.parser")
             articles = soup.find_all("div", class_="p-wrap")
             
@@ -1072,20 +1027,25 @@ def parse_rivnepost_site(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
+# ===== RIVNEPOST ARTICLES =====
+
 def parse_rivnepost_article(url: str, keywords: List[str]):
     """
     Parse a single article from rivnepost.rv.ua and search for keyword patterns.
     Results are appended to global rivnepost_report_brief and rivnepost_report_for_analysis.
     """
-    global rivnepost_err, rivnepost_report_brief, rivnepost_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_rivnepost_article: {url} - HTTP {response.status_code}"
+            rivnepost_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         article = soup.find('article', id=re.compile(r'post-\d+'))
@@ -1151,9 +1111,7 @@ def parse_rivnepost_article(url: str, keywords: List[str]):
         rivnepost_err.append(error_msg)
 
 
-# ============================================================================
-# OGO PARSING
-# ============================================================================
+# ===== OGO PARSING =====
 
 def parse_ogo_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -1162,8 +1120,6 @@ def parse_ogo_site(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global ogo_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     base_url = "https://ogo.ua"
     collected_links = []
@@ -1173,8 +1129,10 @@ def parse_ogo_site(start_time: datetime, end_time: datetime) -> List[str]:
         url = f"{base_url}/rubrics/view/region/page/{page}/" if page > 1 else f"{base_url}/rubrics/view/region/"
         
         try:
-            response = fetch_with_retry(url, headers, timeout=30)
-            
+            response = requests.get(url, headers=headers, timeout=10)
+            if response.status_code != 200:
+                break
+                
             soup = BeautifulSoup(response.text, "html.parser")
             articles = soup.find_all("article", class_="post")
             
@@ -1216,20 +1174,25 @@ def parse_ogo_site(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
+# ===== OGO ARTICLES =====
+
 def parse_ogo_article(url: str, keywords: List[str]):
     """
     Parse a single article from ogo.ua and search for keyword patterns.
     Results are appended to global ogo_report_brief and ogo_report_for_analysis.
     """
-    global ogo_err, ogo_report_brief, ogo_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_ogo_article: {url} - HTTP {response.status_code}"
+            ogo_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         container = soup.find('div', class_='ast-post-format-')
@@ -1299,9 +1262,7 @@ def parse_ogo_article(url: str, keywords: List[str]):
         ogo_err.append(error_msg)
 
 
-# ============================================================================
-# 7DNIV PARSING
-# ============================================================================
+# ===== 7DNIV ALL =====
 
 def parse_7dniv(start_time: datetime, end_time: datetime, keywords: List[str]):
     """
@@ -1315,8 +1276,6 @@ def parse_7dniv(start_time: datetime, end_time: datetime, keywords: List[str]):
     Returns:
         None: Results are appended to global sevendniv_report_brief and sevendniv_report_for_analysis
     """
-    global sevendniv_err, sevendniv_report_brief, sevendniv_report_for_analysis, links_from_sevendniv
-    
     api_url = "https://7dniv.rv.ua/wp-json/wp/v2/posts"
     
     params = {
@@ -1330,7 +1289,9 @@ def parse_7dniv(start_time: datetime, end_time: datetime, keywords: List[str]):
     while True:
         params["page"] = page
         try:
-            response = fetch_with_retry(api_url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
+            response = requests.get(api_url, params=params, timeout=30)
+            if response.status_code != 200:
+                break
             
             posts = response.json()
             if not posts:
@@ -1383,9 +1344,7 @@ def parse_7dniv(start_time: datetime, end_time: datetime, keywords: List[str]):
             break
 
 
-# ============================================================================
-# RIVNEMEDIA PARSING
-# ============================================================================
+# ===== RIVNEMEDIA PARSING =====
 
 def parse_rivnemedia_sitemap(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -1398,20 +1357,45 @@ def parse_rivnemedia_sitemap(start_time: datetime, end_time: datetime) -> List[s
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global rivnemedia_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
     base_url = "https://rivne.media"
     collected_links = []
     
+    def fetch_with_retry(url: str, max_retries: int = 2) -> requests.Response:
+        """Внутренняя функция для запросов с повторными попытками"""
+        timeouts = [30, 100]  # Первая попытка: 30с, вторая: 100с
+        
+        for attempt in range(min(max_retries, len(timeouts))):
+            current_timeout = timeouts[attempt]
+            
+            try:
+                if attempt > 0:
+                    print(f"Повторная попытка для {url} с таймаутом {current_timeout}с")
+                
+                response = requests.get(url, headers=headers, timeout=current_timeout)
+                response.raise_for_status()
+                return response
+                
+            except requests.Timeout as e:
+                error_msg = f"Timeout ({current_timeout}с) при загрузке {url}"
+                rivnemedia_err.append(error_msg)
+                
+                if attempt == max_retries - 1:
+                    raise
+                else:
+                    time.sleep(2)
+                    continue
+        
+        raise requests.Timeout(f"Все попытки загрузки {url} провалились")
+    
     try:
-        response = fetch_with_retry(f"{base_url}/sitemap.xml", headers, timeout=30)
+        response = fetch_with_retry(f"{base_url}/sitemap.xml")
         soup = BeautifulSoup(response.text, "xml")
         sitemap_urls = [s.text for s in soup.find_all("loc")]
         
         for sm_url in reversed(sitemap_urls):
             try:
-                resp_sm = fetch_with_retry(sm_url, headers, timeout=30)
+                resp_sm = fetch_with_retry(sm_url)
                 soup_sm = BeautifulSoup(resp_sm.text, "xml")
                 urls = soup_sm.find_all("url")
                 
@@ -1432,11 +1416,16 @@ def parse_rivnemedia_sitemap(start_time: datetime, end_time: datetime) -> List[s
                 
                 time.sleep(1)
                 
-            except Exception as e:
-                error_msg = f"parse_rivnemedia_sitemap: Пропускаем {sm_url} - {type(e).__name__}"
+            except requests.Timeout:
+                # Пропускаем проблемный под-sitemap и продолжаем
+                error_msg = f"parse_rivnemedia_sitemap: Пропускаем {sm_url} после таймаута"
                 rivnemedia_err.append(error_msg)
                 continue
             
+    except requests.Timeout:
+        error_msg = "parse_rivnemedia_sitemap: Не удалось загрузить главный sitemap.xml"
+        rivnemedia_err.append(error_msg)
+        
     except Exception as e:
         error_msg = f"parse_rivnemedia_sitemap: {type(e).__name__}: {e}"
         rivnemedia_err.append(error_msg)
@@ -1444,20 +1433,25 @@ def parse_rivnemedia_sitemap(start_time: datetime, end_time: datetime) -> List[s
     return collected_links
 
 
+# ===== RIVNEMEDIA ARTICLES =====
+
 def parse_rivnemedia_article(url: str, keywords: List[str]):
     """
     Parse a single article from rivne.media and search for keyword patterns.
     Results are appended to global rivnemedia_report_brief and rivnemedia_report_for_analysis.
     """
-    global rivnemedia_err, rivnemedia_report_brief, rivnemedia_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_rivnemedia_article: {url} - HTTP {response.status_code}"
+            rivnemedia_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         article = soup.find('article', class_='article')
@@ -1526,9 +1520,7 @@ def parse_rivnemedia_article(url: str, keywords: List[str]):
         rivnemedia_err.append(error_msg)
 
 
-# ============================================================================
-# HORYN PARSING
-# ============================================================================
+# ===== HORYN PARSING =====
 
 def get_horyn_news(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -1541,8 +1533,6 @@ def get_horyn_news(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global horyn_err
-    
     months = {"січня": "01", "лютого": "02", "березня": "03", "квітня": "04", 
               "травня": "05", "червня": "06", "липня": "07", "серпня": "08", 
               "вересня": "09", "жовтня": "10", "листопада": "11", "грудня": "12"}
@@ -1554,7 +1544,7 @@ def get_horyn_news(start_time: datetime, end_time: datetime) -> List[str]:
     while True:
         url = f"https://horyn.info/news/?pages={page}" if page > 1 else "https://horyn.info/news/"
         try:
-            soup = BeautifulSoup(fetch_with_retry(url, headers, timeout=30).text, "html.parser")
+            soup = BeautifulSoup(requests.get(url, headers=headers, timeout=10).text, "html.parser")
             items = soup.select(".sidebar__wrapper a.news-card")
             
             if not items:
@@ -1563,7 +1553,7 @@ def get_horyn_news(start_time: datetime, end_time: datetime) -> List[str]:
             for item in items:
                 link = item.get("href")
                 try:
-                    art_soup = BeautifulSoup(fetch_with_retry(link, headers, timeout=30).text, "html.parser")
+                    art_soup = BeautifulSoup(requests.get(link, headers=headers, timeout=10).text, "html.parser")
                     
                     date_tag = art_soup.find("p", class_="post-single__date")
                     if date_tag:
@@ -1590,20 +1580,25 @@ def get_horyn_news(start_time: datetime, end_time: datetime) -> List[str]:
     return links
 
 
+# ===== HORYN ARTICLES =====
+
 def parse_horyn_article(url: str, keywords: List[str]):
     """
     Parse a single article from horyn.info and search for keyword patterns.
     Results are appended to global horyn_report_brief and horyn_report_for_analysis.
     """
-    global horyn_err, horyn_report_brief, horyn_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_horyn_article: {url} - HTTP {response.status_code}"
+            horyn_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         container = soup.find('div', class_='padding-wrapper--post-single')
@@ -1688,9 +1683,7 @@ def parse_horyn_article(url: str, keywords: List[str]):
         horyn_err.append(error_msg)
 
 
-# ============================================================================
-# RIVNE1 PARSING
-# ============================================================================
+# ===== RIVNE1 PARSING =====
 
 def parse_rivne1_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -1703,8 +1696,6 @@ def parse_rivne1_site(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global rivne1_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
     base_url = "https://rivne1.tv"
     category_path = "/category/61-novini"
@@ -1723,7 +1714,7 @@ def parse_rivne1_site(start_time: datetime, end_time: datetime) -> List[str]:
         url = f"{base_url}{category_path}" + (f"/{offset}" if offset > 0 else "")
         
         try:
-            response = fetch_with_retry(url, headers, timeout=30)
+            response = requests.get(url, headers=headers, timeout=10)
             soup = BeautifulSoup(response.text, "html.parser")
             news_list = soup.find("ul", class_="list-st-3")
             
@@ -1782,20 +1773,25 @@ def parse_rivne1_site(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
+# ===== RIVNE1 ARTICLES =====
+
 def parse_rivne1_article(url: str, keywords: List[str]):
     """
     Parse a single article from rivne1.tv and search for keyword patterns.
     Results are appended to global rivne1_report_brief and rivne1_report_for_analysis.
     """
-    global rivne1_err, rivne1_report_brief, rivne1_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_rivne1_article: {url} - HTTP {response.status_code}"
+            rivne1_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         
@@ -1856,9 +1852,7 @@ def parse_rivne1_article(url: str, keywords: List[str]):
         rivne1_err.append(error_msg)
 
 
-# ============================================================================
-# RP_RV_UA PARSING
-# ============================================================================
+# ===== RP_RV_UA PARSING =====
 
 def parse_rp_rv_ua(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -1871,8 +1865,6 @@ def parse_rp_rv_ua(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global rp_rv_ua_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
     base_url = "https://www.rp.rv.ua"
     collected_links = []
@@ -1883,7 +1875,7 @@ def parse_rp_rv_ua(start_time: datetime, end_time: datetime) -> List[str]:
         url = f"{base_url}/page/{page}" if page > 1 else base_url
         
         try:
-            response = fetch_with_retry(url, headers, timeout=30)
+            response = requests.get(url, headers=headers, timeout=10)
             soup = BeautifulSoup(response.text, "html.parser")
             posts = soup.find_all("div", class_="post")
             
@@ -1929,20 +1921,25 @@ def parse_rp_rv_ua(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
+# ===== RP_RV_UA ARTICLES =====
+
 def parse_rp_rv_ua_article(url: str, keywords: List[str]):
     """
     Parse a single article from rp.rv.ua and search for keyword patterns.
     Results are appended to global rp_rv_ua_report_brief and rp_rv_ua_report_for_analysis.
     """
-    global rp_rv_ua_err, rp_rv_ua_report_brief, rp_rv_ua_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
     
     try:
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_rp_rv_ua_article: {url} - HTTP {response.status_code}"
+            rp_rv_ua_err.append(error_msg)
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         article = soup.find('div', id=re.compile(r'^post-\d+'))
@@ -2008,9 +2005,7 @@ def parse_rp_rv_ua_article(url: str, keywords: List[str]):
         rp_rv_ua_err.append(error_msg)
 
 
-# ============================================================================
-# ITVMG PARSING
-# ============================================================================
+# ===== ITVMG PARSING =====
 
 def parse_itvmg_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
@@ -2023,8 +2018,6 @@ def parse_itvmg_site(start_time: datetime, end_time: datetime) -> List[str]:
     Returns:
         list: List of article URLs collected within the specified time range
     """
-    global itvmg_err
-    
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"}
     base_url = "https://itvmg.com"
     category_path = "/novini"
@@ -2037,7 +2030,7 @@ def parse_itvmg_site(start_time: datetime, end_time: datetime) -> List[str]:
         url = f"{base_url}{category_path}" + (f"/{offset}" if offset > 0 else "")
         
         try:
-            response = fetch_with_retry(url, headers, timeout=30)
+            response = requests.get(url, headers=headers, timeout=10)
             soup = BeautifulSoup(response.text, "html.parser")
             news_items = soup.find_all("a", class_="reset-link")
             
@@ -2081,13 +2074,13 @@ def parse_itvmg_site(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
+# ===== ITVMG ARTICLES =====
+
 def parse_itvmg_article(url: str, keywords: List[str]):
     """
     Parse a single article from itvmg.com and search for keyword patterns.
     Results are appended to global itvmg_report_brief and itvmg_report_for_analysis.
     """
-    global itvmg_err, itvmg_report_brief, itvmg_report_for_analysis
-    
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
     }
@@ -2096,8 +2089,11 @@ def parse_itvmg_article(url: str, keywords: List[str]):
         if url in [item['link'] for item in itvmg_report_brief]:
             return
         
-        response = fetch_with_retry(url, headers, timeout=30)
+        response = requests.get(url, headers=headers, impersonate="chrome120", timeout=15)
         response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            return
         
         soup = BeautifulSoup(response.text, 'html.parser')
         
@@ -2155,13 +2151,10 @@ def parse_itvmg_article(url: str, keywords: List[str]):
     except Exception:
         pass
 
+# ===== THREAD POOL EXECUTION ===== 
 
-# ============================================================================
-# THREAD POOL EXECUTION
-# ============================================================================
-
-print(f"\nStarting {len(tasks)} tasks with {MAX_WORKERS} workers...")
-print("=" * 70)
+#print(f"\nStarting {len(tasks)} tasks with {MAX_WORKERS} workers...")
+#print("=" * 70)
 
 with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
     futures = {executor.submit(task): task.__name__ for task in tasks}
@@ -2174,13 +2167,9 @@ with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
         except Exception as e:
             print(f"[ERROR] {task_name} failed: {e}")
 
-print("=" * 70)
-print("All tasks completed")
+#print("=" * 70)
+#print("All tasks completed")
 
-
-# ============================================================================
-# BUILD REPORTS
-# ============================================================================
 
 list_brief = [
     rayon_report_brief,
@@ -2230,16 +2219,37 @@ list_err = [
     itvmg_err
 ]
 
+
+media_names = {"rayon" :"Район.in.ua", 
+               "charivne": "ЧаРівне.інфо", 
+               "radiotrek": "Радіо ТРЕК", 
+               "suspilne": "Суспільне Рівне", 
+               "vse_rv": "Все Рівне", 
+               "rivnepost": "Рівне вечірнє", 
+               "ogo": "OGO.ua", 
+               "sevendniv": "Сім днів", 
+               "rivnemedia": "Рівне Медіа", 
+               "horyn": "Горинь.info", 
+               "rivne1": "Рівне 1", 
+               "rp_rv_ua": "Рівненська правда", 
+               "itvmg": "ITV"}
+
+end_time = datetime.now().replace(hour=14, minute=0, second=0, microsecond=0)
+start_time = end_time - timedelta(days=1)
+
+# List of keys for accessing media_names
 media_keys = ["rayon", "charivne", "radiotrek", "suspilne", "vse_rv", 
               "rivnepost", "ogo", "sevendniv", "rivnemedia", "horyn", 
               "rivne1", "rp_rv_ua", "itvmg"]
 
 # Build the brief report
 brief_report = f"{end_time.strftime('%d.%m')}\n"
+
+# Check if there is at least one non-empty list
 has_any_publication = False
 
 for i, report_list in enumerate(list_brief):
-    if report_list:
+    if report_list:  # if the list is not empty
         has_any_publication = True
         media_key = media_keys[i]
         media_name = media_names[media_key]
@@ -2250,15 +2260,18 @@ for i, report_list in enumerate(list_brief):
             brief_report += f"{item['title']}\n"
             brief_report += f"{item['link']}\n"
 
+# If all lists are empty
 if not has_any_publication:
     brief_report += "Публікації у медіа відсутні"
 
 # Build the full report
 full_report = f"{end_time.strftime('%d.%m')}\n"
+
+# Check if there is at least one non-empty list for full report
 has_any_publication_full = False
 
 for i, report_list in enumerate(list_for_analysis):
-    if report_list:
+    if report_list:  # if the list is not empty
         has_any_publication_full = True
         media_key = media_keys[i]
         media_name = media_names[media_key]
@@ -2271,15 +2284,18 @@ for i, report_list in enumerate(list_for_analysis):
             full_report += f"{item['link']}\n"
             full_report += f"{item['text']}\n"
 
+# If all lists are empty
 if not has_any_publication_full:
     full_report += "Публікації у медіа відсутні"
 
 # Build the error report
 error_report = f"{end_time.strftime('%d.%m')}\n"
+
+# Check if there is at least one non-empty error list
 has_any_error = False
 
 for i, error_list in enumerate(list_err):
-    if error_list:
+    if error_list:  # if the list is not empty
         has_any_error = True
         media_key = media_keys[i]
         media_name = media_names[media_key]
@@ -2290,9 +2306,7 @@ for i, error_list in enumerate(list_err):
             error_report += f"{error}\n"
 
 
-# ============================================================================
-# REPORTS SAVING
-# ============================================================================
+# ====== REPORTS SAVING ======
 
 error_text = str(error_report) if error_report else ""
 has_errors = len(error_text.strip()) > 10
