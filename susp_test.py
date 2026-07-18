@@ -1,3 +1,4 @@
+import random
 import os
 import re
 import time
@@ -5,24 +6,6 @@ from datetime import datetime, timedelta
 from typing import List
 from bs4 import BeautifulSoup
 from curl_cffi import requests
-from playwright.sync_api import sync_playwright  # <-- ИМПОРТ ДЛЯ PLAYWRIGHT
-
-
-# ===== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ =====
-suspilne_links = []
-suspilne_report_brief = []
-suspilne_report_for_analysis = []
-suspilne_err = []
-
-
-import os
-import re
-import time
-from datetime import datetime, timedelta
-from typing import List
-from bs4 import BeautifulSoup
-from curl_cffi import requests
-
 
 # ===== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ =====
 suspilne_links = []
@@ -61,6 +44,17 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     while True:
         url = f"{base_url}/rivne/latest/?page={page}"
         try:
+            # Случайная задержка 2-5 секунд перед каждой страницей
+            delay = random.uniform(2, 5)
+            print(f"   Waiting {delay:.1f}s before page {page}...")
+            time.sleep(delay)
+            
+            # После каждой 3-й страницы - большая пауза 15-25 секунд
+            if page % 3 == 0:
+                big_delay = random.uniform(15, 25)
+                print(f"   ⏰ Long pause {big_delay:.1f}s (page {page})...")
+                time.sleep(big_delay)
+            
             print(f"   Requesting page {page}...")
             
             response = requests.get(
@@ -117,7 +111,6 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
                 break
                 
             page += 1
-            time.sleep(2)  # Увеличенная задержка между страницами
             
         except Exception as e:
             suspilne_err.append(f"parse_suspilne_site: page {page} - {type(e).__name__}: {e}")
