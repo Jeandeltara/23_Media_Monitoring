@@ -14,9 +14,145 @@ suspilne_report_for_analysis = []
 suspilne_err = []
 
 
-# ===== ВАШИ ФУНКЦИИ (скопируйте сюда ваши оригинальные) =====
-# ... parse_suspilne_site ...
-# ... parse_suspilne_article ...
+# ===== SUSPILNE PARSING =====
+
+def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
+    """
+    Parse news articles from suspilne.media within a specified time range.
+    
+    Returns:
+        list: List of article URLs collected within the specified time range
+    """
+    headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
+    base_url = "https://suspilne.media"
+    collected_links = []
+    page = 1
+    
+    while True:
+        url = f"{base_url}/rivne/latest/?page={page}"
+        try:
+            response = requests.get(url, headers=headers, timeout=10)
+            if response.status_code != 200:
+                break
+                
+            soup = BeautifulSoup(response.text, "html.parser")
+            articles = soup.find_all("article", class_=lambda x: x and "c-article-card" in x)
+            
+            if not articles:
+                break
+            
+            found_older = False
+            
+            for art in articles:
+                time_tag = art.find("time", class_=lambda x: x and "time" in x)
+                link_tag = art.find("a", class_=lambda x: x and "headline" in x)
+                
+                if not time_tag or not link_tag:
+                    continue
+                
+                date_iso = time_tag["datetime"]
+                news_date = datetime.fromisoformat(date_iso.split('+')[0])
+                
+                if news_date < start_time:
+                    found_older = True
+                    break
+                
+                if start_time <= news_date <= end_time:
+                    full_url = link_tag["href"]
+                    if not full_url.startswith("http"):
+                        full_url = base_url + full_url
+                    
+                    if full_url not in collected_links:
+                        collected_links.append(full_url)
+            
+            if found_older:
+                break
+                
+            page += 1
+            time.sleep(1)
+            
+        except Exception as e:
+            error_msg = f"parse_suspilne_site: page {page} - {type(e).__name__}: {e}"
+            suspilne_err.append(error_msg)
+            break
+            
+    return collected_links
+
+
+# ===== SUSPILNE ARTICLES =====
+
+def parse_suspilne_article(url: str, keywords: List[str]):
+    """
+    Parse a single article from suspilne.media and search for keyword patterns.
+    Results are appended to global suspilne_report_brief and suspilne_report_for_analysis.
+    """
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+    }
+    
+    try:
+        response = requests.get(url, headers=headers, timeout=15)
+        response.encoding = 'utf-8'
+        
+        if response.status_code != 200:
+            error_msg = f"parse_suspilne_article: {url} - HTTP {response.status_code}"
+            suspilne_err.append(error_msg)
+            return
+        
+        soup = BeautifulSoup(response.text, 'html.parser')
+        
+        title_tag = soup.find('h1')
+        if not title_tag:
+            title_tag = soup.find('h1', class_=re.compile(r'title'))
+        title = title_tag.get_text(strip=True) if title_tag else "No title"
+        
+        article = soup.find('article', class_='post-body')
+        if not article:
+            article = soup.find('article')
+        if not article:
+            error_msg = f"parse_suspilne_article: {url} - ARTICLE CONTAINER NOT FOUND"
+            suspilne_err.append(error_msg)
+            return
+        
+        content_container = article.find('div', class_=re.compile(r'c-article-content'))
+        if not content_container:
+            content_container = article
+        
+        content_copy = content_container.__copy__()
+        
+        for unwanted in content_copy.find_all(['div'], class_=re.compile(r'(share|social|ad|banner|promo|sharing|info-share)')):
+            unwanted.decompose()
+        for img in content_copy.find_all('img'):
+            img.decompose()
+        for embed in content_copy.find_all('div', {'data-embed': True}):
+            embed.decompose()
+        
+        text = content_copy.get_text(separator=' ', strip=True)
+        text = ' '.join(text.split())
+        full_text = title + " " + text
+        
+        found_keywords = []
+        for pattern in keywords:
+            if re.search(pattern, full_text, re.IGNORECASE):
+                found_keywords.append(pattern)
+        
+        if found_keywords:
+            suspilne_report_brief.append({
+                'title': title,
+                'link': url,
+                'keywords': found_keywords
+            })
+            
+            suspilne_report_for_analysis.append({
+                'title': title,
+                'link': url,
+                'text': text,
+                'keywords': found_keywords
+            })
+        
+    except Exception as e:
+        error_msg = f"parse_suspilne_article: {url} - {type(e).__name__}: {e}"
+        suspilne_err.append(error_msg)
 
 
 # ===== ЗАПУСК =====
