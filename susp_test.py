@@ -1,11 +1,12 @@
-import random
 import os
 import re
 import time
+import random
 from datetime import datetime, timedelta
 from typing import List
 from bs4 import BeautifulSoup
 from curl_cffi import requests
+
 
 # ===== ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ =====
 suspilne_links = []
@@ -14,7 +15,7 @@ suspilne_report_for_analysis = []
 suspilne_err = []
 
 
-# ===== ФУНКЦИЯ ПАРСИНГА САЙТА =====
+# ===== ФУНКЦИЯ ПАРСИНГА САЙТА (с задержками между страницами) =====
 def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
     Parse news articles from suspilne.media within a specified time range.
@@ -121,7 +122,7 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     return collected_links
 
 
-# ===== ФУНКЦИЯ ПАРСИНГА СТАТЬИ =====
+# ===== ФУНКЦИЯ ПАРСИНГА СТАТЬИ (БЕЗ задержек внутри) =====
 def parse_suspilne_article(url: str, keywords: List[str]):
     """
     Parse a single article from suspilne.media and search for keyword patterns.
@@ -133,11 +134,6 @@ def parse_suspilne_article(url: str, keywords: List[str]):
     }
     
     try:
-        # Случайная задержка 3-6 секунд перед каждой статьей
-        delay = random.uniform(3, 6)
-        print(f"   Waiting {delay:.1f}s before article...")
-        time.sleep(delay)
-        
         response = requests.get(url, headers=headers, timeout=15, impersonate="chrome120")
         response.encoding = 'utf-8'
         
@@ -219,81 +215,18 @@ if __name__ == "__main__":
     suspilne_links = parse_suspilne_site(start_time, end_time)
     print(f"Найдено ссылок: {len(suspilne_links)}")
     
-    # Парсинг статей
-    for url in suspilne_links:
+    # Парсинг статей с задержкой 3-6 секунд ПОСЛЕ каждой статьи
+    for i, url in enumerate(suspilne_links, 1):
+        print(f"\n📄 [{i}/{len(suspilne_links)}] Parsing article...")
         parse_suspilne_article(url, keywords_list)
-        time.sleep(1)
+        
+        # Задержка после каждой статьи (кроме последней)
+        if i < len(suspilne_links):
+            delay = random.uniform(3, 6)
+            print(f"   ⏰ Waiting {delay:.1f}s before next article...")
+            time.sleep(delay)
     
-    print(f"Найдено статей с ключевыми словами: {len(suspilne_report_brief)}")
-    print(f"Ошибок: {len(suspilne_err)}")
-    
-    # Формирование отчетов
-    brief_report = f"{end_time.strftime('%d.%m')}\n"
-    if suspilne_report_brief:
-        brief_report += "Суспільне Рівне\n"
-        for item in suspilne_report_brief:
-            brief_report += f"{item['title']}\n{item['link']}\n"
-    else:
-        brief_report += "Публікації у медіа відсутні\n"
-    
-    full_report = f"{end_time.strftime('%d.%m')}\n"
-    if suspilne_report_for_analysis:
-        full_report += "Суспільне Рівне\n"
-        for item in suspilne_report_for_analysis:
-            full_report += f"\n\n{item['title']}\n{item['link']}\n{item['text']}\n"
-    else:
-        full_report += "Публікації у медіа відсутні\n"
-    
-    error_report = f"{end_time.strftime('%d.%m')}\n"
-    if suspilne_err:
-        error_report += "Суспільне Рівне\n"
-        for error in suspilne_err:
-            error_report += f"{error}\n"
-    else:
-        error_report += "Помилок не зафіксовано\n"
-    
-    # Сохранение
-    has_errors = len(suspilne_err) > 0
-    warning = "-- Увага! під час обробки зафіксовані помилки. Ймовірно результати не повні.\n\n"
-    
-    with open('suspilne_full_report.txt', 'w', encoding='utf-8') as f:
-        f.write((warning if has_errors else '') + full_report)
-    
-    with open('suspilne_brief_report.txt', 'w', encoding='utf-8') as f:
-        f.write((warning if has_errors else '') + brief_report)
-    
-    with open('suspilne_error_report.txt', 'w', encoding='utf-8') as f:
-        f.write(error_report)
-    
-    print("\n✅ Файлы сохранены:")
-    print("   - suspilne_full_report.txt")
-    print("   - suspilne_brief_report.txt")
-    print("   - suspilne_error_report.txt")
-
-
-# ===== ЗАПУСК =====
-
-if __name__ == "__main__":
-    # Время за последние 7 дней
-    end_time = datetime.now().replace(hour=23, minute=59, second=59, microsecond=0)
-    start_time = end_time - timedelta(days=7)
-    keywords_list = [r'\bрівн\w*']
-    
-    print("=" * 60)
-    print("Запуск парсера Суспільного")
-    print(f"Период: {start_time} - {end_time}")
-    print("=" * 60)
-    
-    # Сбор ссылок
-    suspilne_links = parse_suspilne_site(start_time, end_time)
-    print(f"Найдено ссылок: {len(suspilne_links)}")
-    
-    # Парсинг статей
-    for url in suspilne_links:
-        parse_suspilne_article(url, keywords_list)
-        time.sleep(1)
-    
-    print(f"Найдено статей с ключевыми словами: {len(suspilne_report_brief)}")
+    print(f"\nНайдено статей с ключевыми словами: {len(suspilne_report_brief)}")
     print(f"Ошибок: {len(suspilne_err)}")
     
     # Формирование отчетов
