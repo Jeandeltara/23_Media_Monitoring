@@ -149,10 +149,11 @@ def run_suspilne():
 
 
 def run_vse_rv():
-    links_from_vse_rv = parse_vse_rv_site(start_time, end_time)
-    for url in links_from_vse_rv:
-        parse_vse_rv_article(url, keywords_list)
-        time.sleep(1)
+    global links_from_vse_rv, vse_rv_report_brief, vse_rv_report_for_analysis, vse_rv_err
+    links_from_vse_rv, vse_rv_report_brief, vse_rv_report_for_analysis, vse_rv_err = parse_vse_rv_rss(
+        start_time, end_time, keywords_list
+    )
+    time.sleep(1)
 
 
 def run_rivnepost():
@@ -829,141 +830,103 @@ def parse_suspilne_article(url: str, keywords: List[str]):
 
 # ===== VSE_RV PARSING =====
 
-def parse_vse_rv_site(start_time: datetime, end_time: datetime) -> List[str]:
+def parse_vse_rv_rss(start_time, end_time, keywords_list):
     """
-    Parse news articles from vse.rv.ua within a specified time range.
+    Parse RSS feed of vse.rv.ua and extract articles within time range containing keywords.
+    
+    Args:
+        start_time (datetime): Start of the time range (naive datetime, no timezone)
+        end_time (datetime): End of the time range (naive datetime, no timezone)
+        keywords_list (list): List of regex patterns to search for in title and text
     
     Returns:
-        list: List of article URLs collected within the specified time range
+        tuple: (links_from_vse_rv, vse_rv_report_brief, vse_rv_report_for_analysis, vse_rv_err)
+            - links_from_vse_rv: list of all article URLs in time range
+            - vse_rv_report_brief: list of dicts with 'title', 'link', 'keywords'
+            - vse_rv_report_for_analysis: list of dicts with 'title', 'link', 'text', 'keywords'
+            - vse_rv_err: list of error messages
     """
+    links_from_vse_rv = []
+    vse_rv_report_brief = []
+    vse_rv_report_for_analysis = []
+    vse_rv_err = []
+    
+    rss_url = "http://vse.rv.ua/rss.xml"
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
-    base_url = "https://vse.rv.ua"
-    collected_links = []
-    page = 1
-
-    while True:
-        url = f"{base_url}/strichka.html?page={page}&per-page=9"
-        try:
-            response = requests.get(url, headers=headers, timeout=10)
-            if response.status_code != 200:
-                break
-                
-            soup = BeautifulSoup(response.text, "html.parser")
-            articles = soup.find_all("div", class_="article__item")
-            
-            if not articles:
-                break
-                
-            found_older = False
-            
-            for art in articles:
-                meta_date = art.find("meta", itemprop="datePublished dateModified")
-                if not meta_date:
-                    continue
-                
-                news_date = datetime.strptime(meta_date["content"], "%Y-%m-%d")
-                
-                if news_date < start_time:
-                    found_older = True
-                    break
-                
-                link_tag = art.find("a", class_="article__link")
-                if start_time <= news_date <= end_time and link_tag:
-                    full_url = base_url + link_tag["href"]
-                    if full_url not in collected_links:
-                        collected_links.append(full_url)
-            
-            if found_older:
-                break
-                
-            page += 1
-            time.sleep(1)
-            
-        except Exception as e:
-            error_msg = f"parse_vse_rv_site: page {page} - {type(e).__name__}: {e}"
-            vse_rv_err.append(error_msg)
-            break
-            
-    return collected_links
-
-
-# ===== VSE_RV ARTICLES =====
-
-def parse_vse_rv_article(url: str, keywords: List[str]):
-    """
-    Parse a single article from vse.rv.ua and search for keyword patterns.
-    Results are appended to global vse_rv_report_brief and vse_rv_report_for_analysis.
-    """
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
     
     try:
-        response = requests.get(url, headers=headers, timeout=15)
-        response.encoding = 'utf-8'
+        response = requests.get(rss_url, headers=headers, timeout=10)
+        feed = feedparser.parse(response.text)
         
-        if response.status_code != 200:
-            error_msg = f"parse_vse_rv_article: {url} - HTTP {response.status_code}"
-            vse_rv_err.append(error_msg)
-            return
+        if not feed.entries:
+            vse_rv_err.append("RSS feed is empty")
+            return links_from_vse_rv, vse_rv_report_brief, vse_rv_report_for_analysis, vse_rv_err
         
-        soup = BeautifulSoup(response.text, 'html.parser')
-        container = soup.find('div', class_='section')
-        
-        if not container:
-            error_msg = f"parse_vse_rv_article: {url} - CONTAINER NOT FOUND"
-            vse_rv_err.append(error_msg)
-            return
-        
-        title_tag = container.find('h1', class_='breadcrumbs__title')
-        title = title_tag.get_text(strip=True) if title_tag else "No title"
-        
-        content_container = container.find('div', class_='article-inner__content', itemprop='articleBody')
-        if not content_container:
-            error_msg = f"parse_vse_rv_article: {url} - CONTENT CONTAINER NOT FOUND"
-            vse_rv_err.append(error_msg)
-            return
-        
-        content_copy = content_container.__copy__()
-        
-        for img in content_copy.find_all('img'):
-            img.decompose()
-        
-        for ad in content_copy.find_all('div', class_='within-ads'):
-            ad.decompose()
-        for ad in content_copy.find_all('div', class_='video-adv-wrapper'):
-            ad.decompose()
-        
-        for p in content_copy.find_all('p'):
-            if not p.get_text(strip=True):
-                p.decompose()
-        
-        text = content_copy.get_text(separator=' ', strip=True)
-        text = ' '.join(text.split())
-        full_text = title + " " + text
-        
-        found_keywords = []
-        for pattern in keywords:
-            if re.search(pattern, full_text, re.IGNORECASE):
-                found_keywords.append(pattern)
-        
-        if found_keywords:
-            vse_rv_report_brief.append({
-                'title': title,
-                'link': url,
-                'keywords': found_keywords
-            })
-            
-            vse_rv_report_for_analysis.append({
-                'title': title,
-                'link': url,
-                'text': text,
-                'keywords': found_keywords
-            })
-        
+        for entry in feed.entries:
+            try:
+                pub_date = None
+                if entry.get('published'):
+                    try:
+                        pub_date = parser.parse(entry.get('published'))
+                        pub_date = pub_date.replace(tzinfo=None)
+                    except Exception as e:
+                        vse_rv_err.append(f"Date parsing error: {str(e)}")
+                        continue
+                else:
+                    continue
+                
+                if pub_date < start_time:
+                    break
+                
+                if start_time <= pub_date <= end_time:
+                    title = entry.get('title', '').strip()
+                    link = entry.get('link', '').strip()
+                    
+                    text = ''
+                    if entry.get('content'):
+                        content_data = entry['content']
+                        if isinstance(content_data, list) and content_data:
+                            if isinstance(content_data[0], dict) and 'value' in content_data[0]:
+                                text = content_data[0]['value']
+                            else:
+                                text = str(content_data[0])
+                    elif entry.get('summary'):
+                        text = entry['summary']
+                    
+                    clean_text = re.sub('<[^<]+?>', '', text)
+                    clean_text = ' '.join(clean_text.split())
+                    
+                    if link:
+                        links_from_vse_rv.append(link)
+                    
+                    found_keywords = []
+                    for keyword in keywords_list:
+                        pattern = re.compile(keyword, re.IGNORECASE)
+                        if pattern.search(title) or pattern.search(clean_text):
+                            found_keywords.append(keyword)
+                    
+                    if found_keywords:
+                        vse_rv_report_brief.append({
+                            'title': title,
+                            'link': link,
+                            'keywords': found_keywords
+                        })
+                        
+                        vse_rv_report_for_analysis.append({
+                            'title': title,
+                            'link': link,
+                            'text': clean_text,
+                            'keywords': found_keywords
+                        })
+                        
+            except Exception as e:
+                vse_rv_err.append(f"Entry processing error: {str(e)}")
+                continue
+                
     except Exception as e:
-        error_msg = f"parse_vse_rv_article: {url} - {type(e).__name__}: {e}"
-        vse_rv_err.append(error_msg)
+        vse_rv_err.append(f"RSS loading error: {str(e)}")
+    
+    return links_from_vse_rv, vse_rv_report_brief, vse_rv_report_for_analysis, vse_rv_err
 
 
 # ===== RIVNEPOST PARSING =====
