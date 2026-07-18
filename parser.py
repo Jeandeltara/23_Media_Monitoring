@@ -2305,6 +2305,73 @@ for i, error_list in enumerate(list_err):
         for error in error_list:
             error_report += f"{error}\n"
 
+
+# ============================================================================
+# REPORT SAVING FUNCTION
+# ============================================================================
+
+def save_reports(full_report, brief_report):
+    """
+    Save reports to text files with overwrite.
+    
+    Args:
+        full_report: Full detailed report (can be string, list, or tuple)
+        brief_report: Brief summary report (can be string, list, or tuple)
+    
+    Returns:
+        bool: True if both files saved successfully, False otherwise
+    """
+    
+    success = True
+    
+    # Save full_report.txt
+    try:
+        with open('full_report.txt', 'w', encoding='utf-8') as f:
+            if isinstance(full_report, (list, tuple)):
+                f.write('\n'.join(str(item) for item in full_report))
+            else:
+                f.write(str(full_report))
+        print("✅ full_report.txt saved successfully")
+    except Exception as e:
+        print(f"❌ Error saving full_report.txt: {e}")
+        success = False
+    
+    # Save brief_report.txt
+    try:
+        with open('brief_report.txt', 'w', encoding='utf-8') as f:
+            if isinstance(brief_report, (list, tuple)):
+                f.write('\n'.join(str(item) for item in brief_report))
+            else:
+                f.write(str(brief_report))
+        print("✅ brief_report.txt saved successfully")
+    except Exception as e:
+        print(f"❌ Error saving brief_report.txt: {e}")
+        success = False
+    
+    # Summary output
+    if success:
+        print("\n📊 Reports Summary:")
+        print(f"   - full_report.txt: {len(str(full_report))} characters")
+        print(f"   - brief_report.txt: {len(str(brief_report))} characters")
+        print("   ✅ All reports saved successfully")
+    else:
+        print("\n   ⚠️ Some reports failed to save")
+    
+    return success
+
+
+# ============================================================================
+# SCRIPT EXECUTION COMPLETION
+# ============================================================================
+
+# Save reports to files (call this after full_report and brief_report are defined)
+# Uncomment the line below to enable automatic saving
+# save_reports(full_report, brief_report)
+
+print("\n🏁 Script execution completed")
+print(f"   Time: {datetime.now().strftime('%Y-%m-%d %H:%M:%S UTC')}")
+print("   Status: ✅ Done")
+
 print(full_report)
 print(brief_report)
 print(error_report)
