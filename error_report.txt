@@ -1,5 +1,1 @@
 18.07
-ЧаРівне.інфо
-parse_charivne_article: https://charivne.info/news/u-rivnomu-znovu-perekriyut-rukh- - Timeout: Failed to perform, curl: (28) Connection timed out after 15002 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
-OGO.ua
-parse_ogo_article: https://ogo.ua/u-rivnomu-vstanovyly-novi-portrety-poleglyh-zahysnykiv-ukrayiny/ - Timeout: Failed to perform, curl: (28) Connection timed out after 15001 milliseconds. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.

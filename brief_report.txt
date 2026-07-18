@@ -1,5 +1,3 @@
--- Увага! під час обробки зафіксовані помилки. Ймовірно результати не повні.
-
 18.07
 Район.in.ua
 У Завизові внаслідок пожежі постраждало двоє чоловіків
@@ -47,6 +45,8 @@ https://charivne.info/news/u-rivnomu-znovu-dtp-z-mototsiklistom-19-richnoho-vodi
 https://charivne.info/news/zhitel-rivnenshchini-obladnav-taynik-u-mikroavtobusi-dlya-perepravlennya-cholovikiv-za-kordon
 Як вибрати алюмінієві двері для будинку: 9 важливих нюансів
 https://charivne.info/news/yak-vibrati-alyuminievi-dveri-dlya-budinku-9-vazhlivikh-nyuansiv
+У Рівному знову перекриють рух
+https://charivne.info/news/u-rivnomu-znovu-perekriyut-rukh-
 У Рівному відкрили меморіальну дошку в пам’ять про загиблого воїна Андрія Нестерука
 https://charivne.info/news/novina-748596a
 У Рівному оштрафували чоловіка, який фізично і морально знущався зі співмешканки
@@ -137,6 +137,8 @@ OGO.ua
 https://ogo.ua/selo-mezhyrich-svyatkuye-630-richnyj-yuvilej-zhyteliv-ta-gostej-zaproshuyut-na-blagodijnyj-zahid/
 На Рівненщині провели всеукраїнське навчання психологів ДСНС та координаторів програми «Ти як?»
 https://ogo.ua/na-rivnenshhyni-provely-vseukrayinske-navchannya-psyhologiv-dsns-ta-koordynatoriv-programy-ty-yak/
+У Рівному встановили нові портрети полеглих Захисників України
+https://ogo.ua/u-rivnomu-vstanovyly-novi-portrety-poleglyh-zahysnykiv-ukrayiny/
 У Рівному відкрили пам’ятний знак до 120-річчя від дня народження Олени Теліги
 https://ogo.ua/u-rivnomu-vidkryly-pamyatnyj-znak-do-120-richchya-vid-dnya-narodzhennya-oleny-teligy/
 На Рівненщині ще 63 родини ветеранів та загиблих Героїв забезпечать житлом: перші 29 сертифікатів уже вручили
