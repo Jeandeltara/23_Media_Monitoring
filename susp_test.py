@@ -133,6 +133,11 @@ def parse_suspilne_article(url: str, keywords: List[str]):
     }
     
     try:
+        # Случайная задержка 3-6 секунд перед каждой статьей
+        delay = random.uniform(3, 6)
+        print(f"   Waiting {delay:.1f}s before article...")
+        time.sleep(delay)
+        
         response = requests.get(url, headers=headers, timeout=15, impersonate="chrome120")
         response.encoding = 'utf-8'
         
