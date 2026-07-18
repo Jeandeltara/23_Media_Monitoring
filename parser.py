@@ -16,8 +16,8 @@ from playwright.sync_api import sync_playwright
 
 # ===== VARIABLES ===== 
 
-#keywords_list = ["Рівн*"]
-keywords_list = [r"23(?:-й|-го|-му|й)?[\s-](?:окрем\S*\s)?інженерн[^\s]*|А0451"]
+keywords_list = ["Рівн*"]
+#keywords_list = [r"23(?:-й|-го|-му|й)?[\s-](?:окрем\S*\s)?інженерн[^\s]*|А0451"]
 end_time = datetime.now().replace(hour=14, minute=0, second=0, microsecond=0)
 start_time = end_time - timedelta(days=1)
 all_links = []
