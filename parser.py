@@ -11,6 +11,8 @@ from dateutil import parser
 from curl_cffi import requests
 import requests as simple_requests
 from playwright.sync_api import sync_playwright
+import xml.etree.ElementTree as ET
+import feedparser
 
 
 
