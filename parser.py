@@ -1094,7 +1094,7 @@ def parse_ogo_site(start_time: datetime, end_time: datetime) -> List[str]:
         url = f"{base_url}/rubrics/view/region/page/{page}/" if page > 1 else f"{base_url}/rubrics/view/region/"
         
         try:
-            response = requests.get(url, headers=headers, timeout=10)
+            response = requests.get(url, headers=headers, timeout=30)
             if response.status_code != 200:
                 break
                 
@@ -1151,7 +1151,7 @@ def parse_ogo_article(url: str, keywords: List[str]):
     }
     
     try:
-        response = requests.get(url, headers=headers, timeout=15)
+        response = requests.get(url, headers=headers, timeout=30)
         response.encoding = 'utf-8'
         
         if response.status_code != 200:
