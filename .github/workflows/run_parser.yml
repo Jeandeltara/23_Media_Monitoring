@@ -3,7 +3,7 @@ name: Run Parser
 on:
   schedule:
     - cron: '0 11 * * *'
-  workflow_dispatch:  
+  workflow_dispatch:
 
 jobs:
   parse:
@@ -27,7 +27,7 @@ jobs:
           libdrm2 \
           libxkbcommon0 \
           libgbm1 \
-          libasound2 \
+          libasound2t64 \
           libxshmfence1 \
           libcurl4-openssl-dev
     
