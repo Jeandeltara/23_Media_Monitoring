@@ -2,8 +2,6 @@ name: Run Parser
 
 on:
   schedule:
-    # Запуск каждый день в 11:00 UTC
-    # Это 14:00 по Москве (UTC+3), 13:00 по Киеву (UTC+2/3)
     - cron: '0 11 * * *'
   workflow_dispatch:  # Для ручного запуска
 
