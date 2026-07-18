@@ -44,16 +44,8 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     while True:
         url = f"{base_url}/rivne/latest/?page={page}"
         try:
-            # Случайная задержка 2-5 секунд перед каждой страницей
-            delay = random.uniform(2, 5)
-            print(f"   Waiting {delay:.1f}s before page {page}...")
-            time.sleep(delay)
-            
-            # После каждой 3-й страницы - большая пауза 15-25 секунд
-            if page % 3 == 0:
-                big_delay = random.uniform(15, 25)
-                print(f"   ⏰ Long pause {big_delay:.1f}s (page {page})...")
-                time.sleep(big_delay)
+            # ❌ Убираем задержки! Собираем ссылки БЫСТРО
+            # time.sleep(delay)
             
             print(f"   Requesting page {page}...")
             
@@ -112,6 +104,10 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
                 
             page += 1
             
+            # ⚠️ Только маленькая задержка 0.5-1 секунда между страницами
+            # Чтобы не выглядеть как DDoS
+            time.sleep(random.uniform(0.5, 1))
+            
         except Exception as e:
             suspilne_err.append(f"parse_suspilne_site: page {page} - {type(e).__name__}: {e}")
             print(f"   ❌ {e}")
@@ -119,82 +115,6 @@ def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     
     print(f"   Total: {len(collected_links)} links")
     return collected_links
-
-
-# ===== ФУНКЦИЯ ПАРСИНГА СТАТЬИ (БЕЗ задержек внутри) =====
-def parse_suspilne_article(url: str, keywords: List[str]):
-    """
-    Parse a single article from suspilne.media and search for keyword patterns.
-    """
-    global suspilne_err, suspilne_report_brief, suspilne_report_for_analysis
-    
-    headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
-    }
-    
-    try:
-        response = requests.get(url, headers=headers, timeout=15, impersonate="chrome120")
-        response.encoding = 'utf-8'
-        
-        if response.status_code != 200:
-            error_msg = f"parse_suspilne_article: {url} - HTTP {response.status_code}"
-            suspilne_err.append(error_msg)
-            return
-        
-        soup = BeautifulSoup(response.text, 'html.parser')
-        
-        title_tag = soup.find('h1')
-        if not title_tag:
-            title_tag = soup.find('h1', class_=re.compile(r'title'))
-        title = title_tag.get_text(strip=True) if title_tag else "No title"
-        
-        article = soup.find('article', class_='post-body')
-        if not article:
-            article = soup.find('article')
-        if not article:
-            error_msg = f"parse_suspilne_article: {url} - ARTICLE CONTAINER NOT FOUND"
-            suspilne_err.append(error_msg)
-            return
-        
-        content_container = article.find('div', class_=re.compile(r'c-article-content'))
-        if not content_container:
-            content_container = article
-        
-        content_copy = content_container.__copy__()
-        
-        for unwanted in content_copy.find_all(['div'], class_=re.compile(r'(share|social|ad|banner|promo|sharing|info-share)')):
-            unwanted.decompose()
-        for img in content_copy.find_all('img'):
-            img.decompose()
-        for embed in content_copy.find_all('div', {'data-embed': True}):
-            embed.decompose()
-        
-        text = content_copy.get_text(separator=' ', strip=True)
-        text = ' '.join(text.split())
-        full_text = title + " " + text
-        
-        found_keywords = []
-        for pattern in keywords:
-            if re.search(pattern, full_text, re.IGNORECASE):
-                found_keywords.append(pattern)
-        
-        if found_keywords:
-            suspilne_report_brief.append({
-                'title': title,
-                'link': url,
-                'keywords': found_keywords
-            })
-            
-            suspilne_report_for_analysis.append({
-                'title': title,
-                'link': url,
-                'text': text,
-                'keywords': found_keywords
-            })
-        
-    except Exception as e:
-        error_msg = f"parse_suspilne_article: {url} - {type(e).__name__}: {e}"
-        suspilne_err.append(error_msg)
 
 
 # ===== ЗАПУСК =====
