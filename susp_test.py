@@ -15,7 +15,6 @@ suspilne_report_for_analysis = []
 suspilne_err = []
 
 
-# ===== ФУНКЦИЯ ПАРСИНГА САЙТА (с задержками между страницами) =====
 def parse_suspilne_site(start_time: datetime, end_time: datetime) -> List[str]:
     """
     Parse news articles from suspilne.media within a specified time range.
