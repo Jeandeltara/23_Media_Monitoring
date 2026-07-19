@@ -1,17 +1,12 @@
+import os
 import time
-import random
-import sys
-import subprocess
+import requests
 from curl_cffi import requests as curl_requests
 from bs4 import BeautifulSoup
 
-# Установка pandas если не установлен
-try:
-    import pandas as pd
-except ImportError:
-    print("🔄 Installing pandas...")
-    subprocess.check_call([sys.executable, "-m", "pip", "install", "pandas"])
-    import pandas as pd
+# ============================================================================
+# НАСТРОЙКИ
+# ============================================================================
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
@@ -19,102 +14,73 @@ HEADERS = {
     "Accept-Language": "uk-UA,uk;q=0.9,en-US;q=0.8,en;q=0.7",
 }
 
-BASE_URL = "https://suspilne.media"
-RIVNE_URL = f"{BASE_URL}/rivne/latest/"
+URL = "https://suspilne.media/rivne/latest/"
 
-print("="*70)
-print("🔍 ТЕСТ ЛИМИТОВ SUSPILNE.MEDIA")
-print("="*70)
+# ============================================================================
+# ЗАПРОС И СОХРАНЕНИЕ
+# ============================================================================
 
-# ===== ТЕСТ 1: СТРАНИЦЫ =====
-print("\n📄 ТЕСТ 1: СКОЛЬКО СТРАНИЦ МОЖНО ОТКРЫТЬ")
-print("-"*70)
+print("="*60)
+print("📡 Загрузка страницы suspilne.media")
+print("="*60)
 
-page_results = []
-for page in range(1, 15):
-    url = f"{RIVNE_URL}?page={page}"
-    try:
-        response = curl_requests.get(url, headers=HEADERS, timeout=30, impersonate="chrome120")
-        status = response.status_code
-        soup = BeautifulSoup(response.text, "html.parser")
-        articles = soup.find_all("article", class_=lambda x: x and "c-article-card" in x)
-        
-        print(f"Page {page}: status={status}, articles={len(articles)}")
-        page_results.append({"page": page, "status": status, "articles": len(articles)})
-        
-        if status == 403:
-            print("🚫 БЛОКИРОВКА!")
-            break
-            
-        time.sleep(random.uniform(0.5, 1.5))
-    except Exception as e:
-        print(f"Page {page}: ERROR - {e}")
-        break
-
-# ===== ТЕСТ 2: СТАТЬИ =====
-print("\n\n📄 ТЕСТ 2: СКОЛЬКО СТАТЕЙ МОЖНО ПРОЧИТАТЬ")
-print("-"*70)
-
-# Собираем ссылки
 try:
-    response = curl_requests.get(f"{RIVNE_URL}?page=1", headers=HEADERS, timeout=30, impersonate="chrome120")
-    soup = BeautifulSoup(response.text, "html.parser")
-    articles = soup.find_all("article", class_=lambda x: x and "c-article-card" in x)
+    # Делаем запрос с имитацией Chrome
+    print(f"Запрос: {URL}")
+    response = curl_requests.get(URL, headers=HEADERS, timeout=30, impersonate="chrome120")
     
-    links = []
-    for art in articles[:20]:
-        link_tag = art.find("a", class_=lambda x: x and "headline" in x)
-        if link_tag:
-            href = link_tag.get("href")
-            if href:
-                if href.startswith("/"):
-                    href = BASE_URL + href
-                links.append(href)
+    print(f"Статус: {response.status_code}")
+    print(f"Длина: {len(response.text)} байт")
     
-    print(f"Найдено {len(links)} ссылок")
-    
-except Exception as e:
-    print(f"Ошибка сбора ссылок: {e}")
-    links = []
-
-article_results = []
-for i, link in enumerate(links, 1):
-    try:
-        response = curl_requests.get(link, headers=HEADERS, timeout=30, impersonate="chrome120")
-        status = response.status_code
+    if response.status_code == 200:
+        # Парсим HTML и ищем контейнер
+        soup = BeautifulSoup(response.text, "html.parser")
+        main_content = soup.find("main", id="main_content", class_="l-main-content")
         
-        print(f"Article {i}: status={status}")
-        article_results.append({"article": i, "status": status})
-        
-        if status == 403:
-            print("🚫 БЛОКИРОВКА!")
-            break
+        if main_content:
+            content_html = str(main_content)
             
-        time.sleep(random.uniform(1, 3))
-    except Exception as e:
-        print(f"Article {i}: ERROR - {e}")
-        break
-
-# ===== ВЫВОД =====
-print("\n" + "="*70)
-print("📊 РЕЗУЛЬТАТЫ")
-print("="*70)
-
-if page_results:
-    df_pages = pd.DataFrame(page_results)
-    print("\nСТРАНИЦЫ:")
-    print(df_pages.to_string(index=False))
+            # Сохраняем в файл
+            with open("suspilne_content.txt", "w", encoding="utf-8") as f:
+                f.write(content_html)
+            
+            print("\n✅ Контент сохранен в suspilne_content.txt")
+            print(f"   Размер: {len(content_html)} символов")
+            
+            # Показываем структуру
+            print("\n📋 СТРУКТУРА КОНТЕЙНЕРА:")
+            print("="*60)
+            
+            # Считаем элементы внутри
+            articles = main_content.find_all("article", class_=lambda x: x and "c-article-card" in x)
+            print(f"Статей в контейнере: {len(articles)}")
+            
+            # Заголовки первых 5 статей
+            for i, art in enumerate(articles[:5], 1):
+                link_tag = art.find("a", class_=lambda x: x and "headline" in x)
+                if link_tag:
+                    title = link_tag.get_text(strip=True)
+                    print(f"{i}. {title}")
+            
+            print("="*60)
+            
+        else:
+            print("\n❌ Контейнер <main id='main_content' class='l-main-content'> не найден")
+            print("💾 Сохраняю полный HTML для диагностики")
+            with open("suspilne_full_page.html", "w", encoding="utf-8") as f:
+                f.write(response.text)
+            print("   Сохранен как suspilne_full_page.html")
     
-    max_pages = df_pages[df_pages["status"] == 200]["page"].max()
-    print(f"\n✅ Максимум страниц: {max_pages if max_pages else 0}")
+    else:
+        print(f"\n❌ Ошибка: статус {response.status_code}")
+        print("💾 Сохраняю ответ для диагностики")
+        with open("suspilne_error_response.html", "w", encoding="utf-8") as f:
+            f.write(response.text)
+        print("   Сохранен как suspilne_error_response.html")
 
-if article_results:
-    df_articles = pd.DataFrame(article_results)
-    print("\nСТАТЬИ:")
-    print(df_articles.to_string(index=False))
-    
-    max_articles = df_articles[df_articles["status"] == 200]["article"].max()
-    print(f"\n✅ Максимум статей: {max_articles if max_articles else 0}")
+except Exception as e:
+    print(f"\n❌ Ошибка: {e}")
 
-print("\n" + "="*70)
-print("🏁 ТЕСТ ЗАВЕРШЕН")
+print("\n" + "="*60)
+print("🏁 ЗАВЕРШЕНО")
+print("="*60)
