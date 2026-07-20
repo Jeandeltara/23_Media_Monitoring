@@ -1,3 +1,1 @@
-19.07
-Рівне 1
-parse_rivne1_article: https://rivne1.tv/news/167295-dietolohinya-rekomenduvala-stravu-№1-dlya-lyudey-starshikh-za-50-rokiv - HTTP 400
+20.07
