@@ -1,3 +1,13 @@
-30.07
-Рівне 1
-parse_rivne1_site: offset 0 - Timeout: Failed to perform, curl: (28) Operation timed out after 10002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+31.07
+ЧаРівне.інфо
+parse_charivne_article: https://charivne.info/news/na-rivnenshchini-shukayut-zhitlo-dlya-pereselentsiv-vlasnikiv-porozhnikh-budinkiv-zaklikayut-doluchitisya - HTTP 508
+parse_charivne_article: https://charivne.info/news/zhitelyu-varasha-zahrozhue-do-10-rokiv-uvyaznennya-za-zbut-psikhotropiv - HTTP 508
+parse_charivne_article: https://charivne.info/news/ponad-odin-promile-u-rivnomu-patrulni-zatrimali-netverezoho-vodiya - HTTP 508
+parse_charivne_article: https://charivne.info/news/na-rivnenshchini-kritichno-ne-vistachae-donoriv-pershoi-ta-druhoi-hrup-krovi - HTTP 508
+parse_charivne_article: https://charivne.info/news/rivnenshchina-provela-v-ostannyu-put-anatoliya-voytsishina-dmitra-hoduna-ta-andriya-kruhlika - HTTP 508
+parse_charivne_article: https://charivne.info/news/aleya-slavi-v-selishchi-hoshcha-popovnilasya-shche-pyatma-portretami-voiniv-zemlyakiv - HTTP 508
+parse_charivne_article: https://charivne.info/news/rivne-poproshchaetsya-iz-zakhisnikom-serhiem-fomichem - HTTP 508
+parse_charivne_article: https://charivne.info/news/na-rivnenshchini-u-dtp-zhinka-otrimala-perelom-plecha - HTTP 508
+parse_charivne_article: https://charivne.info/news/ponad-5-rokiv-za-gratami-provede-cholovik-yakiy-u-rivnomu-skoiv-seriyu-kradizhok - HTTP 508
+parse_charivne_article: https://charivne.info/news/u-rivnomu-proveli-v-ostannyu-zemnu-dorohu-zakhisnika-ukraini--anatoliya-voytsishina - HTTP 508
+parse_charivne_article: https://charivne.info/news/u-rivnomu-mediki-vidalili-hihantsku-pukhlinu-molochnoi-zalozi-vahoyu-ponad-55-kilohrama - HTTP 508
