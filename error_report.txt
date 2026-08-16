@@ -1,3 +1,1 @@
-15.08
-ЧаРівне.інфо
-parse_charivne_site: page 1 - DNSError: Failed to perform, curl: (6) Could not resolve host: charivne.info. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
+16.08
