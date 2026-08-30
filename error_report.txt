@@ -1,22 +1,3 @@
-29.08
-Радіо ТРЕК
-parse_radiotrek_article: https://radiotrek.rv.ua/news/ci-kviti-zabirayut-sili-ta-zdorov-ya-p-yat-roslin-yaki-krashche-ne-saditi-bilya-domu_370753.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/vodiyam-varto-znati-yak-zminilisya-cini-na-benzin-i-dizel-29-serpnya_370743.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/kiyiv-zatyagnulo-chornim-dimom-na-zhitomirskiy-trasi-drugu-dobu-ne-vshchuhaie-pozhezha_370741.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/kurs-valyut-na-vihidni-dolar-ta-ievro-mozhut-prodavati-za-duzhe-riznimi-cinami_370739.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/ci-kupyuri-ne-mozhna-zdavati-v-obminnik-za-nih-mozhna-otrimati-bilshe_370684.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/ne-komish-i-ne-ocheret-yak-nazivaietsya-roslina-z-korichnevoyu-sosiskoyu_370704.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/targani-znovu-z-yavlyatsya-shcho-potribno-pribrati-z-domu-shchob-voni-ne-povernulisya_370300.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/cilyushchiy-chay-dlya-vidnovlennya-pechinki-prosto-dodayte-odnu-speciyu_370737.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/bez-duhovki-i-miksera-vologiy-shokoladniy-pirig-za-15-hvilin_370721.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/rik-vidkritih-kordoniv-yak-viyizd-cholovikiv-18-22-rokiv-vplinuv-na-situaciyu-v-ukrayini-foto_370727.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/ne-pospishayte-vikidati-radyanski-mebli-yaki-z-nih-mozhna-zaraz-dorogo-prodati-foto_370736.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/pid-kiievom-bilya-zhitomirskoyi-trasi-pislya-vibuhu-spalahnula-pozhezha-viedo_370735.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/kartoplya-v-ukrayini-rizko-podorozhchaie-ekspert-nazvala-koli-bude-plyus-40-i-yakiy-vrozhay_370689.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/tri-miscya-u-domi-de-ne-mozhna-zberigati-boroshno-narodni-prikmeti_370691.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/natalka-denisenko-podryapala-mercedes-i-pokazala-poshkodzhennya-yak-vidreaguvav-yiyi-supermen-foto_370609.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/bulo-lishe-15-rokiv-na-sarnenshchini-motocikli-zitknulisya-lob-u-lob-foto_370726.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/finansoviy-goroskop-na-veresen-2026-komu-zi-znakiv-zodiaku-poshchastit-iz-groshima_370682.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/nyud-vidhodit-u-minule-naymodnishi-alternativi-klasichnomu-manikyuru-foto_370699.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/retkliff-poperediv-rosiyu-shcho-direktor-cru-vimagav-vid-putina-i-yak-toy-vidpoviv.-detali-vizitu_370667.html - HTTP 403
-parse_radiotrek_article: https://radiotrek.rv.ua/news/suchasni-metodi-likuvannya-ta-korekciyi-zoru-v-ukrayini_370701.html - HTTP 403
+30.08
+Рівне 1
+parse_rivne1_site: offset 0 - Timeout: Failed to perform, curl: (28) Operation timed out after 10002 milliseconds with 0 bytes received. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.
