@@ -1,1 +1,3 @@
-10.09
+11.09
+OGO.ua
+parse_ogo_site: page 1 - DNSError: Failed to perform, curl: (6) Could not resolve host: ogo.ua. See https://curl.se/libcurl/c/libcurl-errors.html first for more details.

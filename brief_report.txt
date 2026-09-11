@@ -1,437 +1,429 @@
-10.09
+-- Увага! під час обробки зафіксовані помилки. Ймовірно результати не повні.
+
+11.09
 Район.in.ua
-У Рівному виявили малолітню дитину без нагляду дорослих: на матір склали адмінпротокол
-https://rivne.rayon.in.ua/news/1100598-u-rivnomu-viiavili-malolitniu-ditinu-bez-nagliadu-doroslix-na-matir-sklali-adminprotokol
-Як працюватимуть заклади освіти під час повітряних тривог різного рівня
-https://osvita.rayon.in.ua/news/1100568-iak-praciuvatimut-zakladi-osviti-pid-cas-povitrianix-trivog-riznogo-rivnia
-У Рівному за тиждень винесли понад 550 постанов за порушення правил паркування
-https://rivne.rayon.in.ua/news/1100553-u-rivnomu-za-tizden-vinesli-ponad-550-postanov-za-porusennia-pravil-parkuvannia
-У Рівному з 14 вересня тимчасово закриють пішохідний міст через річку Устя біля Гідропарку
-https://rivne.rayon.in.ua/news/1100550-u-rivnomu-z-14-veresnia-timcasovo-zakriiut-pisoxidnii-mist-cerez-ricku-ustia-bilia-gidroparku
-Податок на прибуток: підприємства Рівненщини сплатили на 169 мільйонів гривень більше
-https://business.rayon.in.ua/news/1100532-podatok-na-pributok-pidprijemstva-rivnenshhini-splatili-na-169-milioniv-griven-bilse
-Статистика втрат РФ на 10 вересня 2026: оновлені дані Генерального штабу
-https://rayon.in.ua/news/1100488-statistika-vtrat-rf-na-10-veresnia-2026-onovleni-dani-generalnogo-stabu
-Дайджест головних новин Рівненщини: 9 вересня
-https://rayon.in.ua/news/1100476-daidzest-golovnix-novin-rivnenshhini-9-veresnia
-На Рівненщині 10 вересня прогнозують сильні пориви вітру
-https://rivne.rayon.in.ua/news/1100448-na-rivnenshhini-10-veresnia-prognozuiut-silni-porivi-vitru
-У Рівному молодь із різних регіонів обговорила відбудову України до 2036 року
-https://rivne.rayon.in.ua/news/1100429-u-rivnomu-molod-iz-riznix-regioniv-obgovorila-vidbudovu-ukrayini-do-2036-roku
-Збірна Рівненщини посіла третє місце у групі чемпіонату України з футболу 60+
-https://sport.rayon.in.ua/news/1100430-zbirna-rivnenshhini-posila-tretje-misce-u-grupi-cempionatu-ukrayini-z-futbolu-60
-Світовий банк допоміг громадам облаштувати 60 просторів психологічного розвантаження
-https://medicine.rayon.in.ua/news/1100376-svitovii-bank-dopomig-gromadam-oblastuvati-60-prostoriv-psixologicnogo-rozvantazennia
-Трьом жителям Рівненщини повідомили про підозру у збуті PVP, мефедрону та амфетаміну
-https://rivne.rayon.in.ua/news/1100401-tryom-ziteliam-rivnenshhini-povidomili-pro-pidozru-u-zbuti-pvp-mefedronu-ta-amfetaminu
-У Рівному провели в останню земну дорогу захисника України Руслана Лукомського
-https://rivne.rayon.in.ua/news/1100384-u-rivnomu-proveli-v-ostanniu-zemnu-dorogu-zaxisnika-ukrayini-ruslana-lukomskogo
-Як працюватимуть заклади освіти під час повітряних тривог різного рівня
-https://osvita.rayon.in.ua/news/1100568-iak-praciuvatimut-zakladi-osviti-pid-cas-povitrianix-trivog-riznogo-rivnia
-Освітянку з Демидівської громади Марію Овчарук відзначили на конкурсі «Педагогічні інновації Рівненщини»
-https://demydivka.rayon.in.ua/news/1100529-osvitianku-z-demidivskoyi-gromadi-mariiu-ovcaruk-vidznacili-na-konkursi-pedagogicni-innovaciyi-rivnenshhini
-Податок на прибуток: підприємства Рівненщини сплатили на 169 мільйонів гривень більше
-https://business.rayon.in.ua/news/1100532-podatok-na-pributok-pidprijemstva-rivnenshhini-splatili-na-169-milioniv-griven-bilse
-Статистика втрат РФ на 10 вересня 2026: оновлені дані Генерального штабу
-https://rayon.in.ua/news/1100488-statistika-vtrat-rf-na-10-veresnia-2026-onovleni-dani-generalnogo-stabu
-Дайджест головних новин Рівненщини: 9 вересня
-https://rayon.in.ua/news/1100476-daidzest-golovnix-novin-rivnenshhini-9-veresnia
-На Рівненщині 10 вересня прогнозують сильні пориви вітру
-https://rivne.rayon.in.ua/news/1100448-na-rivnenshhini-10-veresnia-prognozuiut-silni-porivi-vitru
-Збірна Рівненщини посіла третє місце у групі чемпіонату України з футболу 60+
-https://sport.rayon.in.ua/news/1100430-zbirna-rivnenshhini-posila-tretje-misce-u-grupi-cempionatu-ukrayini-z-futbolu-60
-Світовий банк допоміг громадам облаштувати 60 просторів психологічного розвантаження
-https://medicine.rayon.in.ua/news/1100376-svitovii-bank-dopomig-gromadam-oblastuvati-60-prostoriv-psixologicnogo-rozvantazennia
-У Дубні четвертокласників навчали правил пожежної та мінної безпеки
-https://dubno.rayon.in.ua/news/1100189-u-dubni-cetvertoklasnikiv-navcali-pravil-pozeznoyi-ta-minnoyi-bezpeki
+До малолітнього мотоцикліста, який на Березнівщині спричинив ДТП, застосовуватимуть примусові заходи виховного характеру
+https://rivne.rayon.in.ua/news/1100898-do-malolitnyogo-motociklista-iakii-na-bereznivshhini-spriciniv-dtp-zastosovuvatimut-primusovi-zaxodi-vixovnogo-xarakteru
+Статистика ВІЛ/СНІДу в Україні за 2026 рік: ситуація в областях
+https://medicine.rayon.in.ua/news/1100856-statistika-vilsnidu-v-ukrayini-za-2026-rik-situaciia-v-oblastiax
+Поліцейські оперативно встановили та затримали жителя Дубенщини, який підпалив авто у Рівному
+https://rivne.rayon.in.ua/news/1100893-policeiski-operativno-vstanovili-ta-zatrimali-zitelia-dubenshhini-iakii-pidpaliv-avto-u-rivnomu
+Платники Рівненщини сплатили понад 11,6 мільярда гривень ПДФО
+https://business.rayon.in.ua/news/1100892-platniki-rivnenshhini-splatili-ponad-116-miliarda-griven-pdfo
+Рівнянка виборола бронзу чемпіонату України з важкої атлетики у Луцьку
+https://sport.rayon.in.ua/news/1100879-rivnianka-viborola-bronzu-cempionatu-ukrayini-z-vazkoyi-atletiki-u-lucku
+У Рівненському районі внаслідок ДТП травмувалася малолітня водійка електросамоката
+https://rivne.rayon.in.ua/news/1100866-u-rivnenskomu-raioni-vnaslidok-dtp-travmuvalasia-malolitnia-vodiika-elektrosamokata
+Понад 120 депутатів Європарламенту закликали відновити переговори про передачу Україні заморожених активів Росії
+https://zakordon.rayon.in.ua/news/1100782-ponad-120-deputativ-jevroparlamentu-zaklikali-vidnoviti-peregovori-pro-peredacu-ukrayini-zamorozenix-aktiviv-rosiyi
+На Рівненщині за вісім місяців працевлаштували понад 10 тисяч людей
+https://business.rayon.in.ua/news/1100815-na-rivnenshhini-za-visim-misiaciv-pracevlastuvali-ponad-10-tisiac-liudei
+Освітня омбудсменка пояснила, що робити школам під час жовтого рівня повітряної загрози
+https://osvita.rayon.in.ua/news/1100785-osvitnia-ombudsmenka-poiasnila-shho-robiti-skolam-pid-cas-zovtogo-rivnia-povitrianoyi-zagrozi
+Втрати РФ перевищили півтора мільйона окупантів: оновлена статистика Генштабу ЗСУ на 11 вересня
+https://rayon.in.ua/news/1100769-vtrati-rf-perevishhili-pivtora-miliona-okupantiv-onovlena-statistika-genstabu-zsu-na-11-veresnia
+У серпні Рросія випустила рекордну кількість КАБів від початку повномасштабної війни
+https://rayon.in.ua/news/1100736-u-serpni-rrosiia-vipustila-rekordnu-kilkist-kabiv-vid-pocatku-povnomasstabnoyi-viini
+«Виткане серцем»: у Рівному відкрили виставку майстрині художнього ткацтва Галини Логощук
+https://kultura.rayon.in.ua/news/1100735-vitkane-sercem-u-rivnomu-vidkrili-vistavku-maistrini-xudoznyogo-tkactva-galini-logoshhuk
+Гощанська лікарня отримала портативні апарати ШВЛ від польських партнерів
+https://hoshcha.rayon.in.ua/news/1100727-goshhanska-likarnia-otrimala-portativni-aparati-svl-vid-polskix-partneriv
+На Рівненщині 17 дітей-сиріт загиблих захисників отримали подарунки до навчального року
+https://rivne.rayon.in.ua/news/1100725-na-rivnenshhini-17-ditei-sirit-zagiblix-zaxisnikiv-otrimali-podarunki-do-navcalnogo-roku
+У Рівному та Рівненському районі аварійно зникло світло: частина тролейбусів зупинилася
+https://rivne.rayon.in.ua/news/1100696-u-rivnomu-ta-rivnenskomu-raioni-avariino-zniklo-svitlo-castina-troleibusiv-zupinilasia
+У Рівному поліція розслідує напад на кондукторку під час перевірки оплати проїзду
+https://rivne.rayon.in.ua/news/1100692-u-rivnomu-policiia-rozsliduje-napad-na-konduktorku-pid-cas-perevirki-oplati-proyizdu
+На Рівненщині є 38 вакансій із житлом: де шукають працівників
+https://business.rayon.in.ua/news/1100624-na-rivnenshhini-je-38-vakansii-iz-zitlom-de-sukaiut-pracivnikiv
+У Рівному чоловік викрав у сусіда-пенсіонера понад 300 тисяч гривень
+https://rivne.rayon.in.ua/news/1100663-u-rivnomu-colovik-vikrav-u-susida-pensionera-ponad-300-tisiac-griven
+На Рівненщині правоохоронці вилучили уламки ворожого боєприпасу
+https://rivne.rayon.in.ua/news/1100661-na-rivnenshhini-pravooxoronci-vilucili-ulamki-vorozogo-bojepripasu
+Систематично знущався над дружиною у присутності малолітніх дітей: жителю Березнівщини загрожує до двох років ув'язнення
+https://rivne.rayon.in.ua/news/1100645-sistematicno-znushhavsia-nad-druzinoiu-u-prisutnosti-malolitnix-ditei-ziteliu-bereznivshhini-zagrozuje-do-dvox-rokiv-uviaznennia
+У Краєві похоронили воїна-прикордонника Володимира Бондарчука
+https://ostrog.rayon.in.ua/news/1100613-u-krajevi-poxoronili-voyina-prikordonnika-volodimira-bondarcuka
+Статистика ВІЛ/СНІДу в Україні за 2026 рік: ситуація в областях
+https://medicine.rayon.in.ua/news/1100856-statistika-vilsnidu-v-ukrayini-za-2026-rik-situaciia-v-oblastiax
+Поліцейські оперативно встановили та затримали жителя Дубенщини, який підпалив авто у Рівному
+https://rivne.rayon.in.ua/news/1100893-policeiski-operativno-vstanovili-ta-zatrimali-zitelia-dubenshhini-iakii-pidpaliv-avto-u-rivnomu
+Платники Рівненщини сплатили понад 11,6 мільярда гривень ПДФО
+https://business.rayon.in.ua/news/1100892-platniki-rivnenshhini-splatili-ponad-116-miliarda-griven-pdfo
+Понад 120 депутатів Європарламенту закликали відновити переговори про передачу Україні заморожених активів Росії
+https://zakordon.rayon.in.ua/news/1100782-ponad-120-deputativ-jevroparlamentu-zaklikali-vidnoviti-peregovori-pro-peredacu-ukrayini-zamorozenix-aktiviv-rosiyi
+На Рівненщині за вісім місяців працевлаштували понад 10 тисяч людей
+https://business.rayon.in.ua/news/1100815-na-rivnenshhini-za-visim-misiaciv-pracevlastuvali-ponad-10-tisiac-liudei
+Підпалив авто у Рівному: поліція затримала 43-річного жителя Дубенщини
+https://dubno.rayon.in.ua/news/1100895-pidpaliv-avto-u-rivnomu-policiia-zatrimala-43-ricnogo-zitelia-dubenshhini
+У Боремельській громаді ветерани та їхні родини зможуть отримати фахові консультації
+https://demydivka.rayon.in.ua/news/1100943-u-boremelskii-gromadi-veterani-ta-yixni-rodini-zmozut-otrimati-faxovi-konsultaciyi
+Втрати РФ перевищили півтора мільйона окупантів: оновлена статистика Генштабу ЗСУ на 11 вересня
+https://rayon.in.ua/news/1100769-vtrati-rf-perevishhili-pivtora-miliona-okupantiv-onovlena-statistika-genstabu-zsu-na-11-veresnia
+У серпні Рросія випустила рекордну кількість КАБів від початку повномасштабної війни
+https://rayon.in.ua/news/1100736-u-serpni-rrosiia-vipustila-rekordnu-kilkist-kabiv-vid-pocatku-povnomasstabnoyi-viini
+На Рівненщині є 38 вакансій із житлом: де шукають працівників
+https://business.rayon.in.ua/news/1100624-na-rivnenshhini-je-38-vakansii-iz-zitlom-de-sukaiut-pracivnikiv
+Молодь Варковицької громади залучають до створення власних ініціатив
+https://dubno.rayon.in.ua/news/1100647-molod-varkovickoyi-gromadi-zalucaiut-do-stvorennia-vlasnix-iniciativ
+У Тараканові зіткнулися два легковики: травмувалися шестеро людей
+https://dubno.rayon.in.ua/news/1100643-u-tarakanovi-zitknulisia-dva-legkoviki-travmuvalisia-sestero-liudei
 ЧаРівне.інфо
-Пішохідний міст через річку Устя поблизу Гідропарку буде тимчасово закрито
-https://charivne.info/news/pishokhidniy-mist-cherez-richku-ustya-poblizu-hidroparku-bude-timchasovo-zakrito
-Стало відомо, коли депутати Рівненської облради зберуться на засідання постійних комісій
-https://charivne.info/news/stalo-vidomo-koli-deputati-rivnenskoi-oblradi-zberutsya-na-zasidannya-postiynikh-komisiy
-Дев’ять пожеж сухої рослинності за добу ліквідували на Рівненщині
-https://charivne.info/news/devyat-pozhezh-sukhoi-roslinnosti-za-dobu-likviduvali-na-rivnenshchini
-На трасі Київ–Чоп у Тараканові зіткнулися два авто: серед потерпілих - двоє дітей
-https://charivne.info/news/na-trasi-kiivchop-u-tarakanovi-zitknulisya-dva-avto-sered-poterpilikh---dvoe-ditey
-У Рівному шестирічну дівчинку знайшли саму в парку
-https://charivne.info/news/u-rivnomu-shestirichnu-divchinku-znayshli-samu-v-parku
-У Рівному за тиждень інспектори з паркування винесли понад 550 постанов
-https://charivne.info/news/u-rivnomu-za-tizhden-inspektori-z-parkuvannya-vinesli-ponad-550-postanov
-У чотирьох громадах Рівненщини попрощалися із захисниками України
-https://charivne.info/news/u-chotirokh-hromadakh-rivnenshchini-poproshchalisya-iz-zakhisnikami-ukraini
-Уламки ворожого боєприпасу знайшли у лісі на Рівненщині
-https://charivne.info/news/ulamki-vorozhoho-boepripasu-znayshli-u-lisi-na-rivnenshchini
-Трьох дилерів викрили та затримали на Рівненщині: отримували наркотики поштою і розміщували «закладки»
-https://charivne.info/news/trokh-dileriv-vikrili-ta-zatrimali-na-rivnenshchini-otrimuvali-narkotiki-poshtoyu-i-rozmishchuvali-zakladki-
-На Рівненщині вилучили три трактори з нелегальною деревиною
-https://charivne.info/news/na-rivnenshchini-viluchili-tri-traktori-z-nelehalnoyu-derevinoyu
-У Рівному судитимуть 18-річного хлопця, який викрав у пенсіонера понад 300 тисяч гривень
-https://charivne.info/news/u-rivnomu-suditimut-18-richnoho-khloptsya-yakiy-vikrav-u-pensionera-ponad-300-tisyach-hriven
+Захищав Україну після евакуації з Маріуполя: у Рівному попрощалися із Сергієм Кучеренком
+https://charivne.info/news/zakhishchav-ukrainu-pislya-evakuatsii-z-mariupolya-u-rivnomu-poproshchalisya-iz-serhiem-kucherenkom
+16-річний хлопець загинув у ДТП на Сарненщині: його знайшли через кілька годин пошуків
+https://charivne.info/news/16-richniy-khlopets-zahinuv-u-dtp-na-sarnenshchini-yoho-znayshli-cherez-kilka-hodin-poshukiv
+У Рівненському районі в ДТП травмувалася 13-річна водійка електросамоката
+https://charivne.info/news/u-rivnenskomu-rayoni-v-dtp-travmuvalasya-13-richna-vodiyka-elektrosamokata
+Терміново потрібна кров усіх груп: Рівненський центр проведе додатковий день донацій
+https://charivne.info/news/terminovo-potribna-krov-usikh-hrup-rivnenskiy-tsentr-provede-dodatkoviy-den-donatsiy
+Житель Дубенщини отримав адмінпротокол за неправдиве повідомлення про підпал школи
+https://charivne.info/news/zhitel-dubenshchini-otrimav-adminprotokol-za-nepravdive-povidomlennya-pro-pidpal-shkoli
+Як правильно наносити олійку для волосся, щоб пасма не виглядали жирними
+https://charivne.info/news/yak-pravilno-nanositi-oliyku-dlya-volossya-shchob-pasma-ne-vihlyadali-zhirnimi
+На Рівненщині попрощалися із двома захисниками - Валерієм Лехом та Василем Олексюком
+https://charivne.info/news/na-rivnenshchini-poproshchalisya-iz-dvoma-zakhisnikami---valeriem-lekhom-ta-vasilem-oleksyukom
+У Рівному відбудеться відкриття дошки пам’яті загиблому Герою Олександру Федорченку
+https://charivne.info/news/u-rivnomu-vidbudetsya-vidkrittya-doshki-pamyati-zahiblomu-heroyu-oleksandru-fedorchenku
+У Рівному пасажири тролейбуса побили кондукторку
+https://charivne.info/news/u-rivnomu-pasazhiri-troleybusa-pobili-konduktorku
+На Рівненщині у 2026 році зареєстровано 238 ДТП з мотоциклістами
+https://charivne.info/news/na-rivnenshchini-u-2026-rotsi-zareestrovano-238-dtp-z-mototsiklistami
+Знущався з дружини у присутності трьох дітей: на Березнівщині судитимуть 37-річного чоловіка
+https://charivne.info/news/znushchavsya-z-druzhini-u-prisutnosti-trokh-ditey-na-bereznivshchini-suditimut-37-richnoho-cholovika
 Радіо ТРЕК
+Сильний дощ і різке похолодання: Якою буде погода на Рівненщині 12 вересня
+https://radiotrek.rv.ua/news/silniy-doshch-i-rizke-poholodannya-yakoyu-bude-pogoda-na-rivnenshchini-12-veresnya_371532.html
+Двоє дітей не розминулися на самокаті: у дівчинки - перелом
+https://radiotrek.rv.ua/news/dvoie-ditey-ne-rozminulisya-na-samokati-u-divchinki---perelom_371527.html
+Бути готовим до війни вже: Мешканців Рівненщини запрошують на навчання
+https://radiotrek.rv.ua/news/buti-gotovim-do-viyni-vzhe-meshkanciv-rivnenshchini-zaproshuyut-na-navchannya_371523.html
+Новий ЖК на Соборній: у Рівному можуть віддати в оренду землю під житлову забудову (ФОТО)
+https://radiotrek.rv.ua/news/u-rivnomu-hochut-viddati-v-orendu-zemlyu-pid-zhitlovu-zabudovu-na-soborniy-foto_371442.html
+У Рівному через ДТП ускладнений рух на Стельмаха
+https://radiotrek.rv.ua/news/u-rivnomu-cherez-dtp-uskladneniy-ruh-na-stelmaha_371526.html
+У Рівному змінюють порядок виплати соцдопомог: Що потрібно зробити клієнтам «Укрексімбанку»
+https://radiotrek.rv.ua/news/u-rivnomu-zminyuyut-poryadok-viplati-socdopomog-shcho-potribno-zrobiti-kliientam-ukreksimbanku_371483.html
+Зарплати в Україні рахуватимуть по-новому: що зміниться найближчим часом, і за що роботодавці платитимуть окремо
+https://radiotrek.rv.ua/news/zarplati-v-ukrayini-rahuvatimut-po-novomu-shcho-zminitsya-nayblizhchim-chasom-i-za-shcho-robotodavci-platitimut-okremo_371514.html
+Де купити безалкогольне пиво у Рівному: великий вибір брендів і вигідні ціни
+https://radiotrek.rv.ua/news/de-kupiti-bezalkogolne-pivo-u-rivnomu-velikiy-vibir-brendiv-i-vigidni-cini_371441.html
+У Рівному планують побудувати новий скейт-парк (ФОТО)
+https://radiotrek.rv.ua/news/u-rivnomu-planuyut-pobuduvati-noviy-skeyt-park-foto_371446.html
+У поліському лісі знайшли рідкісних «американців»: фото грибів
+https://radiotrek.rv.ua/news/u-poliskomu-lisi-znayshli-ridkisnih-amerikanciv-foto-gribiv_371465.html
+«Дівчата, скидайте свої тарілочки»: вчені перевірили ефективність марафонів схуднення з соцмереж
+https://radiotrek.rv.ua/news/divchata-skidayte-svoyi-tarilochki-vcheni-perevirili-efektivnist-marafoniv-shudnennya-z-socmerezh_371513.html
+Мікрохвильовки вже вчорашній день: 5 кухонних помічників, які краще гріють піцу, суп і випічку
+https://radiotrek.rv.ua/news/mikrohvilovki-vzhe-vchorashniy-den-5-kuhonnih-pomichnikiv-yaki-krashche-griyut-picu-sup-i-vipichku_371512.html
+Магнітні бурі 11 вересня: погодинний прогноз К-індексу
+https://radiotrek.rv.ua/news/magnitni-buri-11-veresnya-pogodinniy-prognoz-k-indeksu_371447.html
+З 1 жовтня усі українці отримають нові платіжки за газ
+https://radiotrek.rv.ua/news/z-1-zhovtnya-usi-ukrayinci-otrimayut-novi-platizhki-za-gaz_371511.html
+На Рівненщину суне похолодання: Температура «впаде» до +6 градусів
+https://radiotrek.rv.ua/news/na-rivnenshchinu-sune-poholodannya-temperatura-vpade-do-6-gradusiv_371507.html
+У Героя не залишилося родичів на підконтрольній Україні території: у Рівному попрощаються із військовим
+https://radiotrek.rv.ua/news/u-geroya-ne-zalishilosya-rodichiv-na-pidkontrolniy-ukrayini-teritoriyi-u-rivnomu-poproshchayutsya-iz-viyskovim_371485.html
+Ціни, сорти та зберігання: як правильно запастися картоплею на зиму
+https://radiotrek.rv.ua/news/cini-sorti-ta-zberigannya-yak-pravilno-zapastisya-kartopleyu-na-zimu_371381.html
+У Рівному раптово зникло світло: причини — невідомі
+https://radiotrek.rv.ua/news/u-rivnomu-raptovo-zniklo-svitlo-prichini----nevidomi_371506.html
+Жінку госпіталізували до лікарні з травмою голови: у Рівному побили контролерку тролейбуса
+https://radiotrek.rv.ua/news/zhinku-gospitalizuvali-do-likarni-z-travmu-golovi-u-rivnomu-pobili-kontrolerku-troleybusa_371505.html
+Так буде не завжди: три знаки Зодіаку, яким попри складну молодість - щастить з віком
+https://radiotrek.rv.ua/news/tak-bude-ne-zavzhdi-tri-znaki-zodiaku-yakim-popri-skladnu-molodist---shchastit-z-vikom_371440.html
+У Луцьку пролунали вибухи: область атакують дрони
+https://radiotrek.rv.ua/news/u-lucku-prolunali-vibuhi-oblast-atakuyut-droni_371492.html
+Напад у тролейбусі у Рівному: контролерку госпіталізували
+https://radiotrek.rv.ua/news/napad-u-troleybusi-u-rivnomu-kontrolerku-gospitalizuvali_371488.html
+Юнаки побилися у ДТП на Рівненщині: у хлопців - важкі травми
+https://radiotrek.rv.ua/news/yunaki-pobilisya-u-dtp-na-rivnenshchini-u-hlopciv---vazhki-travmi_371484.html
+Долар та євро знову дорожчають: курс валют 10 вересня
+https://radiotrek.rv.ua/news/dolar-ta-ievro-znovu-dorozhchayut-kurs-valyut-10-veresnya_371455.html
+Кров потрібна терміново: рівнян просять стати донорами
+https://radiotrek.rv.ua/news/krov-potribna-terminovo-rivnyan-prosyat-stati-donorami_371475.html
 Одна рослина замінить гній на городі, зробить ґрунт родючим і здоровим
 https://radiotrek.rv.ua/news/odna-roslina-zaminit-gniy-na-gorodi-zrobit-g-runt-rodyuchim-i-zdorovim_371349.html
-6-річну дівчинку знайшли у парку Рівного: її покинула мама
-https://radiotrek.rv.ua/news/shestirichnu-divchinku-znayshli-bez-doroslih-u-rivnenskomu-parku-chim-use-zakinchilosya_371468.html
-Величезний затор: У Рівному на Кулика і Гудачека сталася ДТП
-https://radiotrek.rv.ua/news/velichezniy-zator-u-rivnomu-na-kulika-i-gudacheka-stalasya-dtp_371471.html
-У центрі Рівного на місці знесеного будинку можуть збудувати торгове приміщення: що відомо про ділянку
-https://radiotrek.rv.ua/news/u-rivnomu-na-misci-znesenogo-budinku-u-centri-mozhut-zbuduvati-torgove-primishchennya-shcho-vidomo-pro-dilyanku_371464.html
-«Шахед» летів на «Нову пошту» у сусідній з Рівненщиною області: що відомо
-https://radiotrek.rv.ua/news/shahed-letiv-na-novu-poshtu-u-susidniy-z-rivnenshchinoyu-oblasti-shcho-vidomo_371458.html
-Осінь — у розпалі, а прилавки у Рівному — порожні: За 1 кг білих грибів просять 500 грн
-https://radiotrek.rv.ua/news/osin-u-rozpali-a-gribiv-mayzhe-nemaie-yaka-situaciya-na-rinku_371445.html
-У Китаї виявили новий вірус, який можуть переносити кліщі: які симптоми
-https://radiotrek.rv.ua/news/u-kitayi-viyavili-noviy-virus-yakiy-mozhut-perenositi-klishchi-yaki-simptomi_371433.html
-Потрійна ДТП у Рівному: на перехресті зіткнулися три авто, рух ускладнений
-https://radiotrek.rv.ua/news/potriyna-dtp-u-rivnomu-na-perehresti-zitknulisya-tri-avto-ruh-uskladneniy_371443.html
-Ще 6 камер відеоспостереження встановлять у Рівному: де не можна перевищувати швидкість
-https://radiotrek.rv.ua/news/shche-6-kamer-videosposterezhennya-vstanovlyat-u-rivnomu-de-ne-mozhna-perevishchuvati-shvidkist_371428.html
-Горіх, що допомагає м'яко знизити тиск
-https://radiotrek.rv.ua/news/gorih-shcho-dopomagaie-m-yako-zniziti-tisk_371438.html
-Магнітна буря 10 вересня: чи очікуються сильні геомагнітні коливання
-https://radiotrek.rv.ua/news/magnitna-burya-10-veresnya-chi-ochikuyutsya-silni-geomagnitni-kolivannya_371375.html
-Називалося на честь кілера і агента КДБ майже 50 років: що це за місто України
-https://radiotrek.rv.ua/news/nazivalosya-na-chest-kilera-i-agenta-kdb-mayzhe-50-rokiv-shcho-ce-za-misto-ukrayini_371384.html
-В Україні очікується літня спека
-https://radiotrek.rv.ua/news/v-ukrayini-ochikuietsya-litnya-speka_371431.html
-Зупинку «Дворецька» у Рівному ліквідували і пустять автобуси: Що кажуть в Укрзалізниці
-https://radiotrek.rv.ua/news/zupinku-dvorecka-u-rivnomu-likviduvali-i-pustyat-avtobusi-shcho-kazhut-v-ukrzaliznici_371430.html
-НМТ вже наступного року хочуть замінити на іспити
-https://radiotrek.rv.ua/news/nmt-vzhe-nastupnogo-roku-hochut-zaminiti-na-ispiti_371426.html
-Зупинку «Дворецьку» у Рівному 10 вересня - ліквідують: Що відомо?
-https://radiotrek.rv.ua/news/hto-virishiv-zakriti-dvorecku-radio-trek-napravilo-zapit-do-lvivskoyi-zaliznici_371419.html
 Все Рівне
-У Рівному матір покинула дитину в парку
-https://vse.rv.ua/article/u-rivnomu-matir-pokinula-ditinu-v-parku.html
-Від завтра у Рівному потяги не зупинятимуться на станції Дворецька
-https://vse.rv.ua/article/vid-zavtra-u-rivnomu-potagi-ne-zupinatimutsa-na-stancii-dvorecka.html
+На Рівненщині в ДТП травмувалися водій та неповнолітній пасажир мотоцикла
+https://vse.rv.ua/article/na-rivnensini-v-dtp-travmuvalisa-vodij-ta-nepovnolitnij-pasazir-motocikla.html
 Рівне вечірнє
-Рівняни просять перевірити підприємство, яке вночі переплавляє брухт
-https://rivnepost.rv.ua/news/rivnyany-prosyat-pereviryty-pidpryyemstvo-yake-vnochi-pereplavlyaye-bruht/
-А ви не знали?
-https://rivnepost.rv.ua/ideya-weeks/a-vy-ne-znaly/
-На перехресті у Рівному – ДТП
-https://rivnepost.rv.ua/news/na-perehresti-u-rivnomu-dtp-2/
-Понад 2 гектара землі вигоріло на Рівненщині за добу
-https://rivnepost.rv.ua/news/ponad-2-gektara-zemli-vygorilo-na-rivnenshhyni-za-dobu/
-На Дубенщині зіткнулися легковики, є постраждалі
-https://rivnepost.rv.ua/news/na-dubenshhyni-zitknulysya-legkovog/
-Чого чекати рівнянам від погоди у п’ятницю?
-https://rivnepost.rv.ua/news/chogo-chekaty-rivnyanam-vid-pogody-u-p%e2%80%99yatnyczyu-2/
-Мати покинула 6-річну доньку у парку в Рівному
-https://rivnepost.rv.ua/news/maty-pokynula-6-richnu-donku-u-parku-v-rivnomu/
-Семеро студентів з Рівненщини отримають стипендії від Зеленського
-https://rivnepost.rv.ua/news/semero-studentiv-z-rivnenshhyny-otrymayut-stypendiyi-vid-zelenskogo/
-Тариф на воду у Рівному знову хочуть підняти
-https://rivnepost.rv.ua/news/taryf-na-vodu-u-rivnomu-znovu-hochut-pidnyaty/
-Ліцей у Рівному увійшов до Топ-10 по Україні – у престижній олімпіаді
-https://rivnepost.rv.ua/news/liczej-u-rivnomu-uvijshov-do-top-10-po-ukrayini-u-prestyzhnij-olimpiadi/
-На Рівненщині попрощалися з чотирма захисниками України
-https://rivnepost.rv.ua/vijna/na-rivnenshhyni-poproshhalysya-z-chotyrma-zahysnykamy-ukrayiny-4/
-У трьох населених пунктах Рівненщини сьогодні тимчасово вимкнуть газ: адреси та причини
-https://rivnepost.rv.ua/news/u-troh-naselenyh-punktah-rivnenshhyny-sogodni-tymchasovo-vymknut-gaz-adresy-ta-prychyny/
-Сонце бере паузу: чого чекати від геомагнітного поля 10 вересня
-https://rivnepost.rv.ua/zhittya/soncze-bere-pauzu-chogo-chekaty-vid-geomagnitnogo-polya-10-veresnya/
-Осінній метео-драйв: 10 вересня
-https://rivnepost.rv.ua/zhittya/osinnij-meteo-drajv-10-veresnya/
-Покарали мотоциклістку з Рівненщини за смерть пасажирки
-https://rivnepost.rv.ua/kriminal/motoczyklistka-z-rivnenshhyny-otrymala-4-roky-tyurmy-za-smert-pasazhyrky/
-На Рівненщині поліцейські розшукали водія Audi, який вчинив ДТП і втік з місця події
-https://rivnepost.rv.ua/news/na-rivnenshhyni-policzejski-rozshukaly-vodiya-audi-yakyj-vchynyv-dtp-i-vtik-z-misczya-podiyi/
-Безбар’єрні ЦНАПи: на Рівненщині облаштували зони для підзарядки протезів
-https://rivnepost.rv.ua/zhittya/bezbaryerni-cznapy-na-rivnenshhyni-oblashtuvaly-zony-dlya-pidzaryadky-proteziv/
-У Дубні на зупинці громадського транспорту раптово помер чоловік
-https://rivnepost.rv.ua/news/u-dubni-na-zupynczi-gromadskogo-transportu-raptovo-pomer-cholovik/
-У Вараші прощатимуться із воїном, який на Донеччині віз провізію побратимам і загинув
-https://rivnepost.rv.ua/vijna/u-varashi-proshhatymutsya-iz-voyinom-yakyj-na-donechchyni-viz-proviziyu-pobratymam-i-zagynuv/
-Полковник з Рівненщини очолив Закарпатський обласний ТЦК
-https://rivnepost.rv.ua/uanews/polkovnyk-z-rivnenshhyny-ocholyv-zakarpatskyj-oblasnyj-tczk/
-На Рівненщині поліція затримала трьох юнаків за розповсюдження наркотиків через Telegram
-https://rivnepost.rv.ua/kriminal/na-rivnenshhyni-policziya-zatrymala-troh-yunakiv-za-rozpovsyudzhennya-narkotykiv-cherez-telegram/
-16-річний водій тікав у Рівному від поліції на мотоциклі
-https://rivnepost.rv.ua/news/16-richnyj-vodij-tikav-u-rivnomu-vid-policziyi-na-motoczykli/
-Невідома жінка поцупила з вулиці у Рівному агроволокно
-https://rivnepost.rv.ua/news/nevidoma-zhinka-poczupyla-z-vulyczi-u-rivnomu-agrovolokno/
-Сарненські патрульні повернули додому 18-річного хлопця
-https://rivnepost.rv.ua/news/sarnenski-patrulni-povernuly-dodomu-18-richnogo-hlopczya/
-До Рівного почали завозити транспортні картки
-https://rivnepost.rv.ua/news/do-rivnogo-pochaly-zavozyty-transportni-kartky/
-У Клевані та в Острозі створять потужні осередки центрів підтримки ментального здоров’я
-https://rivnepost.rv.ua/news/na-rivnenshhyni-zyavytsya-regionalnyj-czentr-mentalnogo-zdorovya/
-Міст до гідропарку у Рівному тимчасово закриють
-https://rivnepost.rv.ua/news/mist-do-gidroparku-u-rivnomu-tymchasovo-zakryyut/
-OGO.ua
-Рівненський науковий ліцей увійшов до десятки найкращих в Україні
-https://ogo.ua/rivnenskyj-naukovyj-liczej-uvijshov-do-desyatky-najkrashhyh-v-ukrayini/
-У Рівному попереджають про можливе ускладнення руху: де 10 вересня проводитимуть дорожні роботи
-https://ogo.ua/u-rivnomu-poperedzhayut-pro-mozhlyve-uskladnennya-ruhu-de-10-veresnya-provodytymut-dorozhni-roboty/
-Переодягнулася у помаранчеву жилетку: у Рівному жінка вкрала матеріали з узбіччя
-https://ogo.ua/pereodyagnulasya-u-pomaranchevu-zhyletku-u-rivnomu-zhinka-vkrala-materialy-z-uzbichchya/
-Де поховати домашнього улюбленця у Рівному: місто просять створити кладовище для тварин
-https://ogo.ua/de-pohovaty-domashnogo-ulyublenczya-u-rivnomu-misto-prosyat-stvoryty-kladovyshhe-dlya-tvaryn/
-У Рівненській області з’явиться новий центр ментального здоров’я: де його створять
-https://ogo.ua/u-rivnenskij-oblasti-zyavytsya-novyj-czentr-mentalnogo-zdorovya-de-jogo-stvoryat/
-Потяги більше не зупинятимуться на «Дворецькій»: рішення обурило рівнян
-https://ogo.ua/potyagy-bilshe-ne-zupynyatymutsya-na-dvoreczkij-rishennya-oburylo-rivnyan/
-Цього тижня JAMALA представить в Рівному нове шоу
-https://ogo.ua/yak-povernutys-u-robochyj-rytm-pislya-lita-korysni-zvychky-pro-yaki-my-zabuvayemo-3/
+16-річний мотоцикліст загинув на півночі Рівненщини
+https://rivnepost.rv.ua/news/16-richnyj-motoczyklist-zagynuv-na-pivnochi-rivnenshhyny/
+Циклон несе на Рівненщину зливу
+https://rivnepost.rv.ua/news/czyklon-nese-na-rivnenshhynu-zlyvu/
+На Рівненщині зіткнулися двоє дітей на електросамокатах
+https://rivnepost.rv.ua/news/na-rivnenshhyni-zitknulysya-dvoye-ditej-na-elektrosamokatah/
+Голи під зливою
+https://rivnepost.rv.ua/news/goly-pid-zlyvoyu/
+У Рівному військовим передали «Джип», який конфіскували у благодійного фонду
+https://rivnepost.rv.ua/region/u-rivnomu-vijskovym-peredaly-dzhyp-yakyj-konfiskuvaly-u-blagodijnogo-fondu/
+Стиль, комфорт та якість: чому варто обрати жіночі джинси від українського бренду Twice
+https://rivnepost.rv.ua/news/styl-komfort-ta-yakist-chomu-varto-obraty-zhinochi-dzhynsy-vid-ukrayinskogo-brendu-twice/
+У ТЦК пояснили, що втеча з полігону на Рівненщині — теж кримінал
+https://rivnepost.rv.ua/news/u-tczk-poyasnyly-shho-vtecha-z-poligonu-na-rivnenshhyni-tezh-kryminal/
+Росія готує нову балістичну ракету, яка може діставати до Рівного — ГУР
+https://rivnepost.rv.ua/news/rosiya-gotuye-novu-balistychnu-raketu-yaka-mozhe-distavaty-do-rivnogo-gur/
+На Рівненщині попрощалися із двома захисниками
+https://rivnepost.rv.ua/vijna/na-rivnenshhyni-poproshhalysya-iz-dvoma-zahysnykamy-5/
+88-й концертний сезон у Рівненській обласній філармонії розпочнеться українськими хітами
+https://rivnepost.rv.ua/kultura/88-j-konczertnyj-sezon-u-rivnenskij-oblasnij-filarmoniyi-rozpochnetsya-ukrayinskymy-hitamy/
+Осінь покаже характер: на Рівненщину йдуть локальні дощі та ранкові тумани
+https://rivnepost.rv.ua/zhittya/osin-pokazhe-harakter-na-rivnenshhynu-jdut-lokalni-doshhi-ta-rankovi-tumany/
+Астрологічний прогноз на 11 вересня
+https://rivnepost.rv.ua/zhittya/astrologichnyj-prognoz-na-11-veresnya/
+У Рівному змінюється порядок виплати допомог через «Укрексімбанк»: що потрібно зробити отримувачам
+https://rivnepost.rv.ua/hroshi/u-rivnomu-zminyuyetsya-poryadok-vyplaty-dopomog-cherez-ukreksimbank-shho-potribno-zrobyty-otrymuvacham/
+У Рівному оштрафували відповідального за будівельні роботи, які розпочали о 07:30 ранку
+https://rivnepost.rv.ua/misto/u-rivnomu-oshtrafuvaly-vidpovidalnogo-za-budivelni-roboty-yaki-rozpochaly-o-0730-ranku/
+Частина Рівного була без світла через аварійне знеструмлення
+https://rivnepost.rv.ua/misto/chastyna-rivnogo-zalyshylasya-bez-svitla-cherez-avarijne-znestrumlennya/
+На Рівненщині критично бракує запасів крові: мешканців області закликають стати донорами
+https://rivnepost.rv.ua/news/na-rivnenshhyni-krytychno-brakuye-zapasiv-krovi-meshkancziv-oblasti-zaklykayut-staty-donoramy/
+На Рівненщині судитимуть чоловіка, який систематично кривдив дружину на очах у дітей
+https://rivnepost.rv.ua/kriminal/na-rivnenshhyni-sudytymut-cholovika-yakyj-systematychno-kryvdyv-druzhynu-na-ochah-u-ditej/
+Поліцейські затримали жителя Дубенщини, який підпалив авто у Рівному
+https://rivnepost.rv.ua/kriminal/policzejski-zatrymaly-zhytelya-dubenshhyny-yakyj-pidpalyv-avto-u-rivnomu/
+У Рівному пасажири тролейбуса побили контролерку через перевірку квитків
+https://rivnepost.rv.ua/news/u-rivnomu-pasazhyry-trolejbusa-pobyly-konduktorku-cherez-perevirku-kvytkiv/
+На Варащині мотоцикліст без шолома та прав потрапив у ДТП
+https://rivnepost.rv.ua/news/na-varashhyni-motoczyklist-bez-sholoma-ta-prav-potrapyv-u-dtp/
+На Рівненщині попит на оренду житла зростає, а пропозицій стає дедалі менше
+https://rivnepost.rv.ua/news/na-rivnenshhyni-popyt-na-orendu-zhytla-zrostaye-a-propozyczij-staye-dedali-menshe/
+Рівне прощається із машиністом, який загинув на Луганщині
+https://rivnepost.rv.ua/news/rivne-proshhayetsya-iz-mashynistom-yakyj-zagynuv-na-luganshhyni/
+Головний санітарний лікар Рівненщини пожартував над скандалом із Настею Каменських
+https://rivnepost.rv.ua/news/golovnyj-sanitarnyj-likar-rivnenshhyny-pozhartuvav-nad-skandalom-iz-nasteyu-kamenskyh/
 Сім днів
-Пам&#8217;ять полеглого Захисника Олександра Федорченка вшанують у Рівному
-https://7dniv.rv.ua/suspilstvo/pam-iat-polehloho-zakhysnyka-oleksandra-fedorchenka-vshanuiut-u-rivnomu/
-Мати отримувала виплати, поки син був у полоні: суд постановив повернути майже 3,9 млн грн
-https://7dniv.rv.ua/suspilstvo/matir-poverne-viiskovomu-39-mln-vyplat-za-chas-polonu/
-Пішохідний міст через Устю поблизу Гідропарку у Рівному тимчасово закриють
-https://7dniv.rv.ua/suspilstvo/rivne-zakryiut-mist-cherez-ustiu-bilia-hidroparku/
-Сім студентів із Рівненщини отримуватимуть президентські стипендії по 20 тисяч гривень
-https://7dniv.rv.ua/osvita/studenty-rivnenshchyny-stypendiyi-prezydenta-2026/
-Семеро людей травмувалися у ДТП на трасі Київ – Чоп у Тараканові
-https://7dniv.rv.ua/suspilstvo/dtp/semero-liudey-travmuvalysia-u-dtp-na-trasi-kyiv-chop-u-tarakanovi/
-У громадах Рівненщини розкладатимуть приманки з вакциною проти сказу
-https://7dniv.rv.ua/news/vaktsyna-proty-skazu-hromady-rivnenshchyny/
-Поблизу Гощі зупинили нетверезого водія, позбавленого права керування
-https://7dniv.rv.ua/news/netverezyi-vodii-poblyzu-hoshchi/
-У Рівному шукають водія, який пошкодив опору освітлення
-https://7dniv.rv.ua/suspilstvo/u-rivnomu-shukaiut-vodiia-iakyi-poshkodyv-oporu/
-У парку Рівного знайшли шестирічну дівчинку без нагляду
-https://7dniv.rv.ua/news/u-parku-rivnoho-znaishly-dytynu-bez-nahliadu/
-Через алкоголь у крові родині загиблого військового відмовили у виплаті – суд скасував рішення
-https://7dniv.rv.ua/suspilstvo/sud-skasuvav-vidmovu-vyplata-rodyni-viiskovoho/
-Компенсації, допомога й оренда житла – що пропонують передбачити для ВПО у Рівному
-https://7dniv.rv.ua/suspilstvo/pidtrymka-vpo-rivne-107-milyoniv/
-У Рівному під час пожежі евакуювали близько 35 мешканців будинку
-https://7dniv.rv.ua/suspilstvo/pozhezha-rivne-evakuiuvaly-35-liudei/
-Якою буде погода на Рівненщині 10 вересня. Короткочасні дощі, грози, сильні пориви вітру
-https://7dniv.rv.ua/suspilstvo/yakoiu-bude-pohoda-na-rivnenshchyni-10-veresnia-2026/
-Громадянина Азербайджану примусово видворили на Рівненщині
-https://7dniv.rv.ua/suspilstvo/kryminal/na-rivnenshchyni-prymusovo-vydvoryly-hromadianyna-azerbaidzhanu/
-На Рівненщині у лісі виявили уламки ворожого боєприпасу
-https://7dniv.rv.ua/suspilstvo/viyna/na-rivnenshchyni-u-lisi-vyiavyly-ulamky-boieprypasu/
-У Рівному патрульні розшукали 16-річного мотоцикліста, який намагався втекти
-https://7dniv.rv.ua/suspilstvo/dtp/16-richnyi-mototsyklist-tikav-vid-patrulnykh-rivne/
-На Рівненщині затримали трьох наркодилерів: вилучили психотропів на майже 190 тисяч гривень
-https://7dniv.rv.ua/suspilstvo/kryminal/rivnenshchyna-zatrymala-trokh-narkodyleriv/
-На вічний спочинок у Рівному провели Захисника Руслана Лукомського
-https://7dniv.rv.ua/suspilstvo/viyna/na-vichnyy-spochynok-u-rivnomu-provely-zakhysnyka-ruslana-lukomskoho/
-На Рівненщині поліцейські викрили трьох чоловіків на незаконній порубці та перевезенні деревини
-https://7dniv.rv.ua/suspilstvo/kryminal/rivnenshchyna-nezakonna-derevyna-vychivka/
-Архітектори майбутнього зібралися у Рівному
-https://7dniv.rv.ua/suspilstvo/rivne-molodizhnyi-forum-ukraina-2036/
-У Сарнах патрульні розшукали 18-річного хлопця, який потребував медичної допомоги
-https://7dniv.rv.ua/suspilstvo/sarny-patrulni-rozshukaly-18-richnoho-khloptsia/
-На Рівненщині планують створити Регіональний центр ментального здоров’я
-https://7dniv.rv.ua/zdorovya/rehionalnyi-tsentr-mentalnoho-zdorovia-ostroh/
+45 Захисників і Захисниць України отримають фінансову допомогу від Рівненської громади
+https://7dniv.rv.ua/suspilstvo/45-zakhysnykiv-otrymaiut-dopomohu-rivnenska-hromada/
+На Березнівщині до малолітнього мотоцикліста застосовуватимуть примусові заходи виховного характеру
+https://7dniv.rv.ua/suspilstvo/dtp/bereznivshchyna-13-richnyi-mototsyklist-sprychynyv-dtp/
+На Рівненщині патрульні виявили двох нетверезих водіїв під час комендантської години
+https://7dniv.rv.ua/suspilstvo/dtp/rivnenshchyna-netverezi-vodii-komendantska-hodyna/
+ХХХ Спортивні ігри Рівненщини серед осіб з інвалідністю: програма та реєстрація
+https://7dniv.rv.ua/sport/sportyvni-ihry-rivnenshchyny-osoby-z-invalidnistyu-2026/
+На Сарненщині в ДТП загинув 16-річний мотоцикліст
+https://7dniv.rv.ua/suspilstvo/viyna/sarnenshchyna-dtp-zahynuv-16-richnyi-mototsyklist/
+Демаріус Джейкобс повертається до БК «Рівне»
+https://7dniv.rv.ua/sport/basketbol/demarius-jacobs-povertaietsia-bk-rivne/
+В Обарові зіткнулися два електросамокати, травмувалася 13-річна дівчина
+https://7dniv.rv.ua/suspilstvo/dtp/dtp-elektrosamokaty-obariv/
+На Рівненщині розвиватимуть адаптивне джиу-джитсу для ветеранів
+https://7dniv.rv.ua/suspilstvo/adaptyvne-dzhyu-dzhytsu-veterany-rivnenshchyna/
+У прикордонній смузі Рівненщини з білоруссю діє спеціальний режим
+https://7dniv.rv.ua/suspilstvo/obmezhennia-prykordonnia-rivnenshchyny/
+На Рівненщині у базі служби зайнятості є 4,4 тисячі вакансій
+https://7dniv.rv.ua/suspilstvo/robota-rivnenshchyna-vakansii-2026/
+Борги за воду можна сплачувати частинами – що пропонує «Рівнеоблводоканал»
+https://7dniv.rv.ua/suspilstvo/restrukturyzatsiia-borhu-za-vodu-rivne/
+У громадах Рівненщини повідомили про втрати серед Захисників
+https://7dniv.rv.ua/suspilstvo/viyna/u-hromadakh-rivnenshchyny-povidomyly-pro-vtraty-sered-zakhysnykiv/
+У Рівненському музеї відкрилася виставка поліського ткацтва «Виткане серцем»
+https://7dniv.rv.ua/kultura/vystavka-tkatstva-vytkane-sertsem-rivne-galyna-logoshchuk-2/
+Якою буде погода на Рівненщині 11 вересня. Синоптики прогнозують короткочасні невеликі дощі
+https://7dniv.rv.ua/suspilstvo/yakoiu-bude-pohoda-na-rivnenshchyni-11-veresnia-2026/
+Військовослужбовцю зі Шпанівської громади вручили відзнаку «За поранення»
+https://7dniv.rv.ua/suspilstvo/viyna/vijskovomu-zi-shpanivskoi-hromady-vruchyly-vidznaku/
+У Рівному патрульні оштрафували відповідального за будівельні роботи через порушення тиші
+https://7dniv.rv.ua/suspilstvo/u-rivnomu-patrulni-pokaraly-za-porushennia-tyshi/
+Жителя Дубенщини затримали за підпал Mercedes-Benz у Рівному
+https://7dniv.rv.ua/suspilstvo/kryminal/u-rivnomu-pidpalyly-mercedes-benz-politsiia-zatrymala-cholovika/
+У Рівненському районі і частині Рівного немає світла: рух тролейбусів на ділянці до «Злата Плаза» призупинили
+https://7dniv.rv.ua/suspilstvo/u-rivnomu-cherez-znestrumlennia-zupynyly-chastynu-troleibusiv/
+У Рівному невідома особа у тролейбусі вдарила кондукторку: поліція розпочала розслідування
+https://7dniv.rv.ua/suspilstvo/kryminal/rivne-pasazhyr-vdaryv-konduktorku-trolejbusa/
+У Рівному відкриють 88-й сезон філармонії святковим дійством «Витоки» до Дня української музики
+https://7dniv.rv.ua/dozvillya/afisha-rivnoho/vidkryttya-88-sezonu-rivnenska-filarmoniya-vytoky/
+11 вересня у Рівному попрощаються із Захисником Сергієм Кучеренком
+https://7dniv.rv.ua/suspilstvo/viyna/11-veresnia-u-rivnomu-poproshchaiutsia-iz-zakhysnykom-serhiiem-kucherenkom/
+На Варащині мотоцикл Kovi з’їхав у лісосмугу: травмувалися двоє
+https://7dniv.rv.ua/suspilstvo/viyna/varashchyna-dtp-mototsykl-vodii-pasazhyr-travmy/
+Водійка Volkswagen у Рівному в’їхала у дорожній знак
+https://7dniv.rv.ua/suspilstvo/dtp/rivne-vodiika-volkswagen-zbyla-dorozhnii-znak/
+У Рівному соціальні допомоги більше не виплачуватимуть через Укрексімбанк
+https://7dniv.rv.ua/suspilstvo/rivnomu-prypyniaut-vyplaty-cherez-ukreksimbank/
+Рівненська митниця спрямувала до держбюджету майже 10 млрд грн з початку року
+https://7dniv.rv.ua/suspilstvo/ekonomika/rivnenska-mytnytsia-991-mlrd-hrn-do-derzhbiudzhetu/
+Колектив Рівненської обласної лікарні передав 14-те авто для ЗСУ
+https://7dniv.rv.ua/suspilstvo/viyna/rokl-peredala-14-avto-dlya-zsu-vantazhivka/
 Рівне Медіа
-У Рівному авто підбило маршрутку (ВІДЕО)
-https://rivne.media/news/u-rivnomu-avto-pidbilo-marshrutku-video
-У Рівному жінка викрала бордюрну стрічку та агроволокно
-https://rivne.media/news/u-rivnomu-zhinka-vikrala-bordyurnu-strichku-ta-ahrovolokno-134110
-Обласну лікарню на Рівненщині хочуть приєднати до Центру психічного здоров’я населення
-https://rivne.media/news/oblasnu-likarnyu-na-rivnenshchini-khochut-priednati-do-tsentru-psikhichnoho-zdorovya-naselennya
-На Рівненщині розшукали юнака, якому була необхідна допомога
-https://rivne.media/news/na-rivnenshchini-rozshukali-yunaka-yakomu-bula-neobkhidna-dopomoha-134109
-Від завтра потяги на станції "Дворецька" у Рівному не зупинятимуться
-https://rivne.media/news/vid-zavtra-potyahi-na-stantsii-dvoretska-u-rivnomu-ne-zupinyatimutsya-134112
-Житель Здолбунова викрав велосипед, яким дитина приїхала до магазину
-https://rivne.media/news/zhitel-zdolbunova-vikrav-velosiped-yakim-ditina-priikhala-do-mahazinu
-На зупинці в Дубні помер чоловік
-https://rivne.media/news/na-zupintsi-v-dubni-pomer-cholovik-134118
-На Рівненщині затримали трьох закладчиків
-https://rivne.media/news/na-rivnenshchini-zatrimali-trokh-zakladchikiv-134119
-Короткочасний дощ, місцями - гроза: якою буде погода на Рівненщині 10 вересня
-https://rivne.media/news/korotkochasniy-doshch-mistsyami---hroza-yakoyu-bude-pohoda-na-rivnenshchini-10-veresnya-134117
-На дитмайданчику в селищі на Рівненщині зламали нову гойдалку
-https://rivne.media/news/na-ditmaydanchiku-v-selishchi-na-rivnenshchini-zlamali-novu-hoydalku-134098
-Терехов долучився до молодіжного форуму у Рівному (ФОТО)
-https://rivne.media/news/terekhov-doluchivsya-do-molodizhnoho-forumu-u-rivnomu-foto-134099
-"Верес" - один із лідерів УПЛ за кількістю легіонерів
-https://rivne.media/news/veres---odin-iz-lideriv-upl-za-kilkistyu-lehioneriv
-У Рівному попрощались з померлим старшим солдатом
-https://rivne.media/news/u-rivnomu-poproshchalis-z-pomerlim-starshim-soldatom-134105
-На Рівненщині лісничий виявив уламки ворожої ракети (ФОТО)
-https://rivne.media/news/na-rivnenshchini-lisnichiy-viyaviv-ulamki-vorozhoi-raketi-foto-134120
-У районі Гідропарку в Рівному може з`явитись новий скейт-парк
-https://rivne.media/news/u-rayoni-hidroparku-v-rivnomu-mozhe-zyavitis-noviy-skeyt-park-134091
-На Рівненщині трьох чоловіків викрили на незаконному перевезенні деревини
-https://rivne.media/news/na-rivnenshchini-trokh-cholovikiv-vikrili-na-nezakonnomu-perevezenni-derevini-134113
-Патрульні показали, як допомагали евакуйовувати мешканців із задимленої багатоповерхівки у Рівному
-https://rivne.media/news/patrulni-pokazali-yak-dopomahali-evakuyovuvati-meshkantsiv-iz-zadimlenoi-bahatopoverkhivki-u-rivnomu-134123
-Солдата з Рівненщини, який зник безвісти майже рік тому, визнали загиблим
-https://rivne.media/news/soldata-z-rivnenshchini-yakiy-znik-bezvisti-mayzhe-rik-tomu-viznali-zahiblim-134116
-Азербайджанця, який на Рівненщині відбував покарання за грабіж та крадіжки, видворили з України
-https://rivne.media/news/azerbaydzhantsya-yakiy-na-rivnenshchini-vidbuvav-pokarannya-za-hrabizh-ta-kradizhki-vidvorili-z-ukraini-134114
-У Рівному шукають водія, який пошкодив електроопору
-https://rivne.media/news/u-rivnomu-shukayut-vodiya-yakiy-poshkodiv-elektrooporu-134115
-Школярі з Рівненщини назбирали на Starlink для тероборонівців
-https://rivne.media/news/shkolyari-z-rivnenshchini-nazbirali-na-starlink-dlya-teroboronivtsiv-
-У парку Рівного провели «Наукові пікніки»
-https://rivne.media/news/u-parku-rivnoho-proveli-naukovi-pikniki
-Оператори, медик, діловод: рівненська бригада ТрО відкрила кілька вакансій
-https://rivne.media/news/operatori-medik-dilovod-rivnenska-brihada-tro-vidkrila-kilka-vakansiy-134059
-На Рівненщині за місяць одружилися понад 400 пар
-https://rivne.media/news/na-rivnenshchini-za-misyats-odruzhilisya-ponad-400-par--134092
-Ще четверо ветеранів-переселенців у Рівному отримають житлові ваучери
-https://rivne.media/news/shche-chetvero-veteraniv-pereselentsiv-u-rivnomu-otrimayut-zhitlovi-vaucheri
-У Рівному повторно виставили на продаж частину БЦ "Політон"
-https://rivne.media/news/u-rivnomu-povtorno-vistavili-na-prodazh-chastinu-bts-politon-134029
-Боєць з Рівненщини виграв апеляцію у своєї мами щодо повернення йому майже 3,9 млн грн
-https://rivne.media/news/boets-z-rivnenshchini-vihrav-apelyatsiyu-u-svoei-mami-shchodo-povernennya-yomu-mayzhe-39-mln-hrn
-"У мене майже немає чергувань без травмованих мотоциклістів", - рівненський лікар
-https://rivne.media/news/u-mene-mayzhe-nemae-cherhuvan-bez-travmovanikh-mototsiklistiv---rivnenskiy-likar-134
-Ремонт двох дитсадків та добудову басейну на Рівненщині можуть профінансувати за кошти ДФРР
-https://rivne.media/news/remont-dvokh-ditsadkiv-ta-dobudovu-baseynu-na-rivnenshchini-mozhut-profinansuvati-za-koshti-dfrr
-У парку Рівного залишили шестирічну дівчинку
-https://rivne.media/news/u-parku-rivnoho-zalishili-shestirichnu-divchinku-134124
-Цей день в історії — 10 вересня 1923 року народилася зв’язкова Романа Шухевича Марія Римик
-https://rivne.media/news/tsey-den-v-istorii---10-veresnya-1923-roku-narodilasya-zvyazkova-romana-shukhevicha-mariya-rimik-134128
-"Медзаклад продовжить працювати", - Карауш - про потенційну реорганізацію Клеванської лікарні
-https://rivne.media/news/medzaklad-prodovzhit-pratsyuvati---karaush---pro-potentsiynu-reorhanizatsiyu-klevanskoi-likarni-134111
-На Рівненщині зіткнулись два авто: семеро потерпілих
-https://rivne.media/news/na-rivnenshchini-zitknulis-dva-avto-semero-poterpilikh-134137
-На Рівненщині за добу вигоріло понад два гектари сухої трави
-https://rivne.media/news/na-rivnenshchini-za-dobu-vihorilo-ponad-dva-hektari-sukhoi-travi--134138
-Завтра у Рівному виступить Jamala
-https://rivne.media/news/zavtra-u-rivnomu-vistupit-jamala-134132
-У Рівному через аварію два будинки залишилися без води
-https://rivne.media/news/u-rivnomu-cherez-avariyu-dva-budinki-zalishilisya-bez-vodi
-Біля "Епіцентру" в Рівному зіткнулись легковик та вантажівка
-https://rivne.media/news/bilya-epitsentru-v-rivnomu-zitknulis-lehkovik-ta-vantazhivka
-Рятувальники показали відео з місця ДТП на Рівненщині, де постраждали семеро людей
-https://rivne.media/news/ryatuvalniki-pokazali-video-z-mistsya-dtp-na-rivnenshchini-de-postrazhdali-semero-lyudey
-У Рівному 16-річний водій, тікаючи від патрульних, кинув мотоцикл та сховався
-https://rivne.media/news/u-rivnomu-16-richniy-vodiy-tikayuchi-vid-patrulnikh-kinuv-mototsikl-ta-skhovavsya-134129
+Мати дівчинки, яка покинула дитину саму в парку Рівного, перед цим накричала на неї - очевидці
+https://rivne.media/news/mati-divchinki-yaka-pokinula-ditinu-samu-v-parku-rivnoho-pered-tsim-nakrichala-na-nei---ochevidtsi
+План стійкості на Рівненщині виконують за графіком - Коваль
+https://rivne.media/news/plan-stiykosti-na-rivnenshchini-vikonuyut-za-hrafikom---koval
+На Рівненщині судитимуть домашнього насильника, який кривдив дружину на очах у дітей
+https://rivne.media/news/na-rivnenshchini-suditimut-domashnoho-nasilnika-yakiy-krivdiv-druzhinu-na-ochakh-u-ditey-
+У селі на Рівненщині прощатимуться з померлим ветераном
+https://rivne.media/news/u-seli-na-rivnenshchini-proshchatimutsya-z-pomerlim-veteranom
+На Рівненщині мотоцикл з`їхав із дороги: двоє травмованих
+https://rivne.media/news/na-rivnenshchini-mototsikl-zikhav-iz-dorohi-dvoe-travmovanikh
+Перевищив норму алкоголю у понад шість разів: на Рівненщині зупинили п`яного водія
+https://rivne.media/news/perevishchiv-normu-alkoholyu-u-ponad-shist-raziv-na-rivnenshchini-zupinili-pyanoho-vodiya
+Підлітки у Рівному напали на військового
+https://rivne.media/news/pidlitki-u-rivnomu-napali-na-viyskovoho
+У Рівному пасажири тролейбуса побили контролерку
+https://rivne.media/news/u-rivnomu-pasazhiri-troleybusa-pobili-konduktorku-134170
+Туман і невеликий дощ прогнозують на Рівненщині
+https://rivne.media/news/tuman-i-nevelikiy-doshch-prohnozuyut-na-rivnenshchini-
+Частина Рівного залишилась без світла
+https://rivne.media/news/chastina-rivnoho-zalishilas-bez-svitla
+Від Пивзаводу до «Злати Плази» у Рівному тимчасово не курсують тролейбуси
+https://rivne.media/news/vid-pivzavodu-do-zlati-plazi-u-rivnomu-timchasovo-ne-kursuyut-troleybusi
+У селищній раді на Рівненщини створили новий відділ
+https://rivne.media/news/u-selishchniy-radi-na-rivnenshchini-stvorili-noviy-viddil-134151
+У низці багатоповерхівок Рівного призупинять подачу газу
+https://rivne.media/news/u-niztsi-bahatopoverkhivok-rivnoho-prizupinyat-podachu-hazu
+Унаслідок атаки дрона загинув солдат із села на Рівненщині
+https://rivne.media/news/unaslidok-ataki-drona-zahinuv-soldat-iz-sela-na-rivnenshchini--134156
+У Рівному водійка легковика збила дорожній знак
+https://rivne.media/news/u-rivnomu-vodiyka-lehkovika-zbila-dorozhniy-znak-134160
+У Рівному встановлять ще шість камер автофіксації порушень ПДР
+https://rivne.media/news/u-rivnomu-vstanovlyat-shche-shist-kamer-avtofiksatsii-porushen-pdr-134145
+Коваль доручив очільникам районів Рівненщини перевірити харчування дітей у школах
+https://rivne.media/news/koval-doruchiv-ochilnikam-rayoniv-rivnenshchini-pereviriti-kharchuvannya-ditey-u-shkolakh
+Зміг вибратися з окупованого Маріуполя: у Рівному попрощаються із загиблим захисником
+https://rivne.media/news/zmih-vibratisya-z-okupovanoho-mariupolya-u-rivnomu-poproshchayutsya-iz-zahiblim-zakhisnikom
+Стендап-комік Антон Тимошенко виступить у Рівному в рамках великого туру Україною
+https://rivne.media/news/stendap-komik-anton-timoshenko-vistupit-u-rivnomu-v-ramkakh-velikoho-turu-ukrainoyu-134162
+Затримали жителя Дубенщини, який у Рівному підпалив авто
+https://rivne.media/news/zatrimali-zhitelya-dubenshchini-yakiy-u-rivnomu-pidpaliv-avto
+У Рівному чоловік поскаржився на будівельні роботи вранці
+https://rivne.media/news/u-rivnomu-cholovik-poskarzhivsya-na-budivelni-roboti-vrantsi-134174
+У Рівному центр служби крові оголосив суботу позачерговим робочим днем
+https://rivne.media/news/u-rivnomu-tsentr-sluzhbi-krovi-oholosiv-subotu-pozacherhovim-robochim-dnem
+Через понад два роки після загибелі додому "На щиті" повертається воїн із Рівненщини
+https://rivne.media/news/cherez-ponad-dva-roki-pislya-zahibeli-dodomu-na-shchiti-povertaetsya-voin-iz-rivnenshchini
+Із конкурсу до Рівненського апеляційного суду вибула суддя райсуду
+https://rivne.media/news/iz-konkursu-do-rivnenskoho-apelyatsiynoho-sudu-vibula-suddya-raysudu
+Щестикласницю з Рівненщини відзначили за волонтерську діяльність
+https://rivne.media/news/shchestiklasnitsyu-z-rivnenshchini-vidznachili-za-volontersku-diyalnist
+Острозька лікарня отримала апарати ШВЛ від польських партнерів
+https://rivne.media/news/ostrozka-likarnya-otrimala-aparati-shvl-vid-polskikh-partneriv--134046
+Салат, каша та шніцель: чим годують учнів у рівненському ліцеї
+https://rivne.media/news/salat-kasha-ta-shnitsel-chim-hoduyut-uchniv-u-rivnenskomu-litsei-134049
+Голос рідних можуть підробити: жителів Рівненщини застерігають від нової шахрайської схеми
+https://rivne.media/news/holos-ridnikh-mozhut-pidrobiti-zhiteliv-rivnenshchini-zasterihayut-vid-novoi-shakhrayskoi-skhemi
+"Про таку проблему, як СЗЧ, ми взагалі навіть не чули", - капітан із Рівненщини
+https://rivne.media/news/pro-taku-problemu-yak-szch-mi-vzahali-navit-ne-chuli---kapitan-iz-rivnenshchini
+На Рівненщині готуються до нових евакуацій переселенців
+https://rivne.media/news/na-rivnenshchini-hotuyutsya-do-novikh-evakuatsiy-pereselentsiv
+На Рівненщині стартує новий курс підготовки громадян до нацспротиву
+https://rivne.media/news/na-rivnenshchini-startue-noviy-kurs-pidhotovki-hromadyan-do-natssprotivu-134103
+Підприємці Рівненщини можуть отримати до 2,5 млн грн за оновленою програмою «Власна справа»
+https://rivne.media/news/pidpriemtsi-rivnenshchini-mozhut-otrimati-do-25-mln-hrn-za-onovlenoyu-prohramoyu-vlasna-sprava
+У Рівному сталась ДТП за участі кур`єра
+https://rivne.media/news/u-rivnomu-stalas-dtp-za-uchasti-kurera
+У селищі на Рівненщині згоріла господарська споруда з дровами (ВІДЕО)
+https://rivne.media/news/u-selishchi-na-rivnenshchini-zhorila-hospodarska-sporuda-z-drovami-video
+"Верес" був близький до підписання гравця лондонського "Арсеналу" - Габовда
+https://rivne.media/news/veres-buv-blizkiy-do-pidpisannya-hravtsya-londonskoho-arsenalu---habovda-134
+Пасажири лаялися та плювалися: деталі нападу на контролерку в тролейбусі в Рівному
+https://rivne.media/news/pasazhiri-layalisya-ta-plyuvalisya-detali-napadu-na-kontrolerku-v-troleybusi-v-rivnomu
+На кількох вулицях Рівного та Квасилова можливе ускладнення руху
+https://rivne.media/news/na-kilkokh-vulitsyakh-rivnoho-ta-kvasilova-mozhlive-uskladnennya-rukhu
+Виїхав на узбіччя та перекинувся: на Рівненщині загинув 16-річний мотоцикліст
+https://rivne.media/news/viikhav-na-uzbichchya-ta-perekinuvsya-na-rivnenshchini-zahinuv-16-richniy-mototsiklist-134193
+Чоловік у селі на Рівненщині погрожував підпалити школу
+https://rivne.media/news/cholovik-u-seli-na-rivnenshchini-pohrozhuvav-pidpaliti-shkolu
+Поблизу Рівного зіткнулися двоє дітей на електросамокатах
+https://rivne.media/news/poblizu-rivnoho-zitknulisya-dvoe-ditey-na-elektrosamokatakh
+На Рівненщині 15-річного мотоцикліста, який тяжко травмував підлітка, хочуть передати під нагляд матері
+https://rivne.media/news/na-rivnenshchini-15-richnoho-mototsiklista-yakiy-tyazhko-travmuvav-pidlitka-khochut-peredati-pid-nahlyad-materi
 Горинь.info
-Уже майже 1000 випускників: на Рівненщині оголосили новий набір на вишкіл із національного спротиву
-https://horyn.info/news/uzhe-majzhe-1000-vypusknykiv-na-rivnenshhyni-ogolosyly-novyj-nabir-na-vyshkil-iz-naczionalnogo-sprotyvu/
-Допомога з Ватикану на фронт: Папа Римський підтримав волонтерську «Кухню Солідарності» з Рівненщини
-https://horyn.info/news/dopomoga-z-vatykanu-na-front-papa-rymskyj-pidtrymav-volontersku-kuhnyu-solidarnosti-z-rivnenshhyny/
-На Рівненщині затримали трьох підозрюваних у збуті психотропів на майже 200 тис. грн
-https://horyn.info/news/na-rivnenshhyni-zatrymaly-troh-pidozryuvanyh-u-zbuti-psyhotropiv-na-majzhe-200-tys-grn/
-Підприємця з Рівненщини підозрюють в організації незаконної вирубки лісу у заказнику
-https://horyn.info/news/pidpryyemczya-z-rivnenshhyny-pidozryuyut-v-organizacziyi-nezakonnoyi-vyrubky-lisu-u-zakaznyku/
-У Рівному відбувся Всеукраїнський молодіжний форум «Україна 2036. Архітектори майбутнього»
-https://horyn.info/news/u-rivnomu-vidbuvsya-vseukrayinskyj-molodizhnyj-forum-ukrayina-2036-arhitektory-majbutnogo/
-На Рівненщині створять регіональний центр ментального здоров’я
-https://horyn.info/news/na-rivnenshhyni-stvoryat-regionalnyj-czentr-mentalnogo-zdorovya/
+У Рівному пасажири побили контролерку тролейбуса: жінку госпіталізували
+https://horyn.info/news/u-rivnomu-pasazhyry-pobyly-kontrolerku-trolejbusa-zhinku-gospitalizuvaly/
+Попри петицію та звернення мешканців: приміські потяги більше не зупиняються на «Дворецькій» у Рівному
+https://horyn.info/news/popry-petycziyu-ta-zvernennya-meshkancziv-prymiski-potyagy-bilshe-ne-zupynyayutsya-na-dvoreczkij-u-rivnomu/
+У Рівному попрощаються із загиблим захисником Сергієм Кучеренком
+https://horyn.info/news/u-rivnomu-poproshhayutsya-iz-zagyblym-zahysnykom-sergiyem-kucherenkom/
+Семеро студентів з Рівненщини отримуватимуть академічні стипендії Президента України
+https://horyn.info/news/semero-studentiv-z-rivnenshhyny-otrymuvatymut-akademichni-stypendiyi-prezydenta-ukrayiny/
+Обласний науковий ліцей у Рівному посів 8-ме місце за підсумками Економічної олімпіади в Україні
+https://horyn.info/news/oblasnyj-naukovyj-liczej-u-rivnomu-posiv-8-me-miscze-za-pidsumkamy-ekonomichnoyi-olimpiady-v-ukrayini/
 Рівне 1
+Українські хіти та «Червона рута»: у Рівному філармонія відкриє 88-й концертний сезон
+https://rivne1.tv/news/175714-ukrainski-khiti-ta-chervona-ruta-u-rivnomu-filarmoniya-vidkrie-88-y-kontsertniy-sezon
+На Рівненщині потрібні донори крові всіх груп: 12 вересня центр працюватиме у суботу
+https://rivne1.tv/news/175724-na-rivnenshchini-potribni-donori-krovi-vsikh-hrup-12-veresnya-tsentr-pratsyuvatime-u-subotu
+У Костополі відкрили майстерню культурної спадщини з автентичними вишиванками
+https://rivne1.tv/news/175702-u-kostopoli-vidkrili-maysternyu-kulturnoi-spadshchini-z-avtentichnimi-vishivankami
+Вирівська та Демидівська громади попрощалися із загиблими захисниками
+https://rivne1.tv/news/175719-virivska-ta-demidivska-hromadi-poproshchalisya-iz-zahiblimi-zakhisnikami
+У Рівному відкриють меморіальну дошку загиблому захиснику Олександру Федорченку
+https://rivne1.tv/news/175713-u-rivnomu-vidkriyut-memorialnu-doshku-zahiblomu-zakhisniku-oleksandru-fedorchenku
+Хмарність, дощі та низькі нічні температури: прогноз погода для Рівненщини на 11–14 вересня
+https://rivne1.tv/news/175681-khmarnist-doshchi-ta-nizki-nichni-temperaturi-prohnoz-pohoda-dlya-rivnenshchini-na-11-14-veresnya
+На Рівненщині рятувальники відпрацювали дії в умовах пожежі
+https://rivne1.tv/news/175707-na-rivnenshchini-ryatuvalniki-vidpratsyuvali-dii-v-umovakh-pozhezhi
+У Рівному після ДТП замінили пошкоджену опору вуличного освітлення
+https://rivne1.tv/news/175701-u-rivnomu-pislya-dtp-zaminili-poshkodzhenu-oporu-vulichnoho-osvitlennya
+Залізничний пункт «Дворецька» у Рівному закрили: пасажири вимагають повернути станцію (ВІДЕО)
+https://rivne1.tv/news/175705-zaliznichniy-punkt-dvoretska-u-rivnomu-zakrili-pasazhiri-vimahayut-povernuti-stantsiyu-video
+Рівненщина визначає нові економічні пріоритети за методологією ЄС
+https://rivne1.tv/news/175704-rivnenshchina-viznachae-novi-ekonomichni-prioriteti-za-metodolohieyu-es
+У Костопільській громаді продовжать збирати кришечки для допомоги фронту
+https://rivne1.tv/news/175703-u-kostopilskiy-hromadi-prodovzhat-zbirati-krishechki-dlya-dopomohi-frontu
+У Рівному попрощаються із Захисником Сергієм Кучеренком, який загинув на Луганщині
+https://rivne1.tv/news/175708-u-rivnomu-poproshchayutsya-iz-zakhisnikom-serhiem-kucherenkom-yakiy-zahinuv-na-luhanshchini
+У Рівному встановили 100 сучасних наземних пожежних гідрантів
+https://rivne1.tv/news/175700-u-rivnomu-vstanovili-100-suchasnikh-nazemnikh-pozhezhnikh-hidrantiv
+«На лижі ставати не збирався»: історія рівнянина «Скорохода», який пішов воювати попри давню травму та родинне минуле (ВІДЕО)
+https://rivne1.tv/news/175697-na-lizhi-stavati-ne-zbiravsya-istoriya-rivnyanina-skorokhoda-yakiy-pishov-voyuvati-popri-davnyu-travmu-ta-rodinne-minule-video
+На Рівненщині впроваджують цифрову базу цін на будівельні матеріали
+https://rivne1.tv/news/175696-na-rivnenshchini-vprovadzhuyut-tsifrovu-bazu-tsin-na-budivelni-materiali
+Шестеро спортсменів із Рівного представлятимуть Україну на Strong Spirit’s Games 2026 в Австрії
+https://rivne1.tv/news/175690-shestero-sportsmeniv-iz-rivnoho-predstavlyatimut-ukrainu-na-strong-spirit-s-games-2026-v-avstrii
 У Рівному відкриють персональну виставку художниці Оксани Лобчук «Для душі»
 https://rivne1.tv/news/175699-u-rivnomu-vidkriyut-personalnu-vistavku-khudozhnitsi-oksani-lobchuk-dlya-dushi
-У Рівному на два тижні закриють пішохідний міст через Устю поблизу Гідропарку
-https://rivne1.tv/news/175689-u-rivnomu-na-dva-tizhni-zakriyut-pishokhidniy-mist-cherez-ustyu-poblizu-hidroparku
-Понад 550 постанов за тиждень: у Рівному інспектори перевіряли дотримання правил паркування
-https://rivne1.tv/news/175688-ponad-550-postanov-za-tizhden-u-rivnomu-inspektori-pereviryali-dotrimannya-pravil-parkuvannya
-На Рівненщині у 25 ЦНАПах облаштували зони для підзарядки біонічних протезів
-https://rivne1.tv/news/175687-na-rivnenshchini-u-25-tsnapakh-oblashtuvali-zoni-dlya-pidzaryadki-bionichnikh-proteziv
-На Рівненщині створять потужний багатопрофільний заклад для психіатричної, наркологічної та реабілітаційної допомоги
-https://rivne1.tv/news/175685-na-rivnenshchini-stvoryat-potuzhniy-bahatoprofilniy-zaklad-dlya-psikhiatrichnoi-narkolohichnoi-ta-reabilitatsiynoi-dopomohi
-На Рівненщині попрощалися з чотирма захисниками
-https://rivne1.tv/news/175686-na-rivnenshchini-poproshchalisya-z-chotirma-zakhisnikami
-Депутати Рівненської облради з 15 вересня розпочнуть роботу в постійних комісіях
-https://rivne1.tv/news/175684-deputati-rivnenskoi-oblradi-z-15-veresnya-rozpochnut-robotu-v-postiynikh-komisiyakh
-На Рівненщині у серпні одружилися 422 пари: від початку року створено понад 2500 родин
-https://rivne1.tv/news/175683-na-rivnenshchini-u-serpni-odruzhilisya-422-pari-vid-pochatku-roku-stvoreno-ponad-2500-rodin
-Погода на Рівненщині 10–13 вересня: дощі у другій половині тижня та падіння температури до +16°C
-https://rivne1.tv/news/175680-pohoda-na-rivnenshchini-10-13-veresnya-doshchi-u-druhiy-polovini-tizhnya-ta-padinnya-temperaturi-do-16-c
-Майже 6 кілограмів щастя: у Рівному народилася дівчинка-богатирка (ВІДЕО)
-https://rivne1.tv/news/175677-mayzhe-6-kilohramiv-shchastya-u-rivnomu-narodilasya-divchinka-bohatirka-video
-Мільйони без аукціонів: Рівненське ШЕУ масово укладає допорогові угоди з двома фірмами (ВІДЕО)
-https://rivne1.tv/news/175676-milyoni-bez-auktsioniv-rivnenske-sheu-masovo-ukladae-doporohovi-uhodi-z-dvoma-firmami-video
-Жителі Рівненщини встановили понад 2,2 тисячі домашніх сонячних електростанцій
-https://rivne1.tv/news/175663-zhiteli-rivnenshchini-vstanovili-ponad-2-2-tisyachi-domashnikh-sonyachnikh-elektrostantsiy
-У Рівному чотири учасники бойових дій отримають житлові ваучери на 2 мільйони гривень
-https://rivne1.tv/news/175662-u-rivnomu-chotiri-uchasniki-boyovikh-diy-otrimayut-zhitlovi-vaucheri-na-2-milyoni-hriven
-Із прифронтових територій на Рівненщину від початку року прибули 599 людей
-https://rivne1.tv/news/175661-iz-prifrontovikh-teritoriy-na-rivnenshchinu-vid-pochatku-roku-pribuli-599-lyudey
-Клеванську обласну лікарню можуть реорганізувати: рішення мають ухвалити депутати
-https://rivne1.tv/news/175658-klevansku-oblasnu-likarnyu-mozhut-reorhanizuvati-rishennya-mayut-ukhvaliti-deputati
-Рівненська правда
-У Рівному пасажири тролейбуса побили кондукторку
-https://www.rp.rv.ua/3836878726-y-r%d1%96vnomy-pasajiri-troleibysa-pobili-kondyktorky.html
-На Рівненщині у 2026 році зареєстровано 238 ДТП з мотоциклістами
-https://www.rp.rv.ua/3836698726-na-r%d1%96vnenshin%d1%96-y-2026-roc%d1%96-zare%d1%94strovano-238-dtp-z-motocikl%d1%96stami.html
-Як підготувати RENAULT до осені: що потрібно перевірити
-https://www.rp.rv.ua/3836668726-iak-p%d1%96dgotyvati-renault-do-osen%d1%96-sho-potr%d1%96bno-perev%d1%96riti.html
-Знущався з дружини у присутності трьох дітей: на Березнівщині судитимуть 37-річного чоловіка
-https://www.rp.rv.ua/3836628726-znyshavsia-z-dryjini-y-prisytnost%d1%96-troh-d%d1%96tei-na-berezn%d1%96vshin%d1%96-syditimyt-37-r%d1%96chnogo-cholov%d1%96ka.html
-Дев’ять пожеж сухої рослинності за добу ліквідували на Рівненщині
-https://www.rp.rv.ua/3836608726-deviat-pojej-syho%d1%97-roslinnost%d1%96-za-doby-l%d1%96kv%d1%96dyvali-na-r%d1%96vnenshin%d1%96.html
-На трасі Київ — Чоп на Рівненщині зіткнулися два авто: семеро травмованих, серед них діти
-https://www.rp.rv.ua/3836578726-na-tras%d1%96-ki%d1%97v-chop-na-r%d1%96vnenshin%d1%96-z%d1%96tknylisia-dva-avto-semero-travmovanih-sered-nih-d%d1%96ti.html
-У ЦНАПах на Рівненщині можна підзарядити біонічні протези: де вже діє інновація
-https://www.rp.rv.ua/3836568726-y-cnapah-na-r%d1%96vnenshin%d1%96-mojna-p%d1%96dzariaditi-b%d1%96on%d1%96chn%d1%96-protezi-de-vje-d%d1%96%d1%94-%d1%96nnovac%d1%96ia.html
-Пішохідний міст через річку Устя поблизу Гідропарку буде тимчасово закрито
-https://www.rp.rv.ua/3836558726-p%d1%96shoh%d1%96dnii-m%d1%96st-cherez-r%d1%96chky-ystia-poblizy-g%d1%96droparky-byde-timchasovo-zakrito.html
-Стало відомо, коли депутати Рівненської облради зберуться на засідання постійних комісій
-https://www.rp.rv.ua/3836548726-stalo-v%d1%96domo-koli-depytati-r%d1%96vnensko%d1%97-oblradi-zberytsia-na-zas%d1%96dannia-post%d1%96inih-kom%d1%96s%d1%96i.html
-На трасі Київ–Чоп у Тараканові зіткнулися два авто: серед потерпілих – двоє дітей
-https://www.rp.rv.ua/3836518726-na-tras%d1%96-ki%d1%97v-chop-y-tarakanov%d1%96-z%d1%96tknylisia-dva-avto-sered-poterp%d1%96lih-dvo%d1%94-d%d1%96tei.html
-Семеро студентів із Рівненщини отримуватимуть президентські стипендії
-https://www.rp.rv.ua/3836488726-semero-stydent%d1%96v-%d1%96z-r%d1%96vnenshini-otrimyvatimyt-prezidentsk%d1%96-stipend%d1%96%d1%97.html
-На Рівненщині відбувся Всеукраїнський молодіжний форум «Україна 2036. Архітектори майбутнього»
-https://www.rp.rv.ua/3836478726-na-r%d1%96vnenshin%d1%96-v%d1%96dbyvsia-vseykra%d1%97nskii-molod%d1%96jnii-forym-ykra%d1%97na-2036-arh%d1%96tektori-maibytnogo.html
-У Рівному шестирічну дівчинку знайшли саму в парку
-https://www.rp.rv.ua/3836468726-y-r%d1%96vnomy-shestir%d1%96chny-d%d1%96vchinky-znaishli-samy-v-parky.html
-У Рівному планують встановити ще 6 камер автофіксації: де саме
-https://www.rp.rv.ua/3836438726-y-r%d1%96vnomy-planyut-vstanoviti-she-6-kamer-avtof%d1%96ksac%d1%96%d1%97-de-same.html
-У Рівному за тиждень інспектори з паркування винесли понад 550 постанов
-https://www.rp.rv.ua/3836428726-y-r%d1%96vnomy-za-tijden-%d1%96nspektori-z-parkyvannia-vinesli-ponad-550-postanov.html
-У чотирьох громадах Рівненщини попрощалися із захисниками України
-https://www.rp.rv.ua/3836418726-y-chotiroh-gromadah-r%d1%96vnenshini-poproshalisia-%d1%96z-zahisnikami-ykra%d1%97ni.html
-Учасникі бойових дій з числа ВПО отримають житлову компенсацію в Рівному
-https://www.rp.rv.ua/3836388726-ychasnik%d1%96-boiovih-d%d1%96i-z-chisla-vpo-otrimaut-jitlovy-kompensac%d1%96u-v-r%d1%96vnomy.html
-Уламки ворожого боєприпасу знайшли у лісі на Рівненщині
-https://www.rp.rv.ua/3836378726-ylamki-vorojogo-bo%d1%94pripasy-znaishli-y-l%d1%96s%d1%96-na-r%d1%96vnenshin%d1%96.html
-«Хрест Клима Савура» може отримати боєць «Карпатської Січі»: рішення за Рівненською обласною радою
-https://www.rp.rv.ua/3836348726-hrest-klima-savyra-moje-otrimati-bo%d1%94c-karpatsko%d1%97-s%d1%96ch%d1%96-r%d1%96shennia-za-r%d1%96vnenskou-oblasnou-radou.html
-«Картка рівнянина» повертається на полиці торгових точок у Рівному
-https://www.rp.rv.ua/3836318726-kartka-r%d1%96vnianina-poverta%d1%94tsia-na-polic%d1%96-torgovih-tochok-y-r%d1%96vnomy.html
 ITV
-На Рівненщині проінспектують шкільні їдальні, аби побачити, як годують дітей
-https://itvmg.com/news/na-rivnenshchini-proinspektuyut-shkilni-idalni-abi-pobachiti-yak-hoduyut-ditey-117386
-У Рівному планують встановити шість нових камер автоматичної фіксації порушень ПДР
-https://itvmg.com/news/u-rivnomu-planuyut-vstanoviti-shist-novikh-kamer-avtomatichnoi-fiksatsii-porushen-pdr-117380
-Знущався над дружиною у присутності дітей: на Рівненщині судитимуть домашнього кривдника
-https://itvmg.com/news/znushchavsya-nad-druzhinoyu-u-prisutnosti-ditey-na-rivnenshchini-suditimut-domashnoho-krivdnika-117382
-Скарга пацієнта та можливі порушення: у Рівненській обласній лікарні проведуть службове розслідування
-https://itvmg.com/news/skarha-patsienta-ta-mozhlivi-porushennya-u-rivnenskiy-oblasniy-likarni-provedut-sluzhbove-rozsliduvannya-117379
-На Рівненщині на трасі Київ-Чоп зіткнулися два автомобілі — є травмовані
-https://itvmg.com/news/na-rivnenshchini-na-trasi-kiiv-chop-zitknulisya-dva-avtomobili---e-travmovani-117376
-У Рівному хочуть створити заказник «Рівненські плавні» площею 94 гектари
-https://itvmg.com/news/u-rivnomu-khochut-stvoriti-zakaznik-rivnenski-plavni-ploshcheyu-94-hektari-117374
-У Рівному матір залишила дитину саму в парку
-https://itvmg.com/news/u-rivnomu-matir-zalishila-ditinu-samu-v-parku-117375
-Семеро студентів із Рівненщини отримуватимуть академічні стипендії Президента України
-https://itvmg.com/news/semero-studentiv-iz-rivnenshchini-otrimuvatimut-akademichni-stipendii-prezidenta-ukraini-117373
-Сучасний санвузол із порадами «ЛЕРУА МЕРЛЕН»: прихований монтаж бачка з інсталяціями Geberit
-https://itvmg.com/news/suchasniy-sanvuzol-iz-poradami-lerua-merlen-prikhovaniy-montazh-bachka-z-instalyatsiyami-geberit-117372
-На Рівненщині громада виділила понад 1 млн грн на підтримку роботи виправної установи
-https://itvmg.com/news/na-rivnenshchini-hromada-vidilila-ponad-1-mln-hrn-na-pidtrimku-roboti-vipravnoi-ustanovi-117369
-Турнір «Баскетбол об’єднує» вперше провели у гідропарку в Рівному (ВІДЕО)
-https://itvmg.com/news/turnir-basketbol-obednue-vpershe-proveli-u-hidroparku-v-rivnomu-video-117368
-Небезпечний чоловік тримає в страху мікрорайон «Північний» у Рівному (ВІДЕО)
-https://itvmg.com/news/nebezpechniy-cholovik-trimae-v-strakhu-mikrorayon-pivnichniy-u-rivnomu-video-117367
-У скільки обходиться державному бюджету апарат Рівненської РДА? (ВІДЕО)
-https://itvmg.com/news/-u-skilki-obkhoditsya-derzhavnomu-byudzhetu-aparat-rivnenskoi-rda-video-117344
-Майже 6 кілограмів щастя: на Рівненщині народилася дівчинка-богатирка (ВІДЕО)
-https://itvmg.com/news/mayzhe-6-kilohramiv-shchastya-na-rivnenshchini-narodilasya-divchinka-bohatirka-video-117364
-Аби молодь не покидала країну: у Рівному відбувся форум "Україна 2036. Архітектори майбутнього" (ВІДЕО)
-https://itvmg.com/news/-abi-molod-ne-pokidala-krainu-u-rivnomu-vidbuvsya-forum-ukraina-2036-arkhitektori-maybutnoho-video-117365
-Давид Дідух прокоментував аудит та ревізію водоканалу у Костополі (ЕКСКЛЮЗИВ)
-https://itvmg.com/news/david-didukh-prokomentuvav-audit-ta-reviziyu-vodokanalu-u-kostopoli-eksklyuzyv-117366
-Сергій Подолін залишив посаду першого заступника голови Рівненської ОДА: що задекларував? (ВІДЕО)
-https://itvmg.com/news/serhiy-podolin-zalishiv-posadu-pershoho-zastupnika-holovi-rivnenskoi-oda-shcho-zadeklaruvav-video-117371
-На Рівненщині прогнозують сильний вітер та короткочасний дощ
-https://itvmg.com/news/na-rivnenshchini-prohnozuyut-silniy-viter-ta-korotkochasniy-doshch-117352
-На Рівненщині лісничий виявив уламки ворожого боєприпасу
-https://itvmg.com/news/na-rivnenshchini-lisnichiy-viyaviv-ulamki-vorozhoho-boepripasu-117370
-Шукають філологів та студентів для викладання української мови переселенцям у Рівному
-https://itvmg.com/news/shukayut-filolohiv-ta-studentiv-dlya-vikladannya-ukrainskoi-movi-pereselentsyam-u-rivnomu-117360
-Залишив неповнолітнього без спадщини: у Рівному судили чоловіка, який підробив документами
-https://itvmg.com/news/zalishiv-nepovnolitnoho-bez-spadshchini-u-rivnomu-sudili-cholovika-yakiy-pidrobiv-dokumentami-117359
-Регіональний центр ментального здоров`я створять на Рівненщині
-https://itvmg.com/news/rehionalniy-tsentr-mentalnoho-zdorovya-stvoryat-na-rivnenshchini-117362
-На Рівненщині виявили нелегала із Азербайджану
-https://itvmg.com/news/na-rivnenshchini-viyavili-nelehala-iz-azerbaydzhanu-117363
-У Рівному водій пошкодив опору вуличного освітлення та втік
-https://itvmg.com/news/u-rivnomu-vodiy-poshkodiv-oporu-vulichnoho-osvitlennya-ta-vtik-117361
-У Рівному жінка переодяглася у комунальницю та викрала матеріали для благоустрою (ВІДЕО)
-https://itvmg.com/news/u-rivnomu-zhinka-pereodyahlasya-u-komunalnitsyu-ta-vikrala-materiali-dlya-blahoustroyu-video-117358
+Повідомив про нібито загрозу підпалу школи: на Рівненщині покарали чоловіка за фейковий виклик
+https://itvmg.com/news/povidomiv-pro-nibito-zahrozu-pidpalu-shkoli-na-rivnenshchini-pokarali-cholovika-za-feykoviy-viklik-117441
+На Березнівщині до 13-річного мотоцикліста, який скоїв ДТП із травмованими, застосують виховні заходи
+https://itvmg.com/news/na-bereznivshchini-do-13-richnoho-mototsiklista-yakiy-skoiv-dtp-iz-travmovanimi-zastosuyut-vikhovni-zakhodi-117444
+Реактивний БпЛА на півночі Рівненщини, - Повітряні сили
+https://itvmg.com/news/-reaktivniy-bpla-na-pivnochi-rivnenshchini---povitryani-sili-117443
+На Сарненщині внаслідок ДТП загинув неповнолітній мотоцикліст
+https://itvmg.com/news/na-sarnenshchini-vnaslidok-dtp-zahinuv-nepovnolitniy-mototsiklist-117442
+У Рівненському районі внаслідок зіткнення двох електросамокатів травмувалася неповнолітня дівчина
+https://itvmg.com/news/u-rivnenskomu-rayoni-vnaslidok-zitknennya-dvokh-elektrosamokativ-travmuvalasya-nepovnolitnya-divchina-117438
+Рівненський обласний центр крові через критичну потребу в донорах крові працюватиме у суботу
+https://itvmg.com/news/-rivnenskiy-oblasniy-tsentr-krovi-cherez-kritichnu-potrebu-v-donorakh-krovi-pratsyuvatime-u-subotu-117430
+У Рівному соцвиплати більше не перераховуватимуть через «Укрексімбанк» — отримувачам треба змінити реквізити
+https://itvmg.com/news/u-rivnomu-sotsviplati-bilshe-ne-pererakhovuvatimut-cherez-ukreksimbank---otrimuvacham-treba-zminiti-rekviziti-117429
+Різновиди форм для випічки та їх особливості
+https://itvmg.com/news/riznovidi-form-dlya-vipichki-ta-ikh-osoblivosti-117399
+У Рівному оштрафували чоловіка, який проводив гучні будівельні роботи зранку
+https://itvmg.com/news/u-rivnomu-oshtrafuvali-cholovika-yakiy-provodiv-huchni-budivelni-roboti-zranku-117428
+У Рівному судитимуть 20-річного хлопця за торгівлю сурогатом і тютюном із підробленими акцизами
+https://itvmg.com/news/u-rivnomu-suditimut-20-richnoho-khloptsya-za-torhivlyu-surohatom-i-tyutyunom-iz-pidroblenimi-aktsizami-117289
+Підготовка троянд до зими: основні етапи осіннього догляду
+https://itvmg.com/news/pidhotovka-troyand-do-zimi-osnovni-etapi-osinnoho-dohlyadu-117324
+У Рівному відкрили сенсорну кімнату для реабілітації дітей (ВІДЕО)
+https://itvmg.com/news/u-rivnomu-vidkrili-sensornu-kimnatu-dlya-reabilitatsii-ditey-video-117406
+17 дітей загиблих Захисників отримали подарунки на Рівненщині (ВІДЕО)
+https://itvmg.com/news/17-ditey-zahiblikh-zakhisnikiv-otrimali-podarunki-na-rivnenshchini-video-117395
+У Костополі планують капітально відремонтувати вулицю Пилипа Орлика (ВІДЕО)
+https://itvmg.com/news/u-kostopoli-planuyut-kapitalno-vidremontuvati-vulitsyu-pilipa-orlika-video-117393
+Хочуть реорганізувати Клеванську обласну лікарню ім. М. Вервеги: як це вплине на пацієнтів? (ВІДЕО)
+https://itvmg.com/news/khochut-reorhanizuvati-klevansku-oblasnu-likarnyu-im-m-vervehi-yak-tse-vpline-na-patsientiv-video-117409
+Черепно-мозкова травма та струс головного мозку: у Рівному вдарили контролерку (ВІДЕО)
+https://itvmg.com/news/cherepno-mozkova-travma-ta-strus-holovnoho-mozku-u-rivnomu-vdarili-kontrolerku-video-117412
+Короткочасний дощ прогнозують синоптики на Рівненщині
+https://itvmg.com/news/korotkochasniy-doshch-prohnozuyut-sinoptiki-na-rivnenshchini-117378
+Недобудову біля стадіону «Імпульс» у Рівному з четвертої спроби продали рівненському підприємцю
+https://itvmg.com/news/nedobudovu-bilya-stadionu-impuls-u-rivnomu-z-chetvertoi-sprobi-prodali-rivnenskomu-pidpriemtsyu-117414
+Поліцейські затримали жителя Дубенщини, який підпалив авто у Рівному
+https://itvmg.com/news/politseyski-zatrimali-zhitelya-dubenshchini-yakiy-pidpaliv-avto-u-rivnomu-117411
+Торт без випічки з чорносливом: простий рецепт, який сподобається всій родині
+https://itvmg.com/news/tort-bez-vipichki-z-chornoslivom-prostiy-retsept-yakiy-spodobaetsya-vsiy-rodini-117308
+У Рівненському районі сталося аварійне знеструмлення
+https://itvmg.com/news/u-rivnenskomu-rayoni-stalosya-avariyne-znestrumlennya-117410
+У Рівному водійка збила дорожній знак
+https://itvmg.com/news/u-rivnomu-vodiyka-zbila-dorozhniy-znak-117402
+У Рокитнівській селищній раді створили відділ у справах ветеранів
+https://itvmg.com/news/u-rokitnivskiy-selishchniy-radi-stvorili-viddil-u-spravakh-veteraniv-117383
+На Рівненщині внаслідок ДТП двоє хлопців потрапили до лікарні
+https://itvmg.com/news/na-rivnenshchini-vnaslidok-dtp-dvoe-khloptsiv-potrapili-do-likarni-117394
+У Рівному пасажири напали на контролера у тролейбусі — жінка у лікарні
+https://itvmg.com/news/u-rivnomu-pasazhiri-napali-na-kontrolera-u-troleybusi---zhinka-u-likarni-117390
